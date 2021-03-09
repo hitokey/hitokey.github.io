@@ -1,0 +1,80 @@
+#+Author: Pedro Fernandes
+#+Date: <2021-03-09 ter>
+#+Title: Simples programa Fib
+
+
+* Introdução
+
+Estou escrevendo este documento para testar o github blog, estão não espere nada demais nesta página.
+
+
+* Fibonacci
+
+Fibonacci é série numerica que descreve a seguinte senquencia *1,1,2,3,4,5,8,13...*, dessa maneira Leonardo Pisa descreve o crescimento pela seguiente fórmula: $F_n=F_{n-1}+F_{n-2}$, com a condição inicial f(0) = 0 e f(1) = 1, então:
+
+#+BEGIN_EXAMPLE
+$$ \big{{} {{0 se n = 0 \newline 1 se n = 1 \newline otherwise f_{n-1}+f_{n-2}}}$$
+#+END_EXAMPLE
+
+Agora descrevemos em common lisp. Obs.: eu implementei no elisp em um emacs-windows. 
+
+#+BEGIN_SRC elisp :export results
+(require 'cl)
+
+(defun fib(n)
+   (if (<= n 2) 1
+         (+ (fib (- n 1)) (fib (- n 2)) )))
+
+(format "Fib(%d):= %d" 5 (fib 8))
+#+END_SRC
+
+#+RESULTS:
+: Fib(5):= 21
+
+Eu quero verificar o tempo de execução da função fib que implementamos no elisp. 
+
+#+BEGIN_SRC elisp :results value pp
+(benchmark-run 1 (fib 40))
+#+END_SRC
+
+#+RESULTS:
+: (60.032343 0 0.0)
+
+É demorou 60 segundos para executar o fibonacci 40, na lista o primeiro é o tempo real de execução, segundo o número fde coletas de lixos e finalizando o tempo gasto pelo coletor de lixo, agora executar por meio de uma complexão binária.
+
+#+BEGIN_SRC elisp :results value pp
+(benchmark-run-compiled 1 (fib 40))
+#+END_SRC
+
+#+RESULTS:
+: (59.464825 0 0.0)
+
+Não mudou particamente nada, principalmente se adicionamos o erro experimental. 
+
+Podemos mudar um pouco a nossa função fibonacci, porque na nossa função como usamos da recursão, o sistema deverá ultizar bastante a pinha para amazenar e depois recalcular o valor de resposta. Então irei implentar utilizando a recursão, mas adicionarei um acumulador.
+
+#+BEGIN_SRC elisp :results value pp
+(defun fib-acc(n prev acc)
+  (if (<= n 0) acc 
+     (fib-acc (- n 1) acc (+ prev acc))))
+
+(defun fib(n)
+  (if (<= n 1) n
+    (fib-acc n 1 0)))
+
+(funcall (lambda (n) (format "Fib(%d): %d" n (fib n))) 40)
+#+END_SRC
+
+#+RESULTS:
+: "Fib(40): 102334155"
+
+#+BEGIN_SRC elisp :results value pp
+(benchmark-run-compiled 1 (fib 40))
+#+END_SRC
+
+#+RESULTS:
+: (1.5e-05 0 0.0)
+
+Notamos que o tempos foi de 1.5x10^5, particamente zero, estão é bom trabalhamos com acumulador.
+
+
