@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR" xml:lang="pt_BR">
 <head>
-<!-- 2021-03-09 ter 07:37 -->
+<!-- 2021-03-09 ter 08:14 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Simples programa Fib</title>
@@ -18,8 +18,8 @@
               font-weight: bold;
               margin-top:0; }
   .todo   { font-family: monospace; color: red; }
- g .done   { font-family: monospace; color: #95f; }
-  .priority { font-family: monospace; color: #055; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
@@ -38,7 +38,7 @@
     overflow: auto;
     margin: 1.2em;
   }
-  pre.src{
+  pre.src {
     position: relative;
     overflow: visible;
     padding-top: 1.2em;
@@ -171,7 +171,7 @@
    { text-align: right; font-size: 70%; white-space: nowrap; }
   textarea { overflow-x: auto; }
   .linenr { font-size: smaller }
-  .code-highlighted { background-color: #fff500; }
+  .code-highlighted { background-color: #ffff00; }
   .org-info-js_info-navigation { border-style: none; }
   #org-info-js_console-label
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
@@ -267,26 +267,25 @@ for the JavaScript code in this tag.
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc1d93bd">1. Introdução</a>
+<li><a href="#orga872407">1. Introdução</a>
 <ul>
-<li><a href="#orgb4f09ca">1.1. Fibonacci</a></li>
+<li><a href="#org0500c91">1.1. Fibonacci</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgc1d93bd" class="outline-2">
-<h2 id="orgc1d93bd"><span class="section-number-2">1</span> Introdução</h2>
+<div id="outline-container-orga872407" class="outline-2">
+<h2 id="orga872407"><span class="section-number-2">1</span> Introdução</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Estou escrevendo este documento para testar o github blog, estão não espere nada demais nesta página.
 </p>
 </div>
 
-
-<div id="outline-container-orgb4f09ca" class="outline-3">
-<h3 id="orgb4f09ca"><span class="section-number-3">1.1</span> Fibonacci</h3>
+<div id="outline-container-org0500c91" class="outline-3">
+<h3 id="org0500c91"><span class="section-number-3">1.1</span> Fibonacci</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Fibonacci é série numerica que descreve a seguinte senquencia <b>1,1,2,3,4,5,8,13&#x2026;</b>, dessa maneira Leonardo Pisa descreve o crescimento pela seguiente fórmula: \(F_n=F_{n-1}+F_{n-2}\), com a condição inicial \(f(0)=0\) e \(f(1)=1\), então:
@@ -297,13 +296,13 @@ Agora descrevemos em common lisp. Obs.: eu implementei no elisp em um emacs-wind
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #8000ff;">require</span> '<span style="color: #e9b2e3;">cl</span>)
+<pre class="src src-elisp">(<span style="color: #b4fa70;">require</span> '<span style="color: #e9b2e3;">cl</span>)
 
-(<span style="color: #8000ff;">defun</span> <span style="color: #bf00ff;">fib</span>(n)
-   (<span style="color: #8000ff;">if</span> (&lt;= n 2) 1
+(<span style="color: #b4fa70;">defun</span> <span style="color: #fce94f;">fib</span>(n)
+   (<span style="color: #b4fa70;">if</span> (&lt;= n 2) 1
          (+ (fib (- n 1)) (fib (- n 2)) )))
 
-(format <span style="color: 0000ff;">"Fib(%d):= %d"</span> 5 (fib 8))
+(format <span style="color: #e9b96e;">"Fib(%d):= %d"</span> 5 (fib 8))
 </pre>
 </div>
 
@@ -312,16 +311,16 @@ Eu quero verificar o tempo de execução da função fib que implementamos no el
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #8000ff;">benchmark-run</span> 1 (fib 40))
+<pre class="src src-elisp">(<span style="color: #b4fa70;">benchmark-run</span> 1 (fib 40))
 </pre>
 </div>
 
 <p>
-É demorou 60 segundos para executar o fibonacci 40, na lista o primeiro é o tempo real de execução, segundo o número fde coletas de lixos e finalizando o tempo gasto pelo coletor de lixo, agora executar por meio de uma complexão binária.
+É demorou 36 segundos para executar o fibonacci 40, na lista o primeiro é o tempo real de execução, segundo o número fde coletas de lixos e finalizando o tempo gasto pelo coletor de lixo, agora executar por meio de uma complexão binária.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #8000ff;">benchmark-run-compiled</span> 1 (fib 40))
+<pre class="src src-elisp">(<span style="color: #b4fa70;">benchmark-run-compiled</span> 1 (fib 40))
 </pre>
 </div>
 
@@ -334,20 +333,20 @@ Podemos mudar um pouco a nossa função fibonacci, porque na nossa função como
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #8000ff;">defun</span> <span style="color: #bf00ff;">fib-acc</span>(n prev acc)
-  (<span style="color: #8000ff;">if</span> (&lt;= n 0) acc 
+<pre class="src src-elisp">(<span style="color: #b4fa70;">defun</span> <span style="color: #fce94f;">fib-acc</span>(n prev acc)
+  (<span style="color: #b4fa70;">if</span> (&lt;= n 0) acc 
      (fib-acc (- n 1) acc (+ prev acc))))
 
-(<span style="color: #8000ff;">defun</span> <span style="color: #bf00ff;">fib</span>(n)
-  (<span style="color: #8000ff;">if</span> (&lt;= n 1) n
+(<span style="color: #b4fa70;">defun</span> <span style="color: #fce94f;">fib</span>(n)
+  (<span style="color: #b4fa70;">if</span> (&lt;= n 1) n
     (fib-acc n 1 0)))
 
-(funcall (<span style="color: #8000ff;">lambda</span> (n) (format <span style="color: 0000ff;">"Fib(%d): %d"</span> n (fib n))) 40)
+(funcall (<span style="color: #b4fa70;">lambda</span> (n) (format <span style="color: #e9b96e;">"Fib(%d): %d"</span> n (fib n))) 40)
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #8000ff;">benchmark-run-compiled</span> 1 (fib 40))
+<pre class="src src-elisp">(<span style="color: #b4fa70;">benchmark-run-compiled</span> 1 (fib 40))
 </pre>
 </div>
 
@@ -361,7 +360,7 @@ Notamos que o tempos foi de 1.5x10<sup>5</sup>, particamente zero, estão é bom
 <div id="postamble" class="status">
 <p class="date">Data: 2021-03-09 ter 00:00</p>
 <p class="author">Autor: Pedro Fernandes</p>
-<p class="date">Created: 2021-03-09 ter 07:37</p>
+<p class="date">Created: 2021-03-09 ter 08:14</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
