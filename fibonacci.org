@@ -1,6 +1,6 @@
 #+Author: Pedro Fernandes
 #+Date: <2021-03-09 ter>
-#+Title: Simples programa Fibonacci
+#+Title: Simples programa de Fibonacci
 #+SETUPFILE: ../org-html-themes/org/theme-bigblow.setup
 #+LANGUAGE: pt_BR
 

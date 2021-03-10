@@ -6,7 +6,7 @@
 <!-- 2021-03-09 ter 21:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>FREE TIME</title>
+<title>Simples programa de Fibonacci</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Pedro Fernandes" />
 <style type="text/css">
@@ -237,26 +237,123 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
-<h1 class="title">FREE TIME</h1>
+<h1 class="title">Simples programa de Fibonacci</h1>
 <div id="table-of-contents">
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org79ca8a6">1. Fibonacci - Recursão e Acumulador</a></li>
+<li><a href="#org8729564">1. Introdução</a>
+<ul>
+<li><a href="#orgfd369a1">1.1. Fibonacci</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
-
-<div id="outline-container-org79ca8a6" class="outline-2">
-<h2 id="org79ca8a6"><span class="section-number-2">1</span> <a href="http://hitokey.github.io/fibonacci.html">Fibonacci - Recursão e Acumulador</a></h2>
+<div id="outline-container-org8729564" class="outline-2">
+<h2 id="org8729564"><span class="section-number-2">1</span> Introdução</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Um teste inicial para o Blog atráveis do github, escrevi o algoritmos fibonacci por recursão e como podemos otimizar atráveis de acumuladores.
+Estou escrevendo este documento para testar o github blog, estão não espere nada demais nesta página.
 </p>
+</div>
+
+<div id="outline-container-orgfd369a1" class="outline-3">
+<h3 id="orgfd369a1"><span class="section-number-3">1.1</span> Fibonacci</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Fibonacci é série numerica que descreve a seguinte senquencia <b>1,1,2,3,4,5,8,13&#x2026;</b>, dessa maneira Leonardo Pisa descreve o crescimento pela seguiente fórmula: \(F_n=F_{n-1}+F_{n-2}\), com a condição inicial \(f(0)=0\) e \(f(1)=1\), então:
+</p>
+
+<p>
+Agora descrevemos em common lisp. Obs.: eu implementei no elisp em um emacs-windows. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #b4fa70;">require</span> '<span style="color: #e9b2e3;">cl</span>)
+
+(<span style="color: #b4fa70;">defun</span> <span style="color: #fce94f;">fib</span>(n)
+   (<span style="color: #b4fa70;">if</span> (&lt;= n 2) 1
+         (+ (fib (- n 1)) (fib (- n 2)) )))
+
+(format <span style="color: #e9b96e;">"&lt;p&gt;Fib(%d):= %d&lt;/p&gt;"</span> 5 (fib 8))
+</pre>
+</div>
+
+<p>
+Eu quero verificar o tempo de execução da função fib que implementamos no elisp. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #b4fa70;">benchmark-run</span> 1 (fib 40))
+</pre>
+</div>
+
+<p>
+É demorou 36 segundos para executar o fibonacci 40, na lista o primeiro é o tempo real de execução, segundo o número fde coletas de lixos e finalizando o tempo gasto pelo coletor de lixo, agora executar por meio de uma complexão binária.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #b4fa70;">benchmark-run-compiled</span> 1 (fib 40))
+</pre>
+</div>
+
+<p>
+Não mudou particamente nada, principalmente se adicionamos o erro experimental. 
+</p>
+
+<p>
+Podemos mudar um pouco a nossa função fibonacci, porque na nossa função como usamos da recursão, o sistema deverá ultizar bastante a pinha para amazenar e depois recalcular o valor de resposta. Então irei implentar utilizando a recursão, mas adicionarei um acumulador.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #b4fa70;">defun</span> <span style="color: #fce94f;">fib-acc</span>(n prev acc)
+  (<span style="color: #b4fa70;">if</span> (&lt;= n 0) acc 
+     (fib-acc (- n 1) acc (+ prev acc))))
+
+(<span style="color: #b4fa70;">defun</span> <span style="color: #fce94f;">fib</span>(n)
+  (<span style="color: #b4fa70;">if</span> (&lt;= n 1) n
+    (fib-acc n 1 0)))
+
+(funcall (<span style="color: #b4fa70;">lambda</span> (n) (format <span style="color: #e9b96e;">"&lt;p&gt;Fib(%d): %d&lt;/p&gt;"</span> n (fib n))) 40)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #b4fa70;">benchmark-run-compiled</span> 1 (fib 40))
+</pre>
+</div>
+
+<p>
+Notamos que o tempos foi de 1.5x10<sup>5</sup>, particamente zero, estão é bom trabalhamos com acumulador.
+</p>
+</div>
 </div>
 </div>
 </div>

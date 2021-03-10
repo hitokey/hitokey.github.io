@@ -1,0 +1,11 @@
+#+AUTHOR: Pedro Fernandes
+#+DATE: <2021-03-09 ter>
+#+TITLE: FREE TIME
+#+SETUPFILE: ../org-html-themes/org/theme-bigblow.setup
+#+LANGUAGE: pt_BR
+
+
+* [[http://hitokey.github.io/fibonacci.html][Fibonacci - Recursão e Acumulador]]
+Um teste inicial para o Blog atráveis do github, escrevi o algoritmos fibonacci por recursão e como podemos otimizar atráveis de acumuladores.
+
+
