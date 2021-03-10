@@ -80,3 +80,6 @@ Podemos mudar um pouco a nossa função fibonacci, porque nesta função utilizamos 
 Notamos que o tempos foi de 1.4x10^5, particamente zero, estão é bom trabalhamos com acumulador.
 
 Vemos que podemos otimizar a recursão utilizando acumuladores.
+
+* [[https://hitokey.github.io/][Home]]
+Minha Página (My Page): [[https://hitokey.github.io/][link]]
