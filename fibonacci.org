@@ -14,48 +14,46 @@ Fibonacci é série numerica que descreve a seguinte senquencia *1,1,2,3,4,5,8,13.
 
 Agora descrevemos em common lisp. Obs.: eu implementei no elisp em um emacs-windows. 
 
-#+BEGIN_SRC elisp :export both :results html
+#+BEGIN_SRC elisp :results value scadar :exports both
 (require 'cl)
 
 (defun fib(n)
    (if (<= n 2) 1
          (+ (fib (- n 1)) (fib (- n 2)) )))
 
-(format "<p>Fib(%d):= %d</p>" 5 (fib 8))
+(message "Fib(%d):= %d" 5 (fib 8))
 #+END_SRC
 
 #+RESULTS:
-#+BEGIN_EXPORT html
-<p>Fib(5):= 21</p>
-#+END_EXPORT
+: Fib(5):= 21
 
 Eu quero verificar o tempo de execução da função fib que implementamos no elisp. 
 
-#+BEGIN_SRC elisp :export both :results value code
+#+BEGIN_SRC elisp :results value code :exports both 
 (benchmark-run 1 (fib 40))
 #+END_SRC
 
 #+RESULTS:
 #+BEGIN_SRC elisp
-(36.699033 0 0.0)
+(37.093078 0 0.0)
 #+END_SRC
 
-É demorou 36 segundos para executar o fibonacci 40, na lista o primeiro é o tempo real de execução, segundo o número fde coletas de lixos e finalizando o tempo gasto pelo coletor de lixo, agora executar por meio de uma complexão binária.
+É demorou 37 segundos para executar o fibonacci 40, na lista o primeiro é o tempo real de execução, segundo o número fde coletas de lixos e finalizando o tempo gasto pelo coletor de lixo, agora executar por meio de uma complexão binária.
 
-#+BEGIN_SRC elisp :export both :results code
+#+BEGIN_SRC elisp :results value code :exports both 
 (benchmark-run-compiled 1 (fib 40))
 #+END_SRC
 
 #+RESULTS:
 #+BEGIN_SRC elisp
-(36.616515 0 0.0)
+(36.967577 0 0.0)
 #+END_SRC
 
-Não mudou particamente nada, principalmente se adicionamos o erro experimental. 
+Não mudou particamente nada, principalmente se consideramos o erro experimental, estão não ocorreu alteração. Realmente não tivemos um resultado rápido, mas podemos mudar nosso algoritmos para otimizamos o resultado.
 
-Podemos mudar um pouco a nossa função fibonacci, porque na nossa função como usamos da recursão, o sistema deverá ultizar bastante a pinha para amazenar e depois recalcular o valor de resposta. Então irei implentar utilizando a recursão, mas adicionarei um acumulador.
+Podemos mudar um pouco a nossa função fibonacci, porque nesta função utilizamos a pura recursão, o sistema deverá ultizar bastante a pinha para amazenar os resultados intermediaram e depois recalcular o valor de resposta. Então irei implentar na recursão um acumulador. Como a recursão e dupla, precisaremos de dois acumuladores, vejamos abaixo.
 
-#+BEGIN_SRC elisp :export both :results html
+#+BEGIN_SRC elisp  :results value scadar :exports both
 (defun fib-acc(n prev acc)
   (if (<= n 0) acc 
      (fib-acc (- n 1) acc (+ prev acc))))
@@ -64,15 +62,13 @@ Podemos mudar um pouco a nossa função fibonacci, porque na nossa função como usa
   (if (<= n 1) n
     (fib-acc n 1 0)))
 
-(funcall (lambda (n) (format "<p>Fib(%d): %d</p>" n (fib n))) 40)
+(funcall (lambda (n) (message "Fib(%d): %d" n (fib n))) 40)
 #+END_SRC
 
 #+RESULTS:
-#+BEGIN_EXPORT html
-<p>Fib(40): 102334155</p>
-#+END_EXPORT
+: Fib(40): 102334155
 
-#+BEGIN_SRC elisp :export both :results code
+#+BEGIN_SRC elisp :exports both :results code
 (benchmark-run-compiled 1 (fib 40))
 #+END_SRC
 
@@ -81,4 +77,6 @@ Podemos mudar um pouco a nossa função fibonacci, porque na nossa função como usa
 (1.4e-05 0 0.0)
 #+END_SRC
 
-Notamos que o tempos foi de 1.5x10^5, particamente zero, estão é bom trabalhamos com acumulador.
+Notamos que o tempos foi de 1.4x10^5, particamente zero, estão é bom trabalhamos com acumulador.
+
+Vemos que podemos otimizar a recursão utilizando acumuladores.
