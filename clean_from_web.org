@@ -73,7 +73,7 @@ Content-Type:text/html;charset=utf-8
 </html>
 #+end_export
 
-Discutiremos um pouco sobre o programa. O codigo é bastante simples, basicamente ele concatena string no formato response html, com um variável do servidor que é a QUERY_STRING, tal variável amazena um parte do URL. Nesta parte normalmente poderá ser passado alguma key e valor, por exemplo, vejamos a URL:
+Discutiremos um pouco sobre o programa. O codigo é bastante simples, basicamente ele concatena string no formato response html, com um variável do servidor que é a QUERY\_STRING, tal variável amazena um parte do URL. Nesta parte normalmente poderá ser passado alguma key e valor, por exemplo, vejamos a URL:
 
 Recomendo que leia o [[https://docstore.mik.ua/orelly/linux/cgi/ch03_02.htm][Enviroment Variables]] e [[https://docstore.mik.ua/orelly/linux/cgi/ch02_01.htm][HTTP]].
 
@@ -246,7 +246,7 @@ Como iremos precisar do hunchentoot, podemos usar o quicklisp para carrega-lo, c
 
 Como hunchentoot em vale ressaltar, que qualquer infomação dentro desse pacote terãom o sufixo hunchentoot:, caso queira evitar isto basta usar *in-package*, mais informaçãoes [[https://www.tutorialspoint.com/lisp/lisp_packages.htm][link]].
 
-Então começamos iniciando um servidor http simples, com uma função dinamica que pegar a query_string é diz um Hello, caso não term a query_string, diz hello, world.
+Então começamos iniciando um servidor http simples, com uma função dinamica que pegar a query_string é diz um Hello, caso não term a query\_string, diz hello, world.
 
 #+CAPTION: Start Easy Acceptor
 #+begin_src
@@ -257,12 +257,13 @@ Então começamos iniciando um servidor http simples, com uma função dinamica que 
 #<HUNCHENTOOT:EASY-ACCEPTOR (host *, port 4242)>
 #+end_example
 
-Como este commando iniciamos o sevidor na porta 4242 no localhost(que é ip do local do nosso computador), se você iniciou, acesse por [[http://localhost:4242]], esta porta podemos escolher, mas devemos ficar atento com as portas já utilizados pelo SO e outra aplicações Web. O numero da porta possui um intervalos de (0 à ${2^10}$. Você pode vê as opções [[https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers][aqui]].
+Como este commando iniciamos o sevidor na porta 4242 no localhost(que é ip do local do nosso computador), se você iniciou, acesse por [[http://localhost:4242]], esta porta podemos escolher, mas devemos ficar atento com as portas já utilizados pelo SO e outra aplicações Web. O numero da porta possui um intervalos de (0 à $2^{10}$). Você pode vê as opções [[https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers][aqui]].
 
 
 Quando acessar o link pelo browser veremos isto no browser:
 
-[[./localhost.png][Web Server]]
+#+CAPTION: Print Check Browser.
+[[./imagens/localhost.png][Web Server]]
 
 E isso no terminal:
 
@@ -270,9 +271,39 @@ E isso no terminal:
 127.0.0.1 - [2022-03-31 02:04:52] "GET / HTTP/1.1" 200 393 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36"
 #+end_example
 
-** GET hello - programa;
+** GET Simples - Hello World;
 
-Então programos o hello world pelo método GET:
+Então programos o hello world pelo método GET, então escrevemos:
+
+#+begin_src
+(ql:quickload :hunchentoot)
+
+(defparameter *web* (make-instance 'hunchentoot:easy-acceptor
+                                    :port 4242))
+
+(hunchentoot:define-easy-handler (hello :uri "/hello") (nome)
+  (setf (hunchentoot:content-type*) "text/plain")
+  (format nil "Hello, ~a!" (if (null nome) "World" nome)))
+
+(hunchentoot:start *web*)
+
+#+end_src
+
+Podemos visualizar no browser o resultado no link: [[http://localhost:4242/hello?nome=pedro]], com meu nome.
+
+[[./imagens/name_hello.png]]
+
+
+Sem nome in [[https://localhost:4242/hello]]
+
+[[./imagens/world_hello.png]]
+
+
+Para desativar o servidor basta digitar:
+
+#+begin_src
+(hunchentoot:stop *web*)
+#+end_src
 
 ** Lisp Hunchentoot Avancado
 
