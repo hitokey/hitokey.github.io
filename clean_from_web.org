@@ -4,11 +4,11 @@
 #+SETUPFILE: ../org-html-themes/org/theme-bigblow.setup
 #+LANGUAGE: pt_BR
 
-
-* Clean
+* Sistema Web.
+** Clean
   Clean e Lisp são linguagens funcionais.
 
-* Instalação
+** Instalação
   A instalação é bastante simples, por iremos já utiliza-se de uma versão já pré-compilada. Sendo assim não será preciso configuramos muita coisa. Além disso como queremos criar um páginas Web para servidores linux, iremos baixar a versão clean-bundle-complete-linux-x64-latest.tgz. Você consiguirá acessando a seguinte página do [[https://wiki.clean.cs.ru.nl/Download_Clean][Clean]].
 
 ** Configuração.
@@ -28,7 +28,7 @@ Com o directório clean criado, vamos então configura no arquivo ~/.bashrc as seg
 # echo "export PATH=$PATH:$CLEAN_HOME/bin >> ~/.bashrc
 #+end_src
 
-* Simples programa em Clean para Web.
+** Simples programa em Clean para Web.
 
   Neste casso, o programa que iremos aborda são para web servering, com pro exemplo o apache, ningx etc. Servidores que gerencia todas as conexão e requisições necessárias para uma comunicação web. Tais programas chamamos de Common Gateway Inferface (CGI). Recomendo o excelente livro: [[https://docstore.mik.ua/orelly/linux/cgi/index.htm][CGI Programming with perl]], aonde ele aborta tais methodo. Então, vamos ao program.
 
@@ -77,7 +77,7 @@ Discutiremos um pouco sobre o programa. O codigo é bastante simples, basicamente
 
 Recomendo que leia o [[https://docstore.mik.ua/orelly/linux/cgi/ch03_02.htm][Enviroment Variables]] e [[https://docstore.mik.ua/orelly/linux/cgi/ch02_01.htm][HTTP]].
 
-* Mas Falaremos um pouco de LISP.
+** Mas Falaremos um pouco de LISP.
 
   Estou abortando o lisp nesta documento porque objetivo maior é interligamos as linguagem LISP com a linguagem CLEAN. Aonde deixamos que o Lisp gerencie o Servidor e usamos programas já escrito nele CLEAN, nem a necessidade de reescremos o mesmo.
 
@@ -206,7 +206,7 @@ NIL
 
 *** Clean Foreign
 
-* Lisp Hunchentoot Básico
+** Lisp Hunchentoot Básico
     
 O sistema hunchentoot é um interface de rede com ferramentas para construções de sites dinamicos. Ele funciona com um servidor web independente, ele é capaz de conexão HTTP/1.1 chunking, conexão persistentes e SSL. Além disso ele fornece diversos recurso de manipulação automatica de sessão, registro etc. Ou seja, ele tem além dessa funções muitas outras, mas caso queira saber de todas visite o site do [[http://edicl.github.io/hunchentoot/][hunchentoot]].
 
@@ -276,7 +276,7 @@ E isso no terminal:
 
 Então programos o hello world pelo método GET:
 
-* Lisp Hunchentoot Avancado
+** Lisp Hunchentoot Avancado
 
   Vamos fazer alguma applicação mais complexa, que são o seguintes pontos:
 

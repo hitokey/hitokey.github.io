@@ -11,6 +11,5 @@
 
 Um teste inicial para o Blog atráveis do github, escrevi o algoritmos fibonacci por recursão e como podemos otimizar atráveis de acumuladores.
 
-
 ** [[http://hitokey.github.io/clean_from_web.html][Clean and Lisp - Muitas confusão no Web Server.]]
 Criando um Sistema serverless com o Hunchentoot que rodem Clean GCI e outras linguagens.
