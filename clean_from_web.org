@@ -1,4 +1,4 @@
-#+TITLE: [[https://hitokey.github.io/][Clean + LISP from Web System.]]
+#+TITLE: Clean + LISP from Web System
 #+AUTHOR: Pedro Fernandes
 #+DATE: <2022-03-24 Thu>
 #+SETUPFILE: ../org-html-themes/org/theme-bigblow.setup
@@ -103,7 +103,6 @@ Recomendo que leia o [[https://docstore.mik.ua/orelly/linux/cgi/ch03_02.htm][Env
 
 Neste caso, vale observar que diferente do clean está versão do código e impletado em tempo de execução, ou seja, está no formato script.
 
-
 ** Lisp control Clean por Object System Interface
    Primeira, uma alternativa para controle do clean programa é usamos o controle de sistema apartir do SO(Sistema Operacional), dessa maneira codificado.
 
@@ -198,7 +197,6 @@ Vemos que conseguimos reproduzir no lisp a resposta do clean, vejamos o resultad
 <html><body><h1>Hello: none</h1></body></html>
 NIL
 #+end_example
-
 
 ** Lisp and Clean Foreign Function Interface
 

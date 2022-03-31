@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR" xml:lang="pt_BR">
 <head>
-<!-- 2022-03-31 Thu 03:29 -->
+<!-- 2022-03-31 Thu 03:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title><a href="https://hitokey.github.io/">Clean + LISP from Web System.</a></title>
+<title>Clean + LISP from Web System</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Pedro Fernandes" />
 <style type="text/css">
@@ -262,41 +262,41 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title"><a href="https://hitokey.github.io/">Clean + LISP from Web System.</a></h1>
+<h1 class="title">Clean + LISP from Web System</h1>
 <div id="table-of-contents">
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge1a9341">1. Sistema Web.</a>
+<li><a href="#org1aeec8d">1. Sistema Web.</a>
 <ul>
-<li><a href="#orgb21cddd">1.1. Clean</a></li>
-<li><a href="#org458e97f">1.2. Instalação</a></li>
-<li><a href="#orge7b125c">1.3. Configuração.</a></li>
-<li><a href="#org714edc5">1.4. Simples programa em Clean para Web.</a></li>
-<li><a href="#org7ac6aa3">1.5. Mas Falaremos um pouco de LISP.</a></li>
-<li><a href="#org20a40f7">1.6. Lisp GGI.</a></li>
-<li><a href="#org771bb34">1.7. Lisp control Clean por Object System Interface</a></li>
-<li><a href="#orgd7579e9">1.8. Lisp and Clean Foreign Function Interface</a>
+<li><a href="#org3550d3b">1.1. Clean</a></li>
+<li><a href="#org527166f">1.2. Instalação</a></li>
+<li><a href="#orgc359b59">1.3. Configuração.</a></li>
+<li><a href="#org202a05c">1.4. Simples programa em Clean para Web.</a></li>
+<li><a href="#org8ad80d3">1.5. Mas Falaremos um pouco de LISP.</a></li>
+<li><a href="#org3aeb6f6">1.6. Lisp GGI.</a></li>
+<li><a href="#orgc9e6f4e">1.7. Lisp control Clean por Object System Interface</a></li>
+<li><a href="#org83f4831">1.8. Lisp and Clean Foreign Function Interface</a>
 <ul>
-<li><a href="#orgfffbb5c">1.8.1. Clean Foreign</a></li>
+<li><a href="#orgdbe60e1">1.8.1. Clean Foreign</a></li>
 </ul>
 </li>
-<li><a href="#org3b38f7b">1.9. Lisp Hunchentoot Básico</a></li>
-<li><a href="#org3f2a8ca">1.10. GET hello - programa;</a></li>
-<li><a href="#org966a4f7">1.11. Lisp Hunchentoot Avancado</a></li>
+<li><a href="#orgc25648e">1.9. Lisp Hunchentoot Básico</a></li>
+<li><a href="#orgbfd4b42">1.10. GET hello - programa;</a></li>
+<li><a href="#org2eec93c">1.11. Lisp Hunchentoot Avancado</a></li>
 </ul>
 </li>
-<li><a href="#orga254b8b">2. Home</a></li>
+<li><a href="#org786caae">2. Home</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orge1a9341" class="outline-2">
-<h2 id="orge1a9341"><span class="section-number-2">1</span> Sistema Web.</h2>
+<div id="outline-container-org1aeec8d" class="outline-2">
+<h2 id="org1aeec8d"><span class="section-number-2">1</span> Sistema Web.</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgb21cddd" class="outline-3">
-<h3 id="orgb21cddd"><span class="section-number-3">1.1</span> Clean</h3>
+<div id="outline-container-org3550d3b" class="outline-3">
+<h3 id="org3550d3b"><span class="section-number-3">1.1</span> Clean</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Clean e Lisp são linguagens funcionais.
@@ -304,8 +304,8 @@ Clean e Lisp são linguagens funcionais.
 </div>
 </div>
 
-<div id="outline-container-org458e97f" class="outline-3">
-<h3 id="org458e97f"><span class="section-number-3">1.2</span> Instalação</h3>
+<div id="outline-container-org527166f" class="outline-3">
+<h3 id="org527166f"><span class="section-number-3">1.2</span> Instalação</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 A instalação é bastante simples, por iremos já utiliza-se de uma versão já pré-compilada. Sendo assim não será preciso configuramos muita coisa. Além disso como queremos criar um páginas Web para servidores linux, iremos baixar a versão clean-bundle-complete-linux-x64-latest.tgz. Você consiguirá acessando a seguinte página do <a href="https://wiki.clean.cs.ru.nl/Download_Clean">Clean</a>.
@@ -313,8 +313,8 @@ A instalação é bastante simples, por iremos já utiliza-se de uma versão já
 </div>
 </div>
 
-<div id="outline-container-orge7b125c" class="outline-3">
-<h3 id="orge7b125c"><span class="section-number-3">1.3</span> Configuração.</h3>
+<div id="outline-container-orgc359b59" class="outline-3">
+<h3 id="orgc359b59"><span class="section-number-3">1.3</span> Configuração.</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Depois de baixar o arquivo, pelo terminal fazemos as seguintes configuração.
@@ -337,8 +337,8 @@ Com o directório clean criado, vamos então configura no arquivo ~/.bashrc as s
 </div>
 </div>
 
-<div id="outline-container-org714edc5" class="outline-3">
-<h3 id="org714edc5"><span class="section-number-3">1.4</span> Simples programa em Clean para Web.</h3>
+<div id="outline-container-org202a05c" class="outline-3">
+<h3 id="org202a05c"><span class="section-number-3">1.4</span> Simples programa em Clean para Web.</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Neste casso, o programa que iremos aborda são para web servering, com pro exemplo o apache, ningx etc. Servidores que gerencia todas as conexão e requisições necessárias para uma comunicação web. Tais programas chamamos de Common Gateway Inferface (CGI). Recomendo o excelente livro: <a href="https://docstore.mik.ua/orelly/linux/cgi/index.htm">CGI Programming with perl</a>, aonde ele aborta tais methodo. Então, vamos ao program.
@@ -397,8 +397,8 @@ Recomendo que leia o <a href="https://docstore.mik.ua/orelly/linux/cgi/ch03_02.h
 </div>
 </div>
 
-<div id="outline-container-org7ac6aa3" class="outline-3">
-<h3 id="org7ac6aa3"><span class="section-number-3">1.5</span> Mas Falaremos um pouco de LISP.</h3>
+<div id="outline-container-org8ad80d3" class="outline-3">
+<h3 id="org8ad80d3"><span class="section-number-3">1.5</span> Mas Falaremos um pouco de LISP.</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 Estou abortando o lisp nesta documento porque objetivo maior é interligamos as linguagem LISP com a linguagem CLEAN. Aonde deixamos que o Lisp gerencie o Servidor e usamos programas já escrito nele CLEAN, nem a necessidade de reescremos o mesmo.
@@ -410,8 +410,8 @@ Obs.: Esta ideia é apenas para um treinamento e educacional, não haverá um co
 </div>
 </div>
 
-<div id="outline-container-org20a40f7" class="outline-3">
-<h3 id="org20a40f7"><span class="section-number-3">1.6</span> Lisp GGI.</h3>
+<div id="outline-container-org3aeb6f6" class="outline-3">
+<h3 id="org3aeb6f6"><span class="section-number-3">1.6</span> Lisp GGI.</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 Podemos também fazer um aplicação GUI com o lisp, não é nosso objetivo, mas podemos observar.
@@ -438,9 +438,8 @@ Neste caso, vale observar que diferente do clean está versão do código e impl
 </div>
 </div>
 
-
-<div id="outline-container-org771bb34" class="outline-3">
-<h3 id="org771bb34"><span class="section-number-3">1.7</span> Lisp control Clean por Object System Interface</h3>
+<div id="outline-container-orgc9e6f4e" class="outline-3">
+<h3 id="orgc9e6f4e"><span class="section-number-3">1.7</span> Lisp control Clean por Object System Interface</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 Primeira, uma alternativa para controle do clean programa é usamos o controle de sistema apartir do SO(Sistema Operacional), dessa maneira codificado.
@@ -555,22 +554,21 @@ NIL
 </div>
 </div>
 
-
-<div id="outline-container-orgd7579e9" class="outline-3">
-<h3 id="orgd7579e9"><span class="section-number-3">1.8</span> Lisp and Clean Foreign Function Interface</h3>
+<div id="outline-container-org83f4831" class="outline-3">
+<h3 id="org83f4831"><span class="section-number-3">1.8</span> Lisp and Clean Foreign Function Interface</h3>
 <div class="outline-text-3" id="text-1-8">
 <p>
 Vamos começa usando function do clean no lisp. Então quando olhamos no manual do cleam, vejamos como export seu código do clean para serem usado em outra linguagem, que pode ser n-linguagem, inclusive o python, mas iremos utilizar a código clean no Lisp.
 </p>
 </div>
 
-<div id="outline-container-orgfffbb5c" class="outline-4">
-<h4 id="orgfffbb5c"><span class="section-number-4">1.8.1</span> Clean Foreign</h4>
+<div id="outline-container-orgdbe60e1" class="outline-4">
+<h4 id="orgdbe60e1"><span class="section-number-4">1.8.1</span> Clean Foreign</h4>
 </div>
 </div>
 
-<div id="outline-container-org3b38f7b" class="outline-3">
-<h3 id="org3b38f7b"><span class="section-number-3">1.9</span> Lisp Hunchentoot Básico</h3>
+<div id="outline-container-orgc25648e" class="outline-3">
+<h3 id="orgc25648e"><span class="section-number-3">1.9</span> Lisp Hunchentoot Básico</h3>
 <div class="outline-text-3" id="text-1-9">
 <p>
 O sistema hunchentoot é um interface de rede com ferramentas para construções de sites dinamicos. Ele funciona com um servidor web independente, ele é capaz de conexão HTTP/1.1 chunking, conexão persistentes e SSL. Além disso ele fornece diversos recurso de manipulação automatica de sessão, registro etc. Ou seja, ele tem além dessa funções muitas outras, mas caso queira saber de todas visite o site do <a href="http://edicl.github.io/hunchentoot/">hunchentoot</a>.
@@ -655,8 +653,8 @@ E isso no terminal:
 </div>
 </div>
 
-<div id="outline-container-org3f2a8ca" class="outline-3">
-<h3 id="org3f2a8ca"><span class="section-number-3">1.10</span> GET hello - programa;</h3>
+<div id="outline-container-orgbfd4b42" class="outline-3">
+<h3 id="orgbfd4b42"><span class="section-number-3">1.10</span> GET hello - programa;</h3>
 <div class="outline-text-3" id="text-1-10">
 <p>
 Então programos o hello world pelo método GET:
@@ -664,8 +662,8 @@ Então programos o hello world pelo método GET:
 </div>
 </div>
 
-<div id="outline-container-org966a4f7" class="outline-3">
-<h3 id="org966a4f7"><span class="section-number-3">1.11</span> Lisp Hunchentoot Avancado</h3>
+<div id="outline-container-org2eec93c" class="outline-3">
+<h3 id="org2eec93c"><span class="section-number-3">1.11</span> Lisp Hunchentoot Avancado</h3>
 <div class="outline-text-3" id="text-1-11">
 <p>
 Vamos fazer alguma applicação mais complexa, que são o seguintes pontos:
@@ -684,8 +682,8 @@ Vamos fazer alguma applicação mais complexa, que são o seguintes pontos:
 </div>
 </div>
 
-<div id="outline-container-orga254b8b" class="outline-2">
-<h2 id="orga254b8b"><span class="section-number-2">2</span> <a href="https://hitokey.github.io/">Home</a></h2>
+<div id="outline-container-org786caae" class="outline-2">
+<h2 id="org786caae"><span class="section-number-2">2</span> <a href="https://hitokey.github.io/">Home</a></h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Minha Página (My Page): <a href="https://hitokey.github.io/">link</a>
@@ -696,7 +694,7 @@ Minha Página (My Page): <a href="https://hitokey.github.io/">link</a>
 <div id="postamble" class="status">
 <p class="date">Data: 2022-03-24 Thu 00:00</p>
 <p class="author">Autor: Pedro Fernandes</p>
-<p class="date">Created: 2022-03-31 Thu 03:29</p>
+<p class="date">Created: 2022-03-31 Thu 03:36</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
