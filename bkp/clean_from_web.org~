@@ -1,0 +1,289 @@
+#+TITLE: Clean + LISP from Web System.
+#+AUTHOR: Pedro Fernandes
+#+DATE: <2022-03-24 Thu>
+
+
+* Clean
+  Clean e Lisp são linguagens funcionais.
+
+* Instalação
+  A instalação é bastante simples, por iremos já utiliza-se de uma versão já pré-compilada. Sendo assim não será preciso configuramos muita coisa. Além disso como queremos criar um páginas Web para servidores linux, iremos baixar a versão clean-bundle-complete-linux-x64-latest.tgz. Você consiguirá acessando a seguinte página do [[https://wiki.clean.cs.ru.nl/Download_Clean][Clean]].
+
+** Configuração.
+
+Depois de baixar o arquivo, pelo terminal fazemos as seguintes configuração.
+
+#+begin_src
+# mv Download/clean-bundle-complete-linux-x64-latest.tgz ~/
+# tar xvf clean-bundle-complete-linux-x64-latest.tgz .
+# mv clean-bundle-complete clean/
+#+end_src
+
+Com o directório clean criado, vamos então configura no arquivo ~/.bashrc as seguintes variáveis.
+
+#+begin_src
+# echo "export CLEAN_HOME=~/clean >> ~/.bashrc
+# echo "export PATH=$PATH:$CLEAN_HOME/bin >> ~/.bashrc
+#+end_src
+
+* Simples programa em Clean para Web.
+
+  Neste casso, o programa que iremos aborda são para web servering, com pro exemplo o apache, ningx etc. Servidores que gerencia todas as conexão e requisições necessárias para uma comunicação web. Tais programas chamamos de Common Gateway Inferface (CGI). Recomendo o excelente livro: [[https://docstore.mik.ua/orelly/linux/cgi/index.htm][CGI Programming with perl]], aonde ele aborta tais methodo. Então, vamos ao program.
+
+#+CAPTION: hello-web.icl
+#+begin_src
+module printenv;
+
+import StdEnv, ArgEnv;
+
+Start w
+  # (cgi, w) = stdio w;
+  # ctype= "Content-Type:text/html;charset=utf-8";
+  # cgi= fwrites ctype cgi;
+  # cgi= fwrites({toChar 13, toChar 10}+++"\n") cgi;
+  # cgi= fwrites "<html>\n" cgi;
+  # cgi= fwrites "<body>\n" cgi;
+  # cgi= fwrites "<h1>Hello: " cgi;
+  # xx= ans (getEnvironmentVariable "QUERY_STRING");
+  # cgi= fwrites (xx+++"</h1>\n</body>\n</html>\n") cgi;
+  = cgi;
+where {
+   ans EnvironmentVariableUndefined="none";
+   ans (EnvironmentVariable v)= v; }
+#+end_src
+
+No Clean precisamos antes de rodar nosso program complilar nosso código, iremos usar um parte importe dos arquivos já baixados, que é o ArgEnv, o mesmo deverá está no directorio lib/ dentro do directorio do clean baixado. Então, tente vê se caso receba um erro, pode ser que esteja faltando esta library. Vejamos, como complilamos este código.
+
+#+begin_src sh
+clm -b -nt -nr hello-web -O hello.cgi
+./hello.cgi
+#+end_src
+
+Tal program retorna quando rodado no localmente.
+
+#+begin_export html
+Content-Type:text/html;charset=utf-8
+
+<html>
+<body>
+<h1>Hello: none</h1>
+</body>
+</html>
+#+end_export
+
+Discutiremos um pouco sobre o programa. O codigo é bastante simples, basicamente ele concatena string no formato response html, com um variável do servidor que é a QUERY_STRING, tal variável amazena um parte do URL. Nesta parte normalmente poderá ser passado alguma key e valor, por exemplo, vejamos a URL:
+
+Recomendo que leia o [[https://docstore.mik.ua/orelly/linux/cgi/ch03_02.htm][Enviroment Variables]] e [[https://docstore.mik.ua/orelly/linux/cgi/ch02_01.htm][HTTP]].
+
+* Mas Falaremos um pouco de LISP.
+
+  Estou abortando o lisp nesta documento porque objetivo maior é interligamos as linguagem LISP com a linguagem CLEAN. Aonde deixamos que o Lisp gerencie o Servidor e usamos programas já escrito nele CLEAN, nem a necessidade de reescremos o mesmo.
+
+  Obs.: Esta ideia é apenas para um treinamento e educacional, não haverá um comparação desempenho ou uma tentativa de explicação do porque fazemos isto e não optamos por simples programa no flask + gunicorn do python, ou outra linguagem popular do momento em que estiver lendo este documento.
+
+** Lisp GGI.
+   Podemos também fazer um aplicação GUI com o lisp, não é nosso objetivo, mas podemos observar.
+
+#+begin_src
+#!/usr/bin/sbcl --script
+
+(format t "Content-type: text/html~%~%")
+
+(format t
+" <html>
+   <body>
+    <h1>Hello, ~a</h1>
+   </body>
+  </html>"
+(getenv 'QUERY_STRING)
+)
+#+end_src
+
+Neste caso, vale observar que diferente do clean está versão do código e impletado em tempo de execução, ou seja, está no formato script.
+
+
+** Lisp control Clean por Object System Interface
+   Primeira, uma alternativa para controle do clean programa é usamos o controle de sistema apartir do SO(Sistema Operacional), dessa maneira codificado.
+
+#+CAPTION: Basic program
+#+begin_src
+(sb-ext:run-program "./hello.cgi" nil :output *standard-output*)
+#+end_src
+
+Temos o resultado:
+#+begin_example
+Hello,World!
+#<SB-IMPL::PROCESS :EXITED 0>
+#+end_example
+
+Usamos a função run-program possui um variação dependendo do common lisp que esteja executado, no sbcl o package sb-ext, já por exemplo ecl, o run-program está no package *ext* apenas, neste caso a estrutura é a mesma, em todo caso sempre der uma olhada no manual do seu imterpetador, mas não se preocupe muito, existem esta diferença mas normalmente elas são voltada mais para pacotes extras de cada imterpetador, mas o restante todos os interpetador que seguem a padrão ANSI, contando que estamos falando se Common Lisp, não de Lisp. Que são o lisp do sbcl e ecl. Vejamos o OSI do ecl.
+
+#+begin_src
+(ext:run-program "./hello" nil :output :stream)
+#+end_src
+
+#+begin_example
+Hello,World!
+
+#<output stream "FD-STREAM" 0x7fffc8ba2e60>
+0
+#S(EXT:EXTERNAL-PROCESS :PID NIL :INPUT #<output stream "FD-STREAM" 0x7fffc8ba2e60> :OUTPUT NIL :ERROR-STREAM #<input stream "FD-STREAM" 0x7fffc8ba2dc0> :%STATUS :EXITED :%CODE 0 :%LOCK #<lock (nonrecursive) 0x7fffc8927300> :%PIPE #<process 0x7fffc88fcf80>)
+#+end_example
+
+Vemos que o retorno no ecl, são três valores, podemos que podemos processá-los como quisermos, exemplo:
+
+#+begin_src
+(multiple-value-bind (x y z) (ext:run-program "./hello" nil :output t) z))
+#+end_src
+
+Neste casso apenas pegamos o z, que o processo.
+#+begin_example
+#S(EXT:EXTERNAL-PROCESS :PID NIL :INPUT #<output stream "FD-STREAM" 0x7fffea8ac8c0> :OUTPUT NIL :ERROR-STREAM #<input stream "FD-STREAM" 0x7fffea8ac820> :%STATUS :EXITED :%CODE 0 :%LOCK #<lock (nonrecursive) 0x7fffea3bdbd0> :%PIPE #<process 0x7fffea464880>)
+#+end_example
+
+De qualquer forma o common lisp permite que controle qual será a função que iremos chamar verificado a versão do interpetador, por exemplo:
+
+#+begin_src
+(defun my-run (program argv)
+     (declare (type string program))
+     (declare (type list argv))
+   (let ((process 
+	  (or #+sbcl (sb-ext:process-output
+                        (sb-ext:run-program program argv :output :stream))
+	      #+ecl (ext:run-program program argv :output :stream)) ))
+     (loop for line = (read-line process nil nil)
+	 while line do (format t "~a" line)) )) 
+
+
+(my-run "./hello" nil)
+#+end_src
+
+#+begin_example
+Hello,World!
+NIL
+#+end_example
+
+Então, com este processo podemos por exemplo controlar produtor de audio, por exemplo, vejamos.
+
+#+CAPTION: Linux
+#+begin_src
+(sb-ext:run-program "play" '("/home/pedro/sound/sound.mp3")
+                            :output nil :wait nil)
+#+end_src
+
+*Obs.*: é necessario ter o sox instalado, instalar: sudo apt install sox
+
+#+CAPTION: Windows
+#+begin_src
+(sb-ext:run-program "cmd.exe" '("/C" "start" "D:/Sound/sound.mp3")
+                                :search t :windows :hide)
+#+end_src
+
+#+CAPTION: Linux in Windows (WSL)
+#+begin_src lisp
+(sb-ext:run-program "cmd.exe" '("/C" "start" "D:/Sound/sound.mp3")
+                               :search t )                   
+#+end_src
+
+Vemos que podemos controlar varios process entre outro com o lisp, então uma possibilidade é controla o programa compilado em clean, afinal o programa estará em formato *elf*, vamos então testa-lo, usamos o programa my-run, escrito anteriormente.
+
+#+begin_src
+(my-run "./hello.cgi" nil)
+#+end_src
+
+Vemos que conseguimos reproduzir no lisp a resposta do clean, vejamos o resultado abaixo.
+#+begin_example
+<html><body><h1>Hello: none</h1></body></html>
+NIL
+#+end_example
+
+
+** Lisp and Clean Foreign Function Interface
+
+   Vamos começa usando function do clean no lisp. Então quando olhamos no manual do cleam, vejamos como export seu código do clean para serem usado em outra linguagem, que pode ser n-linguagem, inclusive o python, mas iremos utilizar a código clean no Lisp.
+
+*** Clean Foreign
+
+* Lisp Hunchentoot Básico
+    
+O sistema hunchentoot é um interface de rede com ferramentas para construções de sites dinamicos. Ele funciona com um servidor web independente, ele é capaz de conexão HTTP/1.1 chunking, conexão persistentes e SSL. Além disso ele fornece diversos recurso de manipulação automatica de sessão, registro etc. Ou seja, ele tem além dessa funções muitas outras, mas caso queira saber de todas visite o site do [[http://edicl.github.io/hunchentoot/][hunchentoot]].
+
+Então começamos o que interessa, construir uma aplicação web-server em lisp. Começamos com algo simples, um helloword
+
+#+begin_src
+(ql:quickload :hunchentoot)
+#+end_src
+
+#+begin_example
+
+(ql:quickload :hunchentoot)
+To load "hunchentoot":
+  Load 1 ASDF system:
+    hunchentoot
+; Loading "hunchentoot"
+
+(:HUNCHENTOOT)
+#+end_example
+
+Como iremos precisar do hunchentoot, podemos usar o quicklisp para carrega-lo, caso seja a primeira vez fazendo este commando, o sistema irá apresentar mais infomações com um semelhante a isto:
+
+#+begin_example
+; Loading "hunchentoot"
+[package chunga]..................................
+[package cl-base64]...............................
+[package cl-fad]..................................
+[package path]....................................
+[package cl+ssl/config]...........................
+[package usocket].................................
+[package cl+ssl]..................................
+[package md5].....................................
+[package rfc2388].................................
+[package trivial-backtrace].......................
+[package url-rewrite].............................
+[package hunchentoot]..........................
+(:HUNCHENTOOT)
+#+end_example
+
+Como hunchentoot em vale ressaltar, que qualquer infomação dentro desse pacote terãom o sufixo hunchentoot:, caso queira evitar isto basta usar *in-package*, mais informaçãoes [[https://www.tutorialspoint.com/lisp/lisp_packages.htm][link]].
+
+Então começamos iniciando um servidor http simples, com uma função dinamica que pegar a query_string é diz um Hello, caso não term a query_string, diz hello, world.
+
+#+CAPTION: Start Easy Acceptor
+#+begin_src
+(hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 4242))
+#+end_src
+
+#+begin_example
+#<HUNCHENTOOT:EASY-ACCEPTOR (host *, port 4242)>
+#+end_example
+
+Como este commando iniciamos o sevidor na porta 4242 no localhost(que é ip do local do nosso computador), se você iniciou, acesse por [[http://localhost:4242]], esta porta podemos escolher, mas devemos ficar atento com as portas já utilizados pelo SO e outra aplicações Web. O numero da porta possui um intervalos de (0 à ${2^10}$. Você pode vê as opções [[https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers][aqui]].
+
+
+Quando acessar o link pelo browser veremos isto no browser:
+
+[[./localhost.png][Web Server]]
+
+E isso no terminal:
+
+#+begin_example
+127.0.0.1 - [2022-03-31 02:04:52] "GET / HTTP/1.1" 200 393 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36"
+#+end_example
+
+** GET hello - programa;
+
+Então programos o hello world pelo método GET:
+
+
+* Lisp Hunchentoot Avancado
+
+  Vamos fazer alguma applicação mais complexa, que são o seguintes pontos:
+
+  - GET/POST REQUEST
+  - HTTP HEADERS
+  - Input/Output JSON
+  - Input/Output RAW BYTES INFOMATION
+  - Authentification
+  - CGI script
+  - Database Controle.
+
