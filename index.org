@@ -1,13 +1,16 @@
 #+AUTHOR: Pedro Fernandes
 #+DATE: <2021-03-09 ter>
-#+TITLE: FREE TIME
+#+TITLE: Free Time from learning
 #+SETUPFILE: ../org-html-themes/org/theme-bigblow.setup
 #+LANGUAGE: pt_BR
 
 
-* [[http://hitokey.github.io/fibonacci.html][Fibonacci - Recursão e Acumuladores]]
+* Blog de Computação
+
+** [[http://hitokey.github.io/fibonacci.html][Fibonacci - Recursão e Acumuladores]]
+
 Um teste inicial para o Blog atráveis do github, escrevi o algoritmos fibonacci por recursão e como podemos otimizar atráveis de acumuladores.
 
 
-* [[http://hitokey.github.io/clean_from_web.html][Clean and Lisp - Muitas confusão no Web Server.]]
+** [[http://hitokey.github.io/clean_from_web.html][Clean and Lisp - Muitas confusão no Web Server.]]
 Criando um Sistema serverless com o Hunchentoot que rodem Clean GCI e outras linguagens.
