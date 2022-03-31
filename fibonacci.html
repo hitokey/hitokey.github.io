@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR" xml:lang="pt_BR">
 <head>
-<!-- 2021-03-09 ter 22:33 -->
+<!-- 2022-03-31 Thu 03:16 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Simples programa de Fibonacci</title>
@@ -267,26 +267,26 @@ for the JavaScript code in this tag.
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org90a8783">1. Introdução</a>
+<li><a href="#org8aa8aff">1. Introdução</a>
 <ul>
-<li><a href="#org31cf3b0">1.1. Fibonacci</a></li>
+<li><a href="#org9ec5c4f">1.1. Fibonacci</a></li>
 </ul>
 </li>
-<li><a href="#orge5440dc">2. Home</a></li>
+<li><a href="#orgaef4d04">2. Home</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org90a8783" class="outline-2">
-<h2 id="org90a8783"><span class="section-number-2">1</span> Introdução</h2>
+<div id="outline-container-org8aa8aff" class="outline-2">
+<h2 id="org8aa8aff"><span class="section-number-2">1</span> Introdução</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Estou escrevendo este documento para testar o github blog, estão não espere nada demais nesta página.
 </p>
 </div>
 
-<div id="outline-container-org31cf3b0" class="outline-3">
-<h3 id="org31cf3b0"><span class="section-number-3">1.1</span> Fibonacci</h3>
+<div id="outline-container-org9ec5c4f" class="outline-3">
+<h3 id="org9ec5c4f"><span class="section-number-3">1.1</span> Fibonacci</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Fibonacci é série numerica que descreve a seguinte senquencia <b>1,1,2,3,4,5,8,13&#x2026;</b>, dessa maneira Leonardo Pisa descreve o crescimento pela seguiente fórmula: \(F_n=F_{n-1}+F_{n-2}\), com a condição inicial \(f(0)=0\) e \(f(1)=1\), então:
@@ -297,13 +297,13 @@ Agora descrevemos em common lisp. Obs.: eu implementei no elisp em um emacs-wind
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #b4fa70;">require</span> '<span style="color: #e9b2e3;">cl</span>)
+<pre class="src src-elisp">(<span style="color: #20b2aa; font-weight: bold;">require</span> '<span style="color: #1e90ff;">cl</span>)
 
-(<span style="color: #b4fa70;">defun</span> <span style="color: #fce94f;">fib</span>(n)
-   (<span style="color: #b4fa70;">if</span> (&lt;= n 2) 1
+(<span style="color: #20b2aa; font-weight: bold;">defun</span> <span style="color: #00ff7f;">fib</span>(n)
+   (<span style="color: #20b2aa; font-weight: bold;">if</span> (&lt;= n 2) 1
          (+ (fib (- n 1)) (fib (- n 2)) )))
 
-(message <span style="color: #e9b96e;">"Fib(%d):= %d"</span> 5 (fib 8))
+(message <span style="color: #ffa07a;">"Fib(%d):= %d"</span> 5 (fib 8))
 </pre>
 </div>
 
@@ -317,7 +317,7 @@ Eu quero verificar o tempo de execução da função fib que implementamos no el
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #b4fa70;">benchmark-run</span> 1 (fib 40))
+<pre class="src src-elisp">(<span style="color: #20b2aa; font-weight: bold;">benchmark-run</span> 1 (fib 40))
 </pre>
 </div>
 
@@ -331,7 +331,7 @@ Eu quero verificar o tempo de execução da função fib que implementamos no el
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #b4fa70;">benchmark-run-compiled</span> 1 (fib 40))
+<pre class="src src-elisp">(<span style="color: #20b2aa; font-weight: bold;">benchmark-run-compiled</span> 1 (fib 40))
 </pre>
 </div>
 
@@ -349,15 +349,15 @@ Podemos mudar um pouco a nossa função fibonacci, porque nesta função utiliza
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #b4fa70;">defun</span> <span style="color: #fce94f;">fib-acc</span>(n prev acc)
-  (<span style="color: #b4fa70;">if</span> (&lt;= n 0) acc 
+<pre class="src src-elisp">(<span style="color: #20b2aa; font-weight: bold;">defun</span> <span style="color: #00ff7f;">fib-acc</span>(n prev acc)
+  (<span style="color: #20b2aa; font-weight: bold;">if</span> (&lt;= n 0) acc 
      (fib-acc (- n 1) acc (+ prev acc))))
 
-(<span style="color: #b4fa70;">defun</span> <span style="color: #fce94f;">fib</span>(n)
-  (<span style="color: #b4fa70;">if</span> (&lt;= n 1) n
+(<span style="color: #20b2aa; font-weight: bold;">defun</span> <span style="color: #00ff7f;">fib</span>(n)
+  (<span style="color: #20b2aa; font-weight: bold;">if</span> (&lt;= n 1) n
     (fib-acc n 1 0)))
 
-(funcall (<span style="color: #b4fa70;">lambda</span> (n) (message <span style="color: #e9b96e;">"Fib(%d): %d"</span> n (fib n))) 40)
+(funcall (<span style="color: #20b2aa; font-weight: bold;">lambda</span> (n) (message <span style="color: #ffa07a;">"Fib(%d): %d"</span> n (fib n))) 40)
 </pre>
 </div>
 
@@ -367,7 +367,7 @@ Fib(40): 102334155
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #b4fa70;">benchmark-run-compiled</span> 1 (fib 40))
+<pre class="src src-elisp">(<span style="color: #20b2aa; font-weight: bold;">benchmark-run-compiled</span> 1 (fib 40))
 </pre>
 </div>
 
@@ -387,8 +387,8 @@ Vemos que podemos otimizar a recursão utilizando acumuladores.
 </div>
 </div>
 
-<div id="outline-container-orge5440dc" class="outline-2">
-<h2 id="orge5440dc"><span class="section-number-2">2</span> <a href="https://hitokey.github.io/">Home</a></h2>
+<div id="outline-container-orgaef4d04" class="outline-2">
+<h2 id="orgaef4d04"><span class="section-number-2">2</span> <a href="https://hitokey.github.io/">Home</a></h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Minha Página (My Page): <a href="https://hitokey.github.io/">link</a>
@@ -397,9 +397,9 @@ Minha Página (My Page): <a href="https://hitokey.github.io/">link</a>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Data: 2021-03-09 ter 00:00</p>
+<p class="date">Data: 2021-03-09 Tue 00:00</p>
 <p class="author">Autor: Pedro Fernandes</p>
-<p class="date">Created: 2021-03-09 ter 22:33</p>
+<p class="date">Created: 2022-03-31 Thu 03:16</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
