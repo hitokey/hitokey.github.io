@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR" xml:lang="pt_BR">
 <head>
-<!-- 2022-04-07 Thu 13:38 -->
+<!-- 2022-04-07 Thu 13:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Clean in LISP from Web System</title>
@@ -256,47 +256,47 @@
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org76ac803">1. Sistema Web.</a>
+<li><a href="#orga5dd31a">1. Sistema Web.</a>
 <ul>
-<li><a href="#orgdaf00c9">1.1. Clean</a></li>
-<li><a href="#org812b3a5">1.2. Instalação</a></li>
-<li><a href="#org8fb5023">1.3. Configuração.</a></li>
-<li><a href="#orgf204c18">1.4. Simples programa em Clean para Web.</a></li>
-<li><a href="#org6518151">1.5. Mas Falaremos um pouco de LISP.</a></li>
-<li><a href="#org475961f">1.6. Lisp GGI.</a></li>
-<li><a href="#org088bbc7">1.7. Lisp control Clean por Object System Interface</a></li>
-<li><a href="#org7bd3302">1.8. Lisp and Clean Foreign Function Interface</a>
+<li><a href="#org10a0335">1.1. Clean</a></li>
+<li><a href="#orgf867de5">1.2. Instalação</a></li>
+<li><a href="#org629c191">1.3. Configuração.</a></li>
+<li><a href="#org56a21e7">1.4. Simples programa em Clean para Web.</a></li>
+<li><a href="#org13ef71f">1.5. Mas Falaremos um pouco de LISP.</a></li>
+<li><a href="#org079f364">1.6. Lisp GGI.</a></li>
+<li><a href="#org378cab0">1.7. Lisp control Clean por Object System Interface</a></li>
+<li><a href="#orgb172e0d">1.8. Lisp and Clean Foreign Function Interface</a>
 <ul>
-<li><a href="#org1dd0f86">1.8.1. Clean Foreign</a></li>
+<li><a href="#orgc24d3d1">1.8.1. Clean Foreign</a></li>
 </ul>
 </li>
-<li><a href="#org21a0eee">1.9. Lisp Hunchentoot Básico</a></li>
-<li><a href="#org8f56274">1.10. GET Simples - Hello World;</a></li>
-<li><a href="#org341eba4">1.11. Lisp Hunchentoot Avancado</a>
+<li><a href="#org8029b6b">1.9. Lisp Hunchentoot Básico</a></li>
+<li><a href="#org8aa60b2">1.10. GET Simples - Hello World;</a></li>
+<li><a href="#org1fe7aca">1.11. Lisp Hunchentoot Avancado</a>
 <ul>
-<li><a href="#orgeb99c1b">1.11.1. GET/POST/PUT Request</a></li>
-<li><a href="#org6ed71fa">1.11.2. HTTP HEADERS</a></li>
-<li><a href="#org0c5dbda">1.11.3. IO Json</a></li>
-<li><a href="#org375b7d1">1.11.4. IO Binary Stream</a></li>
-<li><a href="#org7ec1b97">1.11.5. Authorization</a></li>
-<li><a href="#orgcb51ad3">1.11.6. CGI Script</a></li>
+<li><a href="#orgf77330d">1.11.1. GET/POST/PUT Request</a></li>
+<li><a href="#org023e59e">1.11.2. HTTP HEADERS</a></li>
+<li><a href="#orgd7c773c">1.11.3. IO Json</a></li>
+<li><a href="#orgdc7042b">1.11.4. IO Binary Stream</a></li>
+<li><a href="#org599943a">1.11.5. Authorization</a></li>
+<li><a href="#org17e67e5">1.11.6. CGI Script</a></li>
 </ul>
 </li>
-<li><a href="#org64d8afc">1.12. Extra: HTML e JavaScript</a></li>
+<li><a href="#org13886db">1.12. Extra: HTML e JavaScript</a></li>
 </ul>
 </li>
-<li><a href="#org2a9bd9f">2. Home</a></li>
+<li><a href="#org56623cf">2. Home</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org76ac803" class="outline-2">
-<h2 id="org76ac803"><span class="section-number-2">1</span> Sistema Web.</h2>
+<div id="outline-container-orga5dd31a" class="outline-2">
+<h2 id="orga5dd31a"><span class="section-number-2">1</span> Sistema Web.</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgdaf00c9" class="outline-3">
-<h3 id="orgdaf00c9"><span class="section-number-3">1.1</span> Clean</h3>
+<div id="outline-container-org10a0335" class="outline-3">
+<h3 id="org10a0335"><span class="section-number-3">1.1</span> Clean</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Clean e Lisp são linguagens funcionais.
@@ -304,8 +304,8 @@ Clean e Lisp são linguagens funcionais.
 </div>
 </div>
 
-<div id="outline-container-org812b3a5" class="outline-3">
-<h3 id="org812b3a5"><span class="section-number-3">1.2</span> Instalação</h3>
+<div id="outline-container-orgf867de5" class="outline-3">
+<h3 id="orgf867de5"><span class="section-number-3">1.2</span> Instalação</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 A instalação é bastante simples, por iremos já utiliza-se de uma versão já pré-compilada. Sendo assim não será preciso configuramos muita coisa. Além disso como queremos criar um páginas Web para servidores linux, iremos baixar a versão clean-bundle-complete-linux-x64-latest.tgz. Você consiguirá acessando a seguinte página do <a href="https://wiki.clean.cs.ru.nl/Download_Clean">Clean</a>.
@@ -313,8 +313,8 @@ A instalação é bastante simples, por iremos já utiliza-se de uma versão já
 </div>
 </div>
 
-<div id="outline-container-org8fb5023" class="outline-3">
-<h3 id="org8fb5023"><span class="section-number-3">1.3</span> Configuração.</h3>
+<div id="outline-container-org629c191" class="outline-3">
+<h3 id="org629c191"><span class="section-number-3">1.3</span> Configuração.</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Depois de baixar o arquivo, pelo terminal fazemos as seguintes configuração.
@@ -337,8 +337,8 @@ Com o directório clean criado, vamos então configura no arquivo ~/.bashrc as s
 </div>
 </div>
 
-<div id="outline-container-orgf204c18" class="outline-3">
-<h3 id="orgf204c18"><span class="section-number-3">1.4</span> Simples programa em Clean para Web.</h3>
+<div id="outline-container-org56a21e7" class="outline-3">
+<h3 id="org56a21e7"><span class="section-number-3">1.4</span> Simples programa em Clean para Web.</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Neste casso, o programa que iremos aborda são para web servering, com pro exemplo o apache, ningx etc. Servidores que gerencia todas as conexão e requisições necessárias para uma comunicação web. Tais programas chamamos de Common Gateway Inferface (CGI). Recomendo o excelente livro: <a href="https://docstore.mik.ua/orelly/linux/cgi/index.htm">CGI Programming with perl</a>, aonde ele aborta tais methodo. Então, vamos ao program.
@@ -397,8 +397,8 @@ Recomendo que leia o <a href="https://docstore.mik.ua/orelly/linux/cgi/ch03_02.h
 </div>
 </div>
 
-<div id="outline-container-org6518151" class="outline-3">
-<h3 id="org6518151"><span class="section-number-3">1.5</span> Mas Falaremos um pouco de LISP.</h3>
+<div id="outline-container-org13ef71f" class="outline-3">
+<h3 id="org13ef71f"><span class="section-number-3">1.5</span> Mas Falaremos um pouco de LISP.</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 Estou abortando o lisp nesta documento porque objetivo maior é interligamos as linguagem LISP com a linguagem CLEAN. Aonde deixamos que o Lisp gerencie o Servidor e usamos programas já escrito nele CLEAN, nem a necessidade de reescremos o mesmo.
@@ -410,8 +410,8 @@ Obs.: Esta ideia é apenas para um treinamento e educacional, não haverá um co
 </div>
 </div>
 
-<div id="outline-container-org475961f" class="outline-3">
-<h3 id="org475961f"><span class="section-number-3">1.6</span> Lisp GGI.</h3>
+<div id="outline-container-org079f364" class="outline-3">
+<h3 id="org079f364"><span class="section-number-3">1.6</span> Lisp GGI.</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 Podemos também fazer um aplicação GUI com o lisp, não é nosso objetivo, mas podemos observar.
@@ -438,8 +438,8 @@ Neste caso, vale observar que diferente do clean está versão do código e impl
 </div>
 </div>
 
-<div id="outline-container-org088bbc7" class="outline-3">
-<h3 id="org088bbc7"><span class="section-number-3">1.7</span> Lisp control Clean por Object System Interface</h3>
+<div id="outline-container-org378cab0" class="outline-3">
+<h3 id="org378cab0"><span class="section-number-3">1.7</span> Lisp control Clean por Object System Interface</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 Primeira, uma alternativa para controle do clean programa é usamos o controle de sistema apartir do SO(Sistema Operacional), dessa maneira codificado.
@@ -452,7 +452,7 @@ Primeira, uma alternativa para controle do clean programa é usamos o controle d
 <p>
 Temos o resultado:
 </p>
-<pre class="example" id="org6bbf9a4">
+<pre class="example" id="org52f854a">
 Hello,World!
 #&lt;SB-IMPL::PROCESS :EXITED 0&gt;
 </pre>
@@ -465,7 +465,7 @@ Usamos a função run-program possui um variação dependendo do common lisp que
 (ext:run-program "./hello" nil :output :stream)
 </pre>
 
-<pre class="example" id="org3e08503">
+<pre class="example" id="org54a4f7a">
 Hello,World!
 
 #&lt;output stream "FD-STREAM" 0x7fffc8ba2e60&gt;
@@ -484,7 +484,7 @@ Vemos que o retorno no ecl, são três valores, podemos que podemos processá-lo
 <p>
 Neste casso apenas pegamos o z, que o processo.
 </p>
-<pre class="example" id="org4c38afc">
+<pre class="example" id="orgc8a81ae">
 #S(EXT:EXTERNAL-PROCESS :PID NIL :INPUT #&lt;output stream "FD-STREAM" 0x7fffea8ac8c0&gt; :OUTPUT NIL :ERROR-STREAM #&lt;input stream "FD-STREAM" 0x7fffea8ac820&gt; :%STATUS :EXITED :%CODE 0 :%LOCK #&lt;lock (nonrecursive) 0x7fffea3bdbd0&gt; :%PIPE #&lt;process 0x7fffea464880&gt;)
 </pre>
 
@@ -507,7 +507,7 @@ De qualquer forma o common lisp permite que controle qual será a função que i
 (my-run "./hello" nil)
 </pre>
 
-<pre class="example" id="org6d3d181">
+<pre class="example" id="org4d11203">
 Hello,World!
 NIL
 </pre>
@@ -547,28 +547,28 @@ Vemos que podemos controlar varios process entre outro com o lisp, então uma po
 <p>
 Vemos que conseguimos reproduzir no lisp a resposta do clean, vejamos o resultado abaixo.
 </p>
-<pre class="example" id="orgdbaeb83">
+<pre class="example" id="org12428f1">
 &lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello: none&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
 NIL
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org7bd3302" class="outline-3">
-<h3 id="org7bd3302"><span class="section-number-3">1.8</span> Lisp and Clean Foreign Function Interface</h3>
+<div id="outline-container-orgb172e0d" class="outline-3">
+<h3 id="orgb172e0d"><span class="section-number-3">1.8</span> Lisp and Clean Foreign Function Interface</h3>
 <div class="outline-text-3" id="text-1-8">
 <p>
 Vamos começa usando function do clean no lisp. Então quando olhamos no manual do cleam, vejamos como export seu código do clean para serem usado em outra linguagem, que pode ser n-linguagem, inclusive o python, mas iremos utilizar a código clean no Lisp.
 </p>
 </div>
 
-<div id="outline-container-org1dd0f86" class="outline-4">
-<h4 id="org1dd0f86"><span class="section-number-4">1.8.1</span> Clean Foreign</h4>
+<div id="outline-container-orgc24d3d1" class="outline-4">
+<h4 id="orgc24d3d1"><span class="section-number-4">1.8.1</span> Clean Foreign</h4>
 </div>
 </div>
 
-<div id="outline-container-org21a0eee" class="outline-3">
-<h3 id="org21a0eee"><span class="section-number-3">1.9</span> Lisp Hunchentoot Básico</h3>
+<div id="outline-container-org8029b6b" class="outline-3">
+<h3 id="org8029b6b"><span class="section-number-3">1.9</span> Lisp Hunchentoot Básico</h3>
 <div class="outline-text-3" id="text-1-9">
 <p>
 O sistema hunchentoot é um interface de rede com ferramentas para construções de sites dinamicos. Ele funciona com um servidor web independente, ele é capaz de conexão HTTP/1.1 chunking, conexão persistentes e SSL. Além disso ele fornece diversos recurso de manipulação automatica de sessão, registro etc. Ou seja, ele tem além dessa funções muitas outras, mas caso queira saber de todas visite o site do <a href="http://edicl.github.io/hunchentoot/">hunchentoot</a>.
@@ -582,7 +582,7 @@ Então começamos o que interessa, construir uma aplicação web-server em lisp.
 (ql:quickload :hunchentoot)
 </pre>
 
-<pre class="example" id="org0ef3b5e">
+<pre class="example" id="org7994df9">
 
 (ql:quickload :hunchentoot)
 To load "hunchentoot":
@@ -597,7 +597,7 @@ To load "hunchentoot":
 Como iremos precisar do hunchentoot, podemos usar o quicklisp para carrega-lo, caso seja a primeira vez fazendo este commando, o sistema irá apresentar mais infomações com um semelhante a isto:
 </p>
 
-<pre class="example" id="orgdf3d91e">
+<pre class="example" id="orgde6bcb4">
 ; Loading "hunchentoot"
 [package chunga]..................................
 [package cl-base64]...............................
@@ -626,7 +626,7 @@ Então começamos iniciando um servidor http simples, com uma função dinamica 
 (hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 4242))
 </pre>
 
-<pre class="example" id="org5cf1980">
+<pre class="example" id="orgaec31d3">
 #&lt;HUNCHENTOOT:EASY-ACCEPTOR (host *, port 4242)&gt;
 </pre>
 
@@ -640,7 +640,7 @@ Quando acessar o link pelo browser veremos isto no browser:
 </p>
 
 
-<div id="orga477ff3" class="figure">
+<div id="org3bd45c3" class="figure">
 <p><img src="./imagens/localhost.png" alt="localhost.png" />
 </p>
 <p><span class="figure-number">Figura 1: </span>Print Check Browser.</p>
@@ -650,14 +650,14 @@ Quando acessar o link pelo browser veremos isto no browser:
 E isso no terminal:
 </p>
 
-<pre class="example" id="org2a2f937">
+<pre class="example" id="orgd7f64c2">
 127.0.0.1 - [2022-03-31 02:04:52] "GET / HTTP/1.1" 200 393 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36"
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org8f56274" class="outline-3">
-<h3 id="org8f56274"><span class="section-number-3">1.10</span> GET Simples - Hello World;</h3>
+<div id="outline-container-org8aa60b2" class="outline-3">
+<h3 id="org8aa60b2"><span class="section-number-3">1.10</span> GET Simples - Hello World;</h3>
 <div class="outline-text-3" id="text-1-10">
 <p>
 Então programos o hello world pelo método GET, então escrevemos:
@@ -682,7 +682,7 @@ Podemos visualizar no browser o resultado no link: <a href="http://localhost:424
 </p>
 
 
-<div id="org38b13ed" class="figure">
+<div id="org207f0c3" class="figure">
 <p><img src="./imagens/name_hello.png" alt="name_hello.png" />
 </p>
 </div>
@@ -693,7 +693,7 @@ Sem nome in <a href="https://localhost:4242/hello">https://localhost:4242/hello<
 </p>
 
 
-<div id="org6d9de01" class="figure">
+<div id="org7f8fb2f" class="figure">
 <p><img src="./imagens/world_hello.png" alt="world_hello.png" />
 </p>
 </div>
@@ -709,8 +709,8 @@ Para desativar o servidor basta digitar:
 </div>
 </div>
 
-<div id="outline-container-org341eba4" class="outline-3">
-<h3 id="org341eba4"><span class="section-number-3">1.11</span> Lisp Hunchentoot Avancado</h3>
+<div id="outline-container-org1fe7aca" class="outline-3">
+<h3 id="org1fe7aca"><span class="section-number-3">1.11</span> Lisp Hunchentoot Avancado</h3>
 <div class="outline-text-3" id="text-1-11">
 <p>
 Vamos fazer alguma applicação mais complexa, que são o seguintes pontos:
@@ -726,12 +726,12 @@ Vamos fazer alguma applicação mais complexa, que são o seguintes pontos:
 </ul>
 </div>
 
-<div id="outline-container-orgeb99c1b" class="outline-4">
-<h4 id="orgeb99c1b"><span class="section-number-4">1.11.1</span> GET/POST/PUT Request</h4>
+<div id="outline-container-orgf77330d" class="outline-4">
+<h4 id="orgf77330d"><span class="section-number-4">1.11.1</span> GET/POST/PUT Request</h4>
 <div class="outline-text-4" id="text-1-11-1">
 </div>
 <ol class="org-ol">
-<li><a id="orgebff812"></a>GET Request<br />
+<li><a id="org58fbf7a"></a>GET Request<br />
 <div class="outline-text-5" id="text-1-11-1-1">
 <p>
 O método get e post é exencial para a comunicação HTTP, como vimos no <b>GET Simples - Hello World</b>, usamos o método GET, quando manipulamos a \(QUERY\_STRING\), mas vejamos novamente outra aplicação utilizando o método Query.
@@ -798,7 +798,7 @@ Por exemplo, testamos o seguinte url =&gt; <a href="http://localhost:4242/?pedro
 
 
 
-<div id="orgfd2641c" class="figure">
+<div id="orge76e479" class="figure">
 <p><img src="./imagens/querystring.png" alt="querystring.png" />
 </p>
 <p><span class="figure-number">Figura 4: </span>Query String Hunchentoot Manipulation</p>
@@ -810,7 +810,7 @@ Dessa forma, como a Query\<sub>String</sub> é um string podemos manipulamos com
 </div>
 </li>
 
-<li><a id="orgb598f21"></a>POST Request<br />
+<li><a id="orgf65757c"></a>POST Request<br />
 <div class="outline-text-5" id="text-1-11-1-2">
 <p>
 O método POST request é muito importante na comunição TCP/IP do HTTP/HTTPS, sendo assim iremos demostra algumas programas utilizamos o post como método, mas tarde nos aprofuntaremos, na passagem de json e outro tipos de dados pelo método post. Vejemos então um aplicação básica.
@@ -852,8 +852,8 @@ Novamente podemos testar com o html abaixo:
 </ol>
 </div>
 
-<div id="outline-container-org6ed71fa" class="outline-4">
-<h4 id="org6ed71fa"><span class="section-number-4">1.11.2</span> HTTP HEADERS</h4>
+<div id="outline-container-org023e59e" class="outline-4">
+<h4 id="org023e59e"><span class="section-number-4">1.11.2</span> HTTP HEADERS</h4>
 <div class="outline-text-4" id="text-1-11-2">
 <p>
 Quando trabalhamos com protocolo de redes, e principalmente na comunica TCP/IP, tevemos nos atentar no cabeçario, ou header, então vamos aborta um pouco de como definimos este paramento no hunchentoot. O importante é sempre seguimos os procotolo da do W3C, que estabele-se diretizem de como deveram ser a comunicação da rede <a href="https://www.w3.org/TR/trace-context/#trace-context-http-headers-format">WC3 HTTP header</a>.
@@ -887,8 +887,8 @@ No exemplo usamos este tipos de cabeçario, mas você pode configurar o que quis
 </div>
 </div>
 
-<div id="outline-container-org0c5dbda" class="outline-4">
-<h4 id="org0c5dbda"><span class="section-number-4">1.11.3</span> IO Json</h4>
+<div id="outline-container-orgd7c773c" class="outline-4">
+<h4 id="orgd7c773c"><span class="section-number-4">1.11.3</span> IO Json</h4>
 <div class="outline-text-4" id="text-1-11-3">
 <p>
 Uma maneira bastante util de compartinha dados na rede é usamos o formato json, principalmente entre servidores ou API's, existem também a possibilidade do XML, mas o json é uma maneira bem mais simples de trabalhar, então vejamos com trabalharemos com json no hunchentoot. Nesta aplicação iremos receber um json é retorna um json, no caso será o mesmo json de entrada, como exemplo, mas o json de saida poderá ser qualquer outro, só para fins de demostração iremos utilizar o mesmo json, mas deverá funcionar com qualquer outro que a aplicação retorna. Então vejamos:
@@ -944,8 +944,8 @@ Esta função recebe url e um paramento opcional que deverá ser um string com f
 </div>
 </div>
 
-<div id="outline-container-org375b7d1" class="outline-4">
-<h4 id="org375b7d1"><span class="section-number-4">1.11.4</span> IO Binary Stream</h4>
+<div id="outline-container-orgdc7042b" class="outline-4">
+<h4 id="orgdc7042b"><span class="section-number-4">1.11.4</span> IO Binary Stream</h4>
 <div class="outline-text-4" id="text-1-11-4">
 <p>
 Como estaremos trabalhando com dados binário, devemos trabalhar o que estavamos recebendo, mas vamos supor que nossa aplicação está atras de proxy ou que o request para por um authentificação antes mesmo de receber o streams (transmissão).
@@ -970,8 +970,8 @@ Como estaremos trabalhando com dados binário, devemos trabalhar o que estavamos
 </div>
 </div>
 
-<div id="outline-container-org7ec1b97" class="outline-4">
-<h4 id="org7ec1b97"><span class="section-number-4">1.11.5</span> Authorization</h4>
+<div id="outline-container-org599943a" class="outline-4">
+<h4 id="org599943a"><span class="section-number-4">1.11.5</span> Authorization</h4>
 <div class="outline-text-4" id="text-1-11-5">
 <p>
 Criamos um sistema de authentificação, abortando o básico o método <b>Basic Auth</b>, também falaremos um pouco de como acessar o cabeçario (ou header) de 'AUTHORIZATION', como isso fazemos a athenticação que queremos.
@@ -1014,8 +1014,8 @@ Caso seja necessário usamos outro tipos de authentificação, podemos obter ace
 </div>
 </div>
 
-<div id="outline-container-orgcb51ad3" class="outline-4">
-<h4 id="orgcb51ad3"><span class="section-number-4">1.11.6</span> CGI Script</h4>
+<div id="outline-container-org17e67e5" class="outline-4">
+<h4 id="org17e67e5"><span class="section-number-4">1.11.6</span> CGI Script</h4>
 <div class="outline-text-4" id="text-1-11-6">
 <p>
 Antes de começamos devemos esclarer a sigla CGI, está sigla ao contrario do CGI usados em filmes da marvel ou em qualquer ciname, que possui um nome <b>Computer Generated Imagery</b>, o nosso CGI significa na verdade (Common Gateway Interface), que é uma interface que permite que o servidor execute código externo a ele, ou seja, execução de código que não faze parte do código padrão do servidor. Então vejamos como habilitamos este recurso no hunchentoot, implemetamos o seguinte trecho.
@@ -1038,7 +1038,7 @@ Então testamos aquele programa em clean escrevemos antes, o hello.icl, aonde co
 </p>
 
 
-<div id="org3c5ff61" class="figure">
+<div id="orga91517c" class="figure">
 <p><img src="./imagens/cgiclean.png" alt="cgiclean.png" />
 </p>
 <p><span class="figure-number">Figura 5: </span>Hunchentoot CGI Clean in Hunchentoot Server</p>
@@ -1065,7 +1065,7 @@ print("&lt;/body&gt;&lt;/html&gt;")
 </div>
 
 
-<div id="org37e62bd" class="figure">
+<div id="org27d4c0e" class="figure">
 <p><img src="./imagens/cgipython.png" alt="cgipython.png" />
 </p>
 <p><span class="figure-number">Figura 6: </span>Hunchentoot CGI PYTHON in Hunchentoot Server</p>
@@ -1093,7 +1093,7 @@ Também podemos fazer isto com o lisp:
 </div>
 
 
-<div id="org28be6eb" class="figure">
+<div id="orgc3f35e9" class="figure">
 <p><img src="./imagens/cgilisp.png" alt="cgilisp.png" />
 </p>
 <p><span class="figure-number">Figura 7: </span>Hunchentoot CGI Lisp in Hunchentoot Server</p>
@@ -1106,8 +1106,8 @@ Citei duas linguagem, mas qualquer liguagem podem ser usadas com CGI script.
 </div>
 </div>
 
-<div id="outline-container-org64d8afc" class="outline-3">
-<h3 id="org64d8afc"><span class="section-number-3">1.12</span> Extra: HTML e JavaScript</h3>
+<div id="outline-container-org13886db" class="outline-3">
+<h3 id="org13886db"><span class="section-number-3">1.12</span> Extra: HTML e JavaScript</h3>
 <div class="outline-text-3" id="text-1-12">
 <p>
 Nesta documentação todos os processo foram efeito utiliza-se de programa para montar back-end interface, mas caso queira montar programas para o front-end, é possivel trabalhamos com algumas library também, por exemplo <b>CL-WHO</b>, que é um gerador de html. Vejamos um exemplo:
@@ -1136,7 +1136,7 @@ Existem muitas possibilidades, caso queira visualizar melhor de uma olhada na p�
 </pre>
 </div>
 
-<pre class="example" id="org2f0ba95">
+<pre class="example" id="org8868ac8">
 "function greetingCallback() {
     __PS_MV_REG = [];
     return alert('Hello, World');
@@ -1150,8 +1150,8 @@ Para mais detalhes visualize a página: <a href="https://parenscript.common-lisp
 </div>
 </div>
 
-<div id="outline-container-org2a9bd9f" class="outline-2">
-<h2 id="org2a9bd9f"><span class="section-number-2">2</span> <a href="https://hitokey.github.io/">Home</a></h2>
+<div id="outline-container-org56623cf" class="outline-2">
+<h2 id="org56623cf"><span class="section-number-2">2</span> <a href="https://hitokey.github.io/">Home</a></h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Minha Página (My Page): <a href="https://hitokey.github.io/">https://hitokey.github.io/</a>
@@ -1162,7 +1162,7 @@ Minha Página (My Page): <a href="https://hitokey.github.io/">https://hitokey.gi
 <div id="postamble" class="status">
 <p class="date">Data: 2022-03-24 Thu 00:00</p>
 <p class="author">Autor: Pedro Fernandes</p>
-<p class="date">Criado em: 2022-04-07 Thu 13:38</p>
+<p class="date">Criado em: 2022-04-07 Thu 13:39</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
