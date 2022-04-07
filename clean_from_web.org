@@ -353,7 +353,7 @@ Para desativar o servidor basta digitar:
 
 #+end_src
 
-Agora podemos acessar a página pela url => [[http://localhost:4242/fib?number=40&name=pedro][http://localhost:4242/fib?number=40&name=pedro]]. A QUERY\_STRING dessa url é "?number=40&name=pedro", os paramentos paramentos da função *define-easy-handler* do hunchentoot são *number* e *name*, tais valores são atribuitos pelo conteudo da query number e name respecitivamente. Sendo assim, pegamos tais valores é enviamos a funções *fib* e *client-name, que nós retorna o valores de resposta. Obs.: para função fib, primeiramente convertemos o valores em inteiro.
+Agora podemos acessar a página pela url => [[http://localhost:4242/fib?number=40&name=pedro][http://localhost:4242/fib?number=40&name=pedro]]. A $QUERY\_STRING$ dessa url é "?number=40&name=pedro", os paramentos paramentos da função *define-easy-handler* do hunchentoot são *number* e *name*, tais valores são atribuitos pelo conteudo da query number e name respecitivamente. Sendo assim, pegamos tais valores é enviamos a funções *fib* e *client-name, que nós retorna o valores de resposta. Obs.: para função fib, primeiramente convertemos o valores em inteiro.
 
 Neste caso a propria função *define-easy-handler* separa o conteúdo da query string pelas key como os mesmo nome dos symbols de entrada, conforme vemos o number (symbol) e na url *number=* (key=), mas caso queria pegar o contéudo da query_string por completo podemos fazer o seguinte.
 
@@ -378,7 +378,7 @@ Por exemplo, testamos o seguinte url => [[http://localhost:4242/?pedro=pedro&gab
 #+CAPTION: Query String Hunchentoot Manipulation
 [[./imagens/querystring.png]]
 
-Dessa forma, como a Query\_String é um string podemos manipulamos com queremos. Mas vejamos um pouco de teória, o que acontece aqui é que o hunchentoot gerencia todos os request recebedo nos entypoint, de modo que toda vez que ele recebe um request é amazena em uma variável global chamada *request* todos os paramento passado para o programa em lisp pelo o usuário solicitador (ou seja, o cliente), sendo assim podemos verificar varias coisas neste requeste, uma delas é a QUERY\_STRING. Outra maneira de mamipulamos a Query\_STRING por variável ambiente. Como é um web-server ele também amazena os valores da QUERY\_STRING na variável com o mesmo nome. Importate é tomamos cuidado com está variável para outro valores vazarem para outra solicitações, mas de qualquer forma abortaremos está questão no subtema *CGI*, contéudo petencente a este mesmo manual.
+Dessa forma, como a Query\_String é um string podemos manipulamos com queremos. Mas vejamos um pouco de teória, o que acontece aqui é que o hunchentoot gerencia todos os request recebedo nos entypoint, de modo que toda vez que ele recebe um request é amazena em uma variável global chamada *request* todos os paramento passado para o programa em lisp pelo o usuário solicitador (ou seja, o cliente), sendo assim podemos verificar varias coisas neste requeste, uma delas é a $QUERY\_STRING$. Outra maneira de mamipulamos a Query\_STRING por variável ambiente. Como é um web-server ele também amazena os valores da $QUERY\_STRING$ na variável com o mesmo nome. Importate é tomamos cuidado com está variável para outro valores vazarem para outra solicitações, mas de qualquer forma abortaremos está questão no subtema *CGI*, contéudo petencente a este mesmo manual.
 
 **** POST Request
 
