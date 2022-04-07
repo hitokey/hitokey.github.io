@@ -320,7 +320,7 @@ Para desativar o servidor basta digitar:
 *** GET/POST/PUT Request
 **** GET Request
      
-   O método get e post é exencial para a comunicação HTTP, como vimos no *GET Simples - Hello World*, usamos o método GET, quando manipulamos a QUERY_STRING, mas vejamos novamente outra aplicação utilizando o método Query.
+   O método get e post é exencial para a comunicação HTTP, como vimos no *GET Simples - Hello World*, usamos o método GET, quando manipulamos a $QUERY\_STRING$, mas vejamos novamente outra aplicação utilizando o método Query.
 
 #+begin_src lisp  :tangle ./client_fib.lisp
   ;; file: client_fib.lisp
@@ -374,9 +374,11 @@ Neste caso a propria função *define-easy-handler* separa o conteúdo da query str
 
 Por exemplo, testamos o seguinte url => [[http://localhost:4242/?pedro=pedro&gabrage=%C3%A7ajfdkam][http://localhost:4242/?pedro=pedro&gabrage=%C3%A7ajfdkam]], vejamos o resultado.
 
+
+#+CAPTION: Query String Hunchentoot Manipulation
 [[./imagens/querystring.png]]
 
-Dessa forma, como a Query\_String é um string podemos manipulamos com queremos. Mas vejamos um pouco de teória, o que acontece aqui é que o hunchentoot gerencia todos os request recebedo nos entypoint, de modo que toda vez que ele recebe um request é amazena em uma variável global chamada *request* todos os paramento passado para o programa em lisp pelo o usuário solicitador (ou seja, o cliente), sendo assim podemos verificar varias coisas neste requeste, uma delas é a QUERY_STRING. Outra maneira de mamipulamos a Query\_STRING por variável ambiente. Como é um web-server ele também amazena os valores da QUERY_STRING na variável com o mesmo nome. Importate é tomamos cuidado com está variável para outro valores vazarem para outra solicitações, mas de qualquer forma abortaremos está questão no subtema *CGI*, contéudo petencente a este mesmo manual.
+Dessa forma, como a Query\_String é um string podemos manipulamos com queremos. Mas vejamos um pouco de teória, o que acontece aqui é que o hunchentoot gerencia todos os request recebedo nos entypoint, de modo que toda vez que ele recebe um request é amazena em uma variável global chamada *request* todos os paramento passado para o programa em lisp pelo o usuário solicitador (ou seja, o cliente), sendo assim podemos verificar varias coisas neste requeste, uma delas é a QUERY\_STRING. Outra maneira de mamipulamos a Query\_STRING por variável ambiente. Como é um web-server ele também amazena os valores da QUERY\_STRING na variável com o mesmo nome. Importate é tomamos cuidado com está variável para outro valores vazarem para outra solicitações, mas de qualquer forma abortaremos está questão no subtema *CGI*, contéudo petencente a este mesmo manual.
 
 **** POST Request
 
@@ -572,6 +574,7 @@ Antes de começamos devemos esclarer a sigla CGI, está sigla ao contrario do CGI 
 
 Então testamos aquele programa em clean escrevemos antes, o hello.icl, aonde complitamos o mesmo para hello.cgi, vejamos abaixo o resultado:
 
+#+CAPTION: Hunchentoot CGI Clean in Hunchentoot Server
 [[./imagens/cgiclean.png]]
 
 Podemos rodar programas semelhante em qualquer linguagem, por exemplo, em python:
@@ -591,6 +594,7 @@ Podemos rodar programas semelhante em qualquer linguagem, por exemplo, em python
   print("</body></html>")
 #+end_src
 
+#+CAPTION: Hunchentoot CGI PYTHON in Hunchentoot Server
 [[./imagens/cgipython.png]]
 
 Também podemos fazer isto com o lisp:
@@ -611,6 +615,7 @@ Também podemos fazer isto com o lisp:
   )
 #+end_src
 
+#+CAPTION: Hunchentoot CGI Lisp in Hunchentoot Server
 [[./imagens/cgilisp.png]]
 
 Citei duas linguagem, mas qualquer liguagem podem ser usadas com CGI script.
@@ -648,22 +653,5 @@ Existem muitas possibilidades, caso queira visualizar melhor de uma olhada na pá
 
 Para mais detalhes visualize a página: [[https://parenscript.common-lisp.dev/reference.html][https://parenscript.common-lisp.dev/reference.html]].
 
-
-
-* Docker
-
-Sistema docker é um sistema de maquinas virtualizadas, aonde cada maquina podem ser configurando conforme desejamos. O interessante neste sistema é cada aplicação podem além de possuirem um ambiente proprio, e graça a isto ele podem ser facilmente replicados. Ou seja, caso tenhamos que fazer um upscale da nossa aplicação não necessáriamente precisamos fazer um upgrade no hardware da nossa maquina, podemos simplimente duplicar nossa aplicação em outro conteiner, mas o mais interessante desse método é, como simplimente duplicamos nossa aplicação, caso ele não seja mais necessário podemos simplimente remover (matar) a nova maquina e retorna para a configuração de apenas um maquina. Obs.: eu disse duplica, mas não se limita em apenas duplica, como podemos multiplica por n vezes conforme é necessario.
-
-
-Neste tutorial não vamos aborda o docker a fundo, irei aborta apenas o necessário para utilizamos o Cloun Run do Google Cloud. Então, a primeira coisa iremos precisar é saber como instalar o docker.
-
-
-* Instalação
-
-
-* Cloun Run (Google Cloud)
-
 * [[https://hitokey.github.io/][Home]]
 Minha Página (My Page): [[https://hitokey.github.io/]]
-
-* imagens/cgi_lisp.png
