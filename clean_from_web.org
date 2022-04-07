@@ -74,7 +74,7 @@ Content-Type:text/html;charset=utf-8
 </html>
 #+end_export
 
-Discutiremos um pouco sobre o programa. O codigo é bastante simples, basicamente ele concatena string no formato response html, com um variável do servidor que é a QUERY\_STRING, tal variável amazena um parte do URL. Nesta parte normalmente poderá ser passado alguma key e valor, por exemplo, vejamos a URL:
+Discutiremos um pouco sobre o programa. O codigo é bastante simples, basicamente ele concatena string no formato response html, com um variável do servidor que é a $QUERY\_STRING$, tal variável amazena um parte do URL. Nesta parte normalmente poderá ser passado alguma key e valor, por exemplo, vejamos a URL:
 
 Recomendo que leia o [[https://docstore.mik.ua/orelly/linux/cgi/ch03_02.htm][Enviroment Variables]] e [[https://docstore.mik.ua/orelly/linux/cgi/ch02_01.htm][HTTP]].
 
@@ -374,7 +374,7 @@ Neste caso a propria função *define-easy-handler* separa o conteúdo da query str
 
 Por exemplo, testamos o seguinte url => [[http://localhost:4242/?pedro=pedro&gabrage=%C3%A7ajfdkam][http://localhost:4242/?pedro=pedro&gabrage=%C3%A7ajfdkam]], vejamos o resultado.
 
-[[./image/query_string.png][Query\_String]]
+[[./imagens/query_string.png][./imagens/query_string.png]]
 
 Dessa forma, como a Query\_String é um string podemos manipulamos com queremos. Mas vejamos um pouco de teória, o que acontece aqui é que o hunchentoot gerencia todos os request recebedo nos entypoint, de modo que toda vez que ele recebe um request é amazena em uma variável global chamada *request* todos os paramento passado para o programa em lisp pelo o usuário solicitador (ou seja, o cliente), sendo assim podemos verificar varias coisas neste requeste, uma delas é a QUERY_STRING. Outra maneira de mamipulamos a Query\_STRING por variável ambiente. Como é um web-server ele também amazena os valores da QUERY_STRING na variável com o mesmo nome. Importate é tomamos cuidado com está variável para outro valores vazarem para outra solicitações, mas de qualquer forma abortaremos está questão no subtema *CGI*, contéudo petencente a este mesmo manual.
 
