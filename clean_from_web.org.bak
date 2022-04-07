@@ -80,9 +80,9 @@ Recomendo que leia o [[https://docstore.mik.ua/orelly/linux/cgi/ch03_02.htm][Env
 
 ** Mas falaremos um pouco de LISP.
 
-  Estou abordando o lisp neste documento porque o objetivo maior é interligar a linguagem LISP com a linguagem CLEAN. Onde deixamos que o Lisp gerencie o Servidor e usamos programas já escrito nele CLEAN, nem a necessidade de reescrevermos o mesmo.
+  Estou abordando o lisp neste documento porque o objetivo maior é interligar a linguagem LISP com a linguagem CLEAN. Aonde deixamos que o Lisp gerencie o Servidor e usamos programas já escrito nele CLEAN, nem a necessidade de reescrevermos o mesmo.
 
-  Obs.: Está ideia é apenas para um treinamento e educacional, não haverá um comparação de desempenho ou uma tentativa de explicação do porque fazemos isto e não optamos por simples programa no flask + gunicorn do python, ou outra linguagem popular do momento em que estiver lendo este documento.
+  Obs.: Esta ideia é apenas para um treinamento e educacional, não haverá um comparação de desempenho ou uma tentativa de explicação do porque fazemos isto e não optamos por simples programa no flask + gunicorn do python, ou outra linguagem popular do momento em que estiver lendo este documento.
 
 ** Lisp GGI.
    Podemos também fazer um aplicativo GUI com o lisp, não é nosso objetivo, mas podemos observar.
@@ -227,7 +227,6 @@ To load "hunchentoot":
 #+end_example
 
 Como iremos precisar do hunchentoot, podemos usar o quick lisp para carregá-lo, caso seja a primeira vez fazendo este comando, o sistema irá apresentar mais informações com um semelhante a isto:
-
 #+begin_example
 ; Loading "hunchentoot"
 [package chunga]..................................
@@ -245,9 +244,9 @@ Como iremos precisar do hunchentoot, podemos usar o quick lisp para carregá-lo, 
 (:HUNCHENTOOT)
 #+end_example
 
-Como hunchentoot em vale ressaltar, que qualquer informação dentro desse pacote terão o sufixo hunchentoot:, caso queira evitar isto basta usar *in-package*, mais informaçãoes [[https://www.tutorialspoint.com/lisp/lisp_packages.htm][link]].
+Como hunchentoot em vale ressaltar, que qualquer infomação dentro desse pacote terãom o sufixo hunchentoot:, caso queira evitar isto basta usar *in-package*, mais informaçãoes [[https://www.tutorialspoint.com/lisp/lisp_packages.htm][link]].
 
-Então começamos iniciando um servidor http simples, com uma função dinâmica que pegar a query\_string é diz um Hello, caso não term a query\_string, diz hello, world.
+Então começamos iniciando um servidor http simples, com uma função dinamica que pegar a query\_string é diz um Hello, caso não term a query\_string, diz hello, world.
 
 #+CAPTION: Start Easy Acceptor
 #+begin_src
@@ -258,7 +257,7 @@ Então começamos iniciando um servidor http simples, com uma função dinâmica que 
 #<HUNCHENTOOT:EASY-ACCEPTOR (host *, port 4242)>
 #+end_example
 
-Como este comando iniciar o servidor na porta 4242 no localhost(que é ip do local do nosso computador), se você iniciou, acesse por [[http://localhost:4242]], esta porta podemos escolher, mas devemos ficar atento com as portas já utilizados pelo SO e outra aplicações Web. O número da porta possui um intervalos de (0 à $2^{10}$). Você pode vê as opções [[https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers][aqui]].
+Como este commando iniciamos o sevidor na porta 4242 no localhost(que é ip do local do nosso computador), se você iniciou, acesse por [[http://localhost:4242]], esta porta podemos escolher, mas devemos ficar atento com as portas já utilizados pelo SO e outra aplicações Web. O numero da porta possui um intervalos de (0 à $2^{10}$). Você pode vê as opções [[https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers][aqui]].
 
 
 Quando acessar o link pelo browser veremos isto no browser:
@@ -308,7 +307,7 @@ Para desativar o servidor basta digitar:
 
 ** Lisp Hunchentoot Avancado
 
-  Vamos fazer alguma aplicação mais complexa, que são o seguintes pontos:
+  Vamos fazer alguma applicação mais complexa, que são o seguintes pontos:
 
   - GET/POST REQUEST
   - HTTP HEADERS
@@ -320,7 +319,7 @@ Para desativar o servidor basta digitar:
 *** GET/POST/PUT Request
 **** GET Request
      
-   O método get e post é essencial para a comunicação HTTP, como vimos no *GET Simples - Hello World*, usamos o método GET, quando manipulamos a QUERY_STRING, mas vejamos novamente outra aplicação utilizando o método Query.
+   O método get e post é exencial para a comunicação HTTP, como vimos no *GET Simples - Hello World*, usamos o método GET, quando manipulamos a $QUERY\_STRING$, mas vejamos novamente outra aplicação utilizando o método Query.
 
 #+begin_src lisp  :tangle ./client_fib.lisp
   ;; file: client_fib.lisp
@@ -328,17 +327,17 @@ Para desativar o servidor basta digitar:
 
 
   (defparameter *web* (make-instance 'hunchentoot:easy-acceptor
-:port 4242))
+					 :port 4242))
 
 
   (defun fib(n &optional (prev 1) (acc 0))
       (cond ((> n 50) "limite break, because we limit cost")
-   ((<= n 0) acc)
-   (t (fib (- n 1) acc (+ prev acc)) )))
+	    ((<= n 0) acc)
+	    (t (fib (- n 1) acc (+ prev acc)) )))
 
   (defun client-name(name)
     (if (null name) "Hello, Cliente"
-(format nil "Hello, ~a!" name)))
+	(format nil "Hello, ~a!" name)))
 
   (hunchentoot:define-easy-handler (hello :uri "/fib") (number name)
     (setf (hunchentoot:content-type*) "text/html")
@@ -353,9 +352,9 @@ Para desativar o servidor basta digitar:
 
 #+end_src
 
-Agora podemos acessar a página pela url => [[http://localhost:4242/fib?number=40&name=pedro][http://localhost:4242/fib?number=40&name=pedro]]. A QUERY\_STRING dessa url é "?number=40&name=pedro", os paramentos da função *define-easy-handler* do hunchentoot são *number* e *name*, tais valores são atributos pelo conteúdo da query number e name respectivamente. Sendo assim, pegamos tais valores é enviamos a funções *fib* e *client-name, que nós retorna o valores de resposta. Obs.: para função fib, primeiramente convertemos o valores em inteiro.
+Agora podemos acessar a página pela url => [[http://localhost:4242/fib?number=40&name=pedro][http://localhost:4242/fib?number=40&name=pedro]]. A $QUERY\_STRING$ dessa url é "?number=40&name=pedro", os paramentos paramentos da função *define-easy-handler* do hunchentoot são *number* e *name*, tais valores são atribuitos pelo conteudo da query number e name respecitivamente. Sendo assim, pegamos tais valores é enviamos a funções *fib* e *client-name, que nós retorna o valores de resposta. Obs.: para função fib, primeiramente convertemos o valores em inteiro.
 
-Neste caso a propria função *define-easy-handler* separa o conteúdo da query string pelas key como os mesmo nome dos symbols de entrada, conforme vemos o number (symbol) e na url *number=* (key=), mas caso queria pegar o conteúdo da query_string por completo podemos fazer o seguinte.
+Neste caso a propria função *define-easy-handler* separa o conteúdo da query string pelas key como os mesmo nome dos symbols de entrada, conforme vemos o number (symbol) e na url *number=* (key=), mas caso queria pegar o contéudo da query_string por completo podemos fazer o seguinte.
 
 
 #+begin_src
@@ -374,9 +373,11 @@ Neste caso a propria função *define-easy-handler* separa o conteúdo da query str
 
 Por exemplo, testamos o seguinte url => [[http://localhost:4242/?pedro=pedro&gabrage=%C3%A7ajfdkam][http://localhost:4242/?pedro=pedro&gabrage=%C3%A7ajfdkam]], vejamos o resultado.
 
+
+#+CAPTION: Query String Hunchentoot Manipulation
 [[./imagens/querystring.png]]
 
-Dessa forma, como a Query\_String é um string podemos manipulamos com queremos. Mas vejamos um pouco de teória, o que acontece aqui é que o hunchentoot gerencia todos os request recebedo nos entypoint, de modo que toda vez que ele recebe um request é amazena em uma variável global chamada *request* todos os paramento passado para o programa em lisp pelo o usuário solicitador (ou seja, o cliente), sendo assim podemos verificar varias coisas neste requeste, uma delas é a QUERY_STRING. Outra maneira de mamipulamos a Query\_STRING por variável ambiente. Como é um web-server ele também amazena os valores da QUERY_STRING na variável com o mesmo nome. Importate é tomamos cuidado com está variável para outro valores vazarem para outra solicitações, mas de qualquer forma abortaremos está questão no subtema *CGI*, conteúdo petencente a este mesmo manual.
+Dessa forma, como a $QUERY\STRING$ é um string podemos manipulamos com queremos. Mas vejamos um pouco de teória, o que acontece aqui é que o hunchentoot gerencia todos os request recebedo nos entypoint, de modo que toda vez que ele recebe um request é amazena em uma variável global chamada *request* todos os paramento passado para o programa em lisp pelo o usuário solicitador (ou seja, o cliente), sendo assim podemos verificar varias coisas neste requeste, uma delas é a $QUERY\_STRING$. Outra maneira de mamipulamos a $QUERY\_STRING$ por variável ambiente. Como é um web-server ele também amazena os valores da $QUERY\_STRING$ na variável com o mesmo nome. Importate é tomamos cuidado com está variável para outro valores vazarem para outra solicitações, mas de qualquer forma abortaremos está questão no subtema *CGI*, contéudo petencente a este mesmo manual.
 
 **** POST Request
 
@@ -403,7 +404,7 @@ Neste entypoint apenas aceita post, de modo que se queremos acessar valores que 
 #+end_export
 
 
-Também queria pode utiliza-se de ferramentas do tipo [[https://www.postman.com/][Postman]]. Também podemos pegar o conteúdo do post completo sem o sistema força o parser nas key.
+Também queria pode utiliza-se de ferramento do tipo [[https://www.postman.com/][Postman]]. Também podemos pegar o conteudo do post completo sem o sistema força o parser nas key.
 
 
 #+begin_src lisp
@@ -429,9 +430,9 @@ Novamente podemos testar com o html abaixo:
 #+end_export
 
 *** HTTP HEADERS
-   
+    
 
-Quando trabalhamos com protocolo de redes, e principalmente na comunica TCP/IP, devemos nos atentar no cabeçalho, ou header, então vamos abordar um pouco de como definimos este paramento no hunchentoot. O importante é sempre seguimos os protocolo da do W3C, que estabelece-se diretrizes de como deverão ser a comunicação da rede [[https://www.w3.org/TR/trace-context/#trace-context-http-headers-format][WC3 HTTP header]].
+Quando trabalhamos com protocolo de redes, e principalmente na comunica TCP/IP, tevemos nos atentar no cabeçario, ou header, então vamos aborta um pouco de como definimos este paramento no hunchentoot. O importante é sempre seguimos os procotolo da do W3C, que estabele-se diretizem de como deveram ser a comunicação da rede [[https://www.w3.org/TR/trace-context/#trace-context-http-headers-format][WC3 HTTP header]].
 
 De qualquer maneira vejamos como podemos definir nosso headers. Vejamos o exemplo para uma comunicação que deverá receber um json.
 
@@ -442,19 +443,19 @@ De qualquer maneira vejamos como podemos definir nosso headers. Vejamos o exempl
     (setf (hunchentoot:header-out "Access-Control-Allow-Origin") "*")
     (setf (hunchentoot:header-out "Content-Type") "application/json")
     (setf (hunchentoot:header-out "Access-Control-Allow-Headers")
- "Content-Type, authorization")
+	  "Content-Type, authorization")
     (multiple-value-bind (username password) (hunchentoot:authorization)
       (format nil "~a ~a"  username password) ))
 #+end_src
 
 
-Neste entypoint definimos que o conteúdo que iremos retorna será um "application/json", definido o *Content-type*, até aqui não definimos o header. Mas quando declaremos *(setf (hunchentoot:header-out "Access-Control-Allow-Origin") \"\*\")*, desmos que o campo "Access-Control-Allow-Origin", com \*, dissemos que o conteúdo da solicitação será sem credenciais. Na linha logo  abaixo, definimos o tipo de dado que deverá esta na entrada, deverá *application/json*, por fim devemos por último que o controle de acesso ao headers deverá passar por autenticação.
+Neste entypoint definimos que o conteudo que iremos retorna será um "application/json", definido o *Content-type*, até aqui não definimos o header. Mas quando declaremos *(setf (hunchentoot:header-out "Access-Control-Allow-Origin") "*")*, dessemos que o campo "Access-Control-Allow-Origin", com \*, dissemos que o conteudo da solicitação será sem crendeciais. Na linha logo  abaixo, definimos o tipo de dado que deverá esta na entrada, deverá *application/json*, por fim devimos por ultimo que o controle de acesso ao headers deverá passar por authenticação.
 
-No exemplo usamos este tipos de cabeçalho, mas você pode configurar o que quiser, basta manter o padrão apresentado, *(setf (hunchentoot:header-out "KEY") "NEW-VALUE")*.
+No exemplo usamos este tipos de cabeçario, mas você pode configurar o que quiser, basta manter o padrão apresentado, *(setf (hunchentoot:header-out "KEY") "NEW-VALUE")*.
 
 *** IO Json
 
-Uma maneira bastante útil de compartilhar dados na rede é usamos o formato json, principalmente entre servidores ou API's, existem também a possibilidade do XML, mas o json é uma maneira bem mais simples de trabalhar, então vejamos com trabalharemos com json no hunchentoot. Nesta aplicação iremos receber um json é retorna um json, no caso será o mesmo json de entrada, como exemplo, mas o json de saída poderá ser qualquer outro, só para fins de demonstração iremos utilizar o mesmo json, mas deverá funcionar com qualquer outro que a aplicação retorna. Então vejamos:
+Uma maneira bastante util de compartinha dados na rede é usamos o formato json, principalmente entre servidores ou API's, existem também a possibilidade do XML, mas o json é uma maneira bem mais simples de trabalhar, então vejamos com trabalharemos com json no hunchentoot. Nesta aplicação iremos receber um json é retorna um json, no caso será o mesmo json de entrada, como exemplo, mas o json de saida poderá ser qualquer outro, só para fins de demostração iremos utilizar o mesmo json, mas deverá funcionar com qualquer outro que a aplicação retorna. Então vejamos:
 
 
 #+begin_src lisp
@@ -466,26 +467,26 @@ Uma maneira bastante útil de compartilhar dados na rede é usamos o formato json,
     (setf (hunchentoot:content-type*) "application/json; charset=utf-8")
     (setf (hunchentoot:header-out "Context-Type") "application/json; charset=utf-8")
     (let* ((raw-data (hunchentoot:raw-post-data :force-text t))
-  (js (with-input-from-string (s raw-data) (json:decode-json s))) )
+	   (js (with-input-from-string (s raw-data) (json:decode-json s))) )
       (format nil "~a" (json:encode-json-to-string js))))
 #+end_src
 
 O importante aqui é que configuramos um ponto de entrada que entrar json, mas quando iremos ler no hunchentoot forçamos para ler como text, existem a possibilidade de ferem binary também,
-ao obter todos os corpo do request, usamos outra library, *cl-json*, uma library que manipula json, sendo assim com a mesma decoficamos a string para json, outra coisa antes de retorna o resultado codificar nosso objeto json para string.
+ao obter todos os corpo do request, usamos outra library, *cl-json*, uma library que manipula json, sendo assim com a mesma decoficamos a string para json, outra coisa antes de retorna o resultado codificamos nosso objeto json para string.
 
 Para testar este entypoint, precisamos fazer um request passando um json, novamente podemos utiliza aplicativos com *post-man*, mas aproveitamos sbcl, fazemos então com o sbcl.
 
 #+begin_src lisp
   (ql:quickload :drakma)
 
-  (defun post-request(url &optional string-json)
+  (defun post-request(url &optional string-json) 
     (multiple-value-bind (stream status-code)
-(drakma:http-request url :content string-json
-    :content-type "application/json; charset=utf-8" :want-stream t)
+	(drakma:http-request url :content string-json
+			     :content-type "application/json; charset=utf-8" :want-stream t)
     (let ((r nil))
       (when stream
-(loop for line = (read-line stream nil)
-  while line do (push line r))
+	(loop for line = (read-line stream nil)
+	   while line do (push line r))
       (close stream))
     (values status-code (format nil "~{~a~^~% ~}" r))) ))
 
@@ -502,7 +503,7 @@ Esta função recebe url e um paramento opcional que deverá ser um string com form
 #+end_export
 
 *** IO Binary Stream
-Como estaremos trabalhando com dados binário, devemos trabalhar o que estávamos recebendo, mas vamos supor que nossa aplicação está atrás de proxy ou que o request para por um autenticação antes mesmo de receber o streams (transmissão).
+Como estaremos trabalhando com dados binário, devemos trabalhar o que estavamos recebendo, mas vamos supor que nossa aplicação está atras de proxy ou que o request para por um authentificação antes mesmo de receber o streams (transmissão).
 
 
 #+begin_src
@@ -521,10 +522,10 @@ Como estaremos trabalhando com dados binário, devemos trabalhar o que estávamos 
 
 *** Authorization
 
-Criamos um sistema de autenticação, abortando o básico o método *Basic Auth*, também falamos um pouco de como acessar o cabeçalho (ou header) de 'AUTHORIZATION', como isso fazemos a autenticação que queremos.
+Criamos um sistema de authentificação, abortando o básico o método *Basic Auth*, também falaremos um pouco de como acessar o cabeçario (ou header) de 'AUTHORIZATION', como isso fazemos a athenticação que queremos.
 
 
- - O Basic Auth é uma autenticação simples que passa um string no formato base64 com usuário e senha separado por ; (ponto e vírgula). Como é uma autenticação mais simples pode utiliza-se de uma função já existente no hunchentoot, que já nos passa o o usuário e senha, então vejamos:
+ - O Basic Auth é uma authentificação simples que passa um string no formato base64 com usuário e senha separado por ; (ponto e vigula). Como é uma authentificação mais simples pode utiliza-se de uma função já existente no hunchentoot, que já nos passa o o usuário e senha, então vejamos:
 
 #+begin_src
 
@@ -532,15 +533,15 @@ Criamos um sistema de autenticação, abortando o básico o método *Basic Auth*, ta
   (setf (hunchentoot:content-type*) "text/plain")
   (setf (hunchentoot:header-out "Access-Control-Allow-Origin") "*")
   (setf (hunchentoot:header-out "Content-Type") "text/html;application/json")
-  (setf (hunchentoot:header-out "Access-Control-Allow-Headers")
-"Content-Type, authorization")
+  (setf (hunchentoot:header-out "Access-Control-Allow-Headers")	
+	"Content-Type, authorization")
   (setf (hunchentoot:return-code*) hunchentoot:+http-bad-request+)
   (multiple-value-bind (username password) (hunchentoot:authorization)
     (format nil "User: ~A ; Password: ~A" username password)))
 
 #+end_src
 
-Caso seja necessário usamos outro tipos de autenticação, podemos obter acesso no conteúdo do cabeçario 'AUTHORIZATION', vejamos então o cabeçario:
+Caso seja necessário usamos outro tipos de authentificação, podemos obter acesso no contéudo do cabeçario 'AUTHORIZATION', vejamos então o cabeçario:
 
 #+begin_src
 
@@ -548,15 +549,15 @@ Caso seja necessário usamos outro tipos de autenticação, podemos obter acesso no
   (setf (hunchentoot:content-type*) "text/plain")
   (setf (hunchentoot:header-out "Access-Control-Allow-Origin") "*")
   (setf (hunchentoot:header-out "Content-Type") "text/html;application/json")
-  (setf (hunchentoot:header-out "Access-Control-Allow-Headers")
-"Content-Type, authorization")
+  (setf (hunchentoot:header-out "Access-Control-Allow-Headers")	
+	"Content-Type, authorization")
   (format nil "~a" (hunchentoot:header-in* "Authorization"))
  
 #+end_src
 
 *** CGI Script
 
-Antes de começamos devemos esclarer a sigla CGI, está sigla ao contrario do CGI usados em filmes da marvel ou em qualquer cinema, que possui um nome *Computer Generated Imagery*, o nosso CGI significa na verdade (Common Gateway Interface), que é uma interface que permite que o servidor execute código externo a ele, ou seja, execução de código que não faze parte do código padrão do servidor. Então vejamos como habilitamos este recurso no hunchentoot, implemetamos o seguinte trecho.
+Antes de começamos devemos esclarer a sigla CGI, está sigla ao contrario do CGI usados em filmes da marvel ou em qualquer ciname, que possui um nome *Computer Generated Imagery*, o nosso CGI significa na verdade (Common Gateway Interface), que é uma interface que permite que o servidor execute código externo a ele, ou seja, execução de código que não faze parte do código padrão do servidor. Então vejamos como habilitamos este recurso no hunchentoot, implemetamos o seguinte trecho.
 
 #+begin_src
 (ql:quickload :hunchentoot-cgi)
@@ -572,6 +573,7 @@ Antes de começamos devemos esclarer a sigla CGI, está sigla ao contrario do CGI 
 
 Então testamos aquele programa em clean escrevemos antes, o hello.icl, aonde complitamos o mesmo para hello.cgi, vejamos abaixo o resultado:
 
+#+CAPTION: Hunchentoot CGI Clean in Hunchentoot Server
 [[./imagens/cgiclean.png]]
 
 Podemos rodar programas semelhante em qualquer linguagem, por exemplo, em python:
@@ -591,6 +593,7 @@ Podemos rodar programas semelhante em qualquer linguagem, por exemplo, em python
   print("</body></html>")
 #+end_src
 
+#+CAPTION: Hunchentoot CGI PYTHON in Hunchentoot Server
 [[./imagens/cgipython.png]]
 
 Também podemos fazer isto com o lisp:
@@ -611,6 +614,7 @@ Também podemos fazer isto com o lisp:
   )
 #+end_src
 
+#+CAPTION: Hunchentoot CGI Lisp in Hunchentoot Server
 [[./imagens/cgilisp.png]]
 
 Citei duas linguagem, mas qualquer liguagem podem ser usadas com CGI script.
