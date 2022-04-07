@@ -1,0 +1,8 @@
+#!/usr/bin/python3.8
+import os
+
+def hello_cgi(name):
+  print("Hello, {}!".format(name))
+
+
+hello_cgi(os.environ['QUERY_STRING'])

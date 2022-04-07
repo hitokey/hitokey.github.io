@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR" xml:lang="pt_BR">
 <head>
-<!-- 2022-03-31 Thu 03:36 -->
+<!-- 2022-03-31 Thu 04:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title><a href="https://hitokey.github.io/">Simples programa de Fibonacci</a></title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="DESKTOP-6C7OVT5" />
+<meta name="author" content="Pedro Fernandes" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -161,6 +161,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -192,50 +205,26 @@
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/hideshow.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -267,29 +256,26 @@ for the JavaScript code in this tag.
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org080c683">1. Introdução</a>
+<li><a href="#orgba18614">1. Introdução</a>
 <ul>
-<li><a href="#org1c1558a">1.1. Fibonacci</a></li>
+<li><a href="#org1e94160">1.1. Fibonacci</a></li>
 </ul>
 </li>
-<li><a href="#org23692ed">2. Home</a></li>
+<li><a href="#org2a4a810">2. Home</a></li>
 </ul>
 </div>
 </div>
-<p>
-n#+Author: Pedro Fernandes
-</p>
 
-<div id="outline-container-org080c683" class="outline-2">
-<h2 id="org080c683"><span class="section-number-2">1</span> Introdução</h2>
+<div id="outline-container-orgba18614" class="outline-2">
+<h2 id="orgba18614"><span class="section-number-2">1</span> Introdução</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Estou escrevendo este documento para testar o github blog, estão não espere nada demais nesta página.
 </p>
 </div>
 
-<div id="outline-container-org1c1558a" class="outline-3">
-<h3 id="org1c1558a"><span class="section-number-3">1.1</span> Fibonacci</h3>
+<div id="outline-container-org1e94160" class="outline-3">
+<h3 id="org1e94160"><span class="section-number-3">1.1</span> Fibonacci</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Fibonacci é série numerica que descreve a seguinte senquencia <b>1,1,2,3,4,5,8,13&#x2026;</b>, dessa maneira Leonardo Pisa descreve o crescimento pela seguiente fórmula: \(F_n=F_{n-1}+F_{n-2}\), com a condição inicial \(f(0)=0\) e \(f(1)=1\), então:
@@ -300,46 +286,46 @@ Agora descrevemos em common lisp. Obs.: eu implementei no elisp em um emacs-wind
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #20b2aa; font-weight: bold;">require</span> '<span style="color: #1e90ff;">cl</span>)
+<pre class="src src-elisp">(require 'cl)
 
-(<span style="color: #20b2aa; font-weight: bold;">defun</span> <span style="color: #00ff7f;">fib</span>(n)
-   (<span style="color: #20b2aa; font-weight: bold;">if</span> (&lt;= n 2) 1
-         (+ (fib (- n 1)) (fib (- n 2)) )))
+(defun fib(n)
+   (if (&lt;= n 2) 1
+	 (+ (fib (- n 1)) (fib (- n 2)) )))
 
-(message <span style="color: #ffa07a;">"Fib(%d):= %d"</span> 5 (fib 8))
+(message "Fib(%d):= %d" 5 (fib 8))
 </pre>
 </div>
 
 <pre class="example">
 Fib(5):= 21
-
 </pre>
+
 
 <p>
 Eu quero verificar o tempo de execução da função fib que implementamos no elisp. 
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #20b2aa; font-weight: bold;">benchmark-run</span> 1 (fib 40))
+<pre class="src src-elisp">(benchmark-run 1 (fib 40))
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(35.0080677 0 0.0)
+<pre class="src src-elisp">(37.093078 0 0.0)
 </pre>
 </div>
 
 <p>
-É demorou 37 segundos para executar o fibonacci 40, na lista o primeiro é o tempo real de execução, segundo o número fde coletas de lixos e finalizando o tempo gasto pelo coletor de lixo, agora executar por meio de uma complexão binária.
+É demorou mais de 30 segundos para executar o fibonacci 40, na lista o primeiro é o tempo real de execução, segundo o número fde coletas de lixos e finalizando o tempo gasto pelo coletor de lixo, agora executar por meio de uma complexão binária.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #20b2aa; font-weight: bold;">benchmark-run-compiled</span> 1 (fib 40))
+<pre class="src src-elisp">(benchmark-run-compiled 1 (fib 40))
 </pre>
 </div>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(34.9536884 0 0.0)
+<pre class="src src-elisp">(36.967577 0 0.0)
 </pre>
 </div>
 
@@ -352,25 +338,25 @@ Podemos mudar um pouco a nossa função fibonacci, porque nesta função utiliza
 </p>
 
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #20b2aa; font-weight: bold;">defun</span> <span style="color: #00ff7f;">fib-acc</span>(n prev acc)
-  (<span style="color: #20b2aa; font-weight: bold;">if</span> (&lt;= n 0) acc 
+<pre class="src src-elisp">(defun fib-acc(n prev acc)
+  (if (&lt;= n 0) acc 
      (fib-acc (- n 1) acc (+ prev acc))))
 
-(<span style="color: #20b2aa; font-weight: bold;">defun</span> <span style="color: #00ff7f;">fib</span>(n)
-  (<span style="color: #20b2aa; font-weight: bold;">if</span> (&lt;= n 1) n
+(defun fib(n)
+  (if (&lt;= n 1) n
     (fib-acc n 1 0)))
 
-(funcall (<span style="color: #20b2aa; font-weight: bold;">lambda</span> (n) (message <span style="color: #ffa07a;">"Fib(%d): %d"</span> n (fib n))) 40)
+(funcall (lambda (n) (message "Fib(%d): %d" n (fib n))) 40)
 </pre>
 </div>
 
 <pre class="example">
 Fib(40): 102334155
-
 </pre>
 
+
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #20b2aa; font-weight: bold;">benchmark-run-compiled</span> 1 (fib 40))
+<pre class="src src-elisp">(benchmark-run-compiled 1 (fib 40))
 </pre>
 </div>
 
@@ -390,8 +376,8 @@ Vemos que podemos otimizar a recursão utilizando acumuladores.
 </div>
 </div>
 
-<div id="outline-container-org23692ed" class="outline-2">
-<h2 id="org23692ed"><span class="section-number-2">2</span> <a href="https://hitokey.github.io/">Home</a></h2>
+<div id="outline-container-org2a4a810" class="outline-2">
+<h2 id="org2a4a810"><span class="section-number-2">2</span> <a href="https://hitokey.github.io/">Home</a></h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Minha Página (My Page): <a href="https://hitokey.github.io/">link</a>
@@ -401,9 +387,9 @@ Minha Página (My Page): <a href="https://hitokey.github.io/">link</a>
 </div>
 <div id="postamble" class="status">
 <p class="date">Data: 2021-03-09 Tue 00:00</p>
-<p class="author">Autor: DESKTOP-6C7OVT5</p>
-<p class="date">Created: 2022-03-31 Thu 03:36</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="author">Autor: Pedro Fernandes</p>
+<p class="date">Criado em: 2022-03-31 Thu 04:22</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

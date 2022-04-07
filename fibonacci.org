@@ -1,4 +1,4 @@
-n#+Author: Pedro Fernandes
+#+Author: Pedro Fernandes
 #+Date: <2021-03-09 ter>
 #+Title: [[https://hitokey.github.io/][Simples programa de Fibonacci]]
 #+SETUPFILE: ../org-html-themes/org/theme-bigblow.setup
@@ -38,7 +38,7 @@ Eu quero verificar o tempo de execução da função fib que implementamos no elisp.
 (37.093078 0 0.0)
 #+END_SRC
 
-É demorou 37 segundos para executar o fibonacci 40, na lista o primeiro é o tempo real de execução, segundo o número fde coletas de lixos e finalizando o tempo gasto pelo coletor de lixo, agora executar por meio de uma complexão binária.
+É demorou mais de 30 segundos para executar o fibonacci 40, na lista o primeiro é o tempo real de execução, segundo o número fde coletas de lixos e finalizando o tempo gasto pelo coletor de lixo, agora executar por meio de uma complexão binária.
 
 #+BEGIN_SRC elisp :results value code :exports both 
 (benchmark-run-compiled 1 (fib 40))
