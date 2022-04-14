@@ -627,11 +627,10 @@ Citei duas linguagem, mas qualquer liguagem podem ser usadas com CGI script.
 
 #+end_src
 
-#+begin_export html
+#+begin_example
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html><body>Exemplo</body></html>
-#+end_export
-
+#+end_example
 
 Existem muitas possibilidades, caso queira visualizar melhor de uma olhada na página: [[https://edicl.github.io/cl-who/][https://edicl.github.io/cl-who/]]. Também é possivel geramos código javascript de um código lisp usando o parenscipt, vejamos um exemplo:
 
