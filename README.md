@@ -2,6 +2,8 @@
 
 Blog Link <https://hitokey.github.io/>
 
-Estou criando este blog para me ajudar a melhorá minha deficiencia linguistica, tanto no português, quanto em outro idioma. O mais importante é melhorá minha habilidades de computação, além de força-me a em ser mais focado em algo atividade.
+Estou criando este blog para me ajudar a melhorÃ¡ com o portuguÃªs, tambÃ©m outro idioma. O mais importante Ã© melhorÃ¡ minha habilidades de computaÃ§Ã£o, alÃ©m de forÃ§a-me a em ser mais focado em algo atividade.
 
-Então caso alguém esteja lendo este texto que escrevi, acredito que este não é o melhor lugar para gastarem seu tempo, mas caso queira continuar, tente relevar os inumeros erros linguísticos. Caso tenha alguma sugestão, dúvida ou concelho poderá ser enviado para <pedro_like07@hotmail.com>.
+EntÃ£o caso alguÃ©m esteja lendo este texto que escrevi, acredito que este nÃ£o Ã© o melhor lugar para gastarem seu tempo, mas caso queira continuar, tente relevar os inumeros erros linguÃ­sticos. 
+
+[comment]: <> (Caso tenha alguma sugestÃ£o, dÃºvida ou concelho poderÃ¡ ser enviado para <pedro_like07@hotmail.com>.)
