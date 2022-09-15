@@ -1,6 +1,6 @@
 # Criando um Blog.
 
-Blog Link <https://hitokey.github.io/>
+Blog: <https://hitokey.github.io/>
 
 Estou criando este blog para me ajudar a melhorá o português, outros idiomas também. O mais importante é melhora meu conhecimento em computação, além de força-me em obter periodicidade de escrita e estudos.
 
