@@ -1,0 +1,12 @@
+#+AUTHOR: 1500 palavras indispensável Francês.
+#+DATE: <2022-04-19 Tue>
+#+TITLE: Pedro Fernandes
+
+
+* Substantifs et/ou mots qui répondent aux questions
+  QU'EST-CE QUE? et QUI EST-CE QUE?
+
+#+
+#+begin_verse
+
+#+end_verse

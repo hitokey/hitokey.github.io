@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR" xml:lang="pt_BR">
 <head>
-<!-- 2022-04-14 Thu 10:14 -->
+<!-- 2022-10-07 Fri 19:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Clean in LISP from Web System</title>
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -161,6 +161,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -192,50 +205,26 @@
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/hideshow.js"></script>
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -267,47 +256,47 @@ for the JavaScript code in this tag.
 <h2>&Iacute;ndice</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org846b816">1. Sistema Web.</a>
+<li><a href="#org99ea1c4">1. Sistema Web.</a>
 <ul>
-<li><a href="#orgb58d8e0">1.1. Clean</a></li>
-<li><a href="#org48a95fa">1.2. Instalação</a></li>
-<li><a href="#org4c1d942">1.3. Configuração.</a></li>
-<li><a href="#org48234f0">1.4. Simples programa em Clean para Web.</a></li>
-<li><a href="#orge60adc2">1.5. Mas falaremos um pouco de LISP.</a></li>
-<li><a href="#org89a0aec">1.6. Lisp GGI.</a></li>
-<li><a href="#orga2f1f31">1.7. Lisp control Clean por Object System Interface</a></li>
-<li><a href="#orgd39fbdd">1.8. Lisp and Clean Foreign Function Interface</a>
+<li><a href="#orgbd3c943">1.1. Clean</a></li>
+<li><a href="#org5518199">1.2. Instalação</a></li>
+<li><a href="#org45d6125">1.3. Configuração.</a></li>
+<li><a href="#org252e63f">1.4. Simples programa em Clean para Web.</a></li>
+<li><a href="#org6d06345">1.5. Mas falaremos um pouco de LISP.</a></li>
+<li><a href="#orgb4d0bb9">1.6. Lisp GGI.</a></li>
+<li><a href="#org75772d5">1.7. Lisp control Clean por Object System Interface</a></li>
+<li><a href="#org50957d9">1.8. Lisp and Clean Foreign Function Interface</a>
 <ul>
-<li><a href="#orgea4a2fe">1.8.1. Clean Foreign</a></li>
+<li><a href="#org3c2114e">1.8.1. Clean Foreign</a></li>
 </ul>
 </li>
-<li><a href="#org168833f">1.9. Lisp Hunchentoot Básico</a></li>
-<li><a href="#org8ae942e">1.10. GET Simples - Hello World;</a></li>
-<li><a href="#orgc949bc5">1.11. Lisp Hunchentoot Avancado</a>
+<li><a href="#org2d312ed">1.9. Lisp Hunchentoot Básico</a></li>
+<li><a href="#org91f46f3">1.10. GET Simples - Hello World;</a></li>
+<li><a href="#org1f708a0">1.11. Lisp Hunchentoot Avancado</a>
 <ul>
-<li><a href="#org865f6b3">1.11.1. GET/POST/PUT Request</a></li>
-<li><a href="#org9e6b8d6">1.11.2. HTTP HEADERS</a></li>
-<li><a href="#org0c36b81">1.11.3. IO Json</a></li>
-<li><a href="#org307288d">1.11.4. IO Binary Stream</a></li>
-<li><a href="#org0dd870c">1.11.5. Authorization</a></li>
-<li><a href="#org7966500">1.11.6. CGI Script</a></li>
+<li><a href="#org12217e0">1.11.1. GET/POST/PUT Request</a></li>
+<li><a href="#orgd91b064">1.11.2. HTTP HEADERS</a></li>
+<li><a href="#org3fb6d37">1.11.3. IO Json</a></li>
+<li><a href="#orgb006d5d">1.11.4. IO Binary Stream</a></li>
+<li><a href="#orgc6e794b">1.11.5. Authorization</a></li>
+<li><a href="#orgb28621f">1.11.6. CGI Script</a></li>
 </ul>
 </li>
-<li><a href="#orgcdfd3db">1.12. Extra: HTML e JavaScript</a></li>
+<li><a href="#org8e5a15d">1.12. Extra: HTML e JavaScript</a></li>
 </ul>
 </li>
-<li><a href="#orgdca7630">2. Home</a></li>
+<li><a href="#org5ad4d3d">2. Home</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org846b816" class="outline-2">
-<h2 id="org846b816"><span class="section-number-2">1</span> Sistema Web.</h2>
+<div id="outline-container-org99ea1c4" class="outline-2">
+<h2 id="org99ea1c4"><span class="section-number-2">1</span> Sistema Web.</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgb58d8e0" class="outline-3">
-<h3 id="orgb58d8e0"><span class="section-number-3">1.1</span> Clean</h3>
+<div id="outline-container-orgbd3c943" class="outline-3">
+<h3 id="orgbd3c943"><span class="section-number-3">1.1</span> Clean</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Clean e Lisp são linguagens funcionais.
@@ -315,8 +304,8 @@ Clean e Lisp são linguagens funcionais.
 </div>
 </div>
 
-<div id="outline-container-org48a95fa" class="outline-3">
-<h3 id="org48a95fa"><span class="section-number-3">1.2</span> Instalação</h3>
+<div id="outline-container-org5518199" class="outline-3">
+<h3 id="org5518199"><span class="section-number-3">1.2</span> Instalação</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 A instalação é bastante simples, por isso já utiliza-se de uma versão já pré-compilada. Sendo assim não será preciso configurarmos muita coisa. Além disso, como queremos criar um paginas Web para servidores linux, iremos baixar a versão clean-bundle-complete-linux-x64-latest.tgz. Você conseguirá acessar a seguinte página do <a href="https://wiki.clean.cs.ru.nl/Download_Clean">Clean</a>.
@@ -324,17 +313,17 @@ A instalação é bastante simples, por isso já utiliza-se de uma versão já p
 </div>
 </div>
 
-<div id="outline-container-org4c1d942" class="outline-3">
-<h3 id="org4c1d942"><span class="section-number-3">1.3</span> Configuração.</h3>
+<div id="outline-container-org45d6125" class="outline-3">
+<h3 id="org45d6125"><span class="section-number-3">1.3</span> Configuração.</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Depois de baixar o arquivo, pelo terminal fazemos as seguintes configuração.
 </p>
 
 <pre class="example">
-# mv Download/clean-bundle-complete-linux-x64-latest.tgz ~/
-# tar xvf clean-bundle-complete-linux-x64-latest.tgz .
-# mv clean-bundle-complete clean/
+$ mv Download/clean-bundle-complete-linux-x64-latest.tgz ~/
+$ tar xvf clean-bundle-complete-linux-x64-latest.tgz .
+$ mv clean-bundle-complete clean/
 </pre>
 
 <p>
@@ -342,14 +331,14 @@ Com o directório clean criado, vamos então configurar no arquivo ~/.bashrc as 
 </p>
 
 <pre class="example">
-# echo "export CLEAN_HOME=~/clean &gt;&gt; ~/.bashrc
-# echo "export PATH=$PATH:$CLEAN_HOME/bin &gt;&gt; ~/.bashrc
+$ echo "export CLEAN_HOME=~/clean &gt;&gt; ~/.bashrc
+$ echo "export PATH=$PATH:$CLEAN_HOME/bin &gt;&gt; ~/.bashrc
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org48234f0" class="outline-3">
-<h3 id="org48234f0"><span class="section-number-3">1.4</span> Simples programa em Clean para Web.</h3>
+<div id="outline-container-org252e63f" class="outline-3">
+<h3 id="org252e63f"><span class="section-number-3">1.4</span> Simples programa em Clean para Web.</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Neste caso, o programa que iremos abordar são para web servering, com por exemplo o apache, nginx etc. Servidores que gerenciam todas as conexão e requisições necessárias para uma comunicação web. Tais programas chamamos de Common Gateway Interface (CGI). Recomendo o excelente livro: <a href="https://docstore.mik.ua/orelly/linux/cgi/index.htm">CGI Programming with perl</a>, onde ele aborda tais métodos. Então, vamos ao programa.
@@ -381,8 +370,8 @@ No Clean precisamos antes de rodar nosso programa compilar nosso código, iremos
 </p>
 
 <div class="org-src-container">
-<pre class="src src-sh">clm -b -nt -nr hello-web -O hello.cgi
-./hello.cgi
+<pre class="src src-sh">$ clm -b -nt -nr hello-web -O hello.cgi
+$ ./hello.cgi
 </pre>
 </div>
 
@@ -408,8 +397,8 @@ Recomendo que leia o <a href="https://docstore.mik.ua/orelly/linux/cgi/ch03_02.h
 </div>
 </div>
 
-<div id="outline-container-orge60adc2" class="outline-3">
-<h3 id="orge60adc2"><span class="section-number-3">1.5</span> Mas falaremos um pouco de LISP.</h3>
+<div id="outline-container-org6d06345" class="outline-3">
+<h3 id="org6d06345"><span class="section-number-3">1.5</span> Mas falaremos um pouco de LISP.</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 Estou abordando o lisp neste documento porque o objetivo maior é interligar a linguagem LISP com a linguagem CLEAN. Onde deixamos que o Lisp gerencie o Servidor e usamos programas já escrito nele CLEAN, nem a necessidade de reescrevermos o mesmo.
@@ -421,15 +410,15 @@ Obs.: Está ideia é apenas para um treinamento e educacional, não haverá um c
 </div>
 </div>
 
-<div id="outline-container-org89a0aec" class="outline-3">
-<h3 id="org89a0aec"><span class="section-number-3">1.6</span> Lisp GGI.</h3>
+<div id="outline-container-orgb4d0bb9" class="outline-3">
+<h3 id="orgb4d0bb9"><span class="section-number-3">1.6</span> Lisp GGI.</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 Podemos também fazer um aplicativo GUI com o lisp, não é nosso objetivo, mas podemos observar.
 </p>
 
-<pre class="example">
-#!/usr/local/bin/sbcl --script
+<div class="org-src-container">
+<pre class="src src-lisp">#!/usr/local/bin/sbcl --script
 
 (format t "Content-type: text/html~%~%")
 
@@ -442,6 +431,7 @@ Podemos também fazer um aplicativo GUI com o lisp, não é nosso objetivo, mas 
 (sb-ext:posix-getenv "QUERY_STRING")
 )
 </pre>
+</div>
 
 <p>
 Neste caso, vale observar que diferente do clean esta versão do código é implantado em tempo de execução, ou seja, está no formato script.
@@ -449,21 +439,22 @@ Neste caso, vale observar que diferente do clean esta versão do código é impl
 </div>
 </div>
 
-<div id="outline-container-orga2f1f31" class="outline-3">
-<h3 id="orga2f1f31"><span class="section-number-3">1.7</span> Lisp control Clean por Object System Interface</h3>
+<div id="outline-container-org75772d5" class="outline-3">
+<h3 id="org75772d5"><span class="section-number-3">1.7</span> Lisp control Clean por Object System Interface</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 Primeira, uma alternativa para controle do clean programa é usamos o controle de sistema a partir do SO(Sistema Operacional), dessa maneira codificado.
 </p>
 
-<pre class="example">
-(sb-ext:run-program "./hello.cgi" nil :output *standard-output*)
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listagem 2: </span>Basic program</label><pre class="src src-lisp">(sb-ext:run-program "./hello.cgi" nil :output *standard-output*)
 </pre>
+</div>
 
 <p>
 Temos o resultado:
 </p>
-<pre class="example">
+<pre class="example" id="orgee4458e">
 Hello,World!
 #&lt;SB-IMPL::PROCESS :EXITED 0&gt;
 </pre>
@@ -476,7 +467,7 @@ Usamos a função run-program possui um variação dependendo do common lisp que
 (ext:run-program "./hello" nil :output :stream)
 </pre>
 
-<pre class="example">
+<pre class="example" id="orgc17d91c">
 Hello,World!
 
 #&lt;output stream "FD-STREAM" 0x7fffc8ba2e60&gt;
@@ -495,7 +486,7 @@ Vemos que o retorno no ecl, são três valores, podemos que podemos processá-lo
 <p>
 Neste caso apenas llegamos o z, que o processo.
 </p>
-<pre class="example">
+<pre class="example" id="org4161e3b">
 #S(EXT:EXTERNAL-PROCESS :PID NIL :INPUT #&lt;output stream "FD-STREAM" 0x7fffea8ac8c0&gt; :OUTPUT NIL :ERROR-STREAM #&lt;input stream "FD-STREAM" 0x7fffea8ac820&gt; :%STATUS :EXITED :%CODE 0 :%LOCK #&lt;lock (nonrecursive) 0x7fffea3bdbd0&gt; :%PIPE #&lt;process 0x7fffea464880&gt;)
 </pre>
 
@@ -503,8 +494,8 @@ Neste caso apenas llegamos o z, que o processo.
 De qualquer forma o common lisp permite que controle qual será a função que iremos chamar verificado a versão do interpretador, por exemplo:
 </p>
 
-<pre class="example">
-(defun my-run (program argv)
+<div class="org-src-container">
+<pre class="src src-lisp">(defun my-run (program argv)
      (declare (type string program))
      (declare (type list argv))
    (let ((process
@@ -517,8 +508,9 @@ while line do (format t "~a" line)) ))
 
 (my-run "./hello" nil)
 </pre>
+</div>
 
-<pre class="example">
+<pre class="example" id="org905c834">
 Hello,World!
 NIL
 </pre>
@@ -536,14 +528,15 @@ Então, com este processo podemos por exemplo controlar produtor de áudio, por 
 <b>Obs.</b>: é necessário ter o sox instalado, instalar: sudo apt install sox
 </p>
 
-<pre class="example">
-(sb-ext:run-program "cmd.exe" '("/C" "start" "D:/Sound/sound.mp3")
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listagem 4: </span>Windows</label><pre class="src src-lisp">(sb-ext:run-program "cmd.exe" '("/C" "start" "D:/Sound/sound.mp3")
 				:search t :windows :hide)
 </pre>
+</div>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listagem 5 </span>Linux in Windows (WSL)</label><pre class="src src-lisp">(sb-ext:run-program <span style="color: #ffa07a;">"cmd.exe"</span> '(<span style="color: #ffa07a;">"/C"</span> <span style="color: #ffa07a;">"start"</span> <span style="color: #ffa07a;">"D:/Sound/sound.mp3"</span>)
-                               <span style="color: #76ee00;">:search</span> t )                  
+<label class="org-src-name"><span class="listing-number">Listagem 5: </span>Linux in Windows (WSL)</label><pre class="src src-lisp">(sb-ext:run-program "cmd.exe" '("/C" "start" "D:/Sound/sound.mp3")
+			       :search t )                  
 </pre>
 </div>
 
@@ -551,35 +544,36 @@ Então, com este processo podemos por exemplo controlar produtor de áudio, por 
 Vemos que podemos controlar vários processos entre outro com o lisp, então uma possibilidade é controlar o programa compilado em clean, afinal o programa estará em formato <b>elf</b>, vamos então testá-lo, usamos o programa my-run, escrito anteriormente.
 </p>
 
-<pre class="example">
-(my-run "./hello.cgi" nil)
+<div class="org-src-container">
+<pre class="src src-lisp">(my-run "./hello.cgi" nil)
 </pre>
+</div>
 
 <p>
 Vemos que conseguimos reproduzir no lisp a resposta do clean, vejamos o resultado abaixo.
 </p>
-<pre class="example">
+<pre class="example" id="org0bdbebd">
 &lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello: none&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
 NIL
 </pre>
 </div>
 </div>
 
-<div id="outline-container-orgd39fbdd" class="outline-3">
-<h3 id="orgd39fbdd"><span class="section-number-3">1.8</span> Lisp and Clean Foreign Function Interface</h3>
+<div id="outline-container-org50957d9" class="outline-3">
+<h3 id="org50957d9"><span class="section-number-3">1.8</span> Lisp and Clean Foreign Function Interface</h3>
 <div class="outline-text-3" id="text-1-8">
 <p>
 Vamos começar usando a função do clean no lisp. Então quando olhamos no manual do clean, vejamos como exportar seu código do clean para ser usado em outra linguagem, que pode ser n-linguagem, inclusive o python, mas iremos utilizar a código clean no Lisp.
 </p>
 </div>
 
-<div id="outline-container-orgea4a2fe" class="outline-4">
-<h4 id="orgea4a2fe"><span class="section-number-4">1.8.1</span> Clean Foreign</h4>
+<div id="outline-container-org3c2114e" class="outline-4">
+<h4 id="org3c2114e"><span class="section-number-4">1.8.1</span> Clean Foreign</h4>
 </div>
 </div>
 
-<div id="outline-container-org168833f" class="outline-3">
-<h3 id="org168833f"><span class="section-number-3">1.9</span> Lisp Hunchentoot Básico</h3>
+<div id="outline-container-org2d312ed" class="outline-3">
+<h3 id="org2d312ed"><span class="section-number-3">1.9</span> Lisp Hunchentoot Básico</h3>
 <div class="outline-text-3" id="text-1-9">
 <p>
 O sistema hunchentoot é um interface de rede com ferramentas para construção de sites dinâmicos. Ele funciona com um servidor web independente, ele é capaz de conexão HTTP/1.1 chunking, conexão persistentes e SSL. Além disso, ele fornece diversos recursos de manipulação automática de seção, registro etc. Ou seja, ele tem além dessa função muitas outras, mas caso queira saber de todas visite o site do <a href="http://edicl.github.io/hunchentoot/">hunchentoot</a>.
@@ -589,11 +583,12 @@ O sistema hunchentoot é um interface de rede com ferramentas para construção 
 Então começamos o que interessa, construir uma aplicação web-server em lisp. Começamos com algo simples, um hello world
 </p>
 
-<pre class="example">
-(ql:quickload :hunchentoot)
+<div class="org-src-container">
+<pre class="src src-lisp">(ql:quickload :hunchentoot)
 </pre>
+</div>
 
-<pre class="example">
+<pre class="example" id="org62f4012">
 
 (ql:quickload :hunchentoot)
 To load "hunchentoot":
@@ -608,7 +603,7 @@ To load "hunchentoot":
 Como iremos precisar do hunchentoot, podemos usar o quick lisp para carregá-lo, caso seja a primeira vez fazendo este comando, o sistema irá apresentar mais informações com um semelhante a isto:
 </p>
 
-<pre class="example">
+<pre class="example" id="orgf4f0364">
 ; Loading "hunchentoot"
 [package chunga]..................................
 [package cl-base64]...............................
@@ -633,11 +628,12 @@ Como hunchentoot em vale ressaltar, que qualquer informação dentro desse pacot
 Então começamos iniciando um servidor http simples, com uma função dinâmica que pegar a query\<sub>string</sub> é diz um Hello, caso não term a query\<sub>string</sub>, diz hello, world.
 </p>
 
-<pre class="example">
-(hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 4242))
+<div class="org-src-container">
+<label class="org-src-name"><span class="listing-number">Listagem 6: </span>Start Easy Acceptor</label><pre class="src src-lisp">(hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 4242))
 </pre>
+</div>
 
-<pre class="example">
+<pre class="example" id="orgc6e6bec">
 #&lt;HUNCHENTOOT:EASY-ACCEPTOR (host *, port 4242)&gt;
 </pre>
 
@@ -651,7 +647,7 @@ Quando acessar o link pelo browser veremos isto no browser:
 </p>
 
 
-<div class="figure">
+<div id="orgb08d623" class="figure">
 <p><img src="./imagens/localhost.png" alt="localhost.png" />
 </p>
 <p><span class="figure-number">Figura 1: </span>Print Check Browser.</p>
@@ -661,21 +657,21 @@ Quando acessar o link pelo browser veremos isto no browser:
 E isso no terminal:
 </p>
 
-<pre class="example">
+<pre class="example" id="orgb9bbb2d">
 127.0.0.1 - [2022-03-31 02:04:52] "GET / HTTP/1.1" 200 393 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36"
 </pre>
 </div>
 </div>
 
-<div id="outline-container-org8ae942e" class="outline-3">
-<h3 id="org8ae942e"><span class="section-number-3">1.10</span> GET Simples - Hello World;</h3>
+<div id="outline-container-org91f46f3" class="outline-3">
+<h3 id="org91f46f3"><span class="section-number-3">1.10</span> GET Simples - Hello World;</h3>
 <div class="outline-text-3" id="text-1-10">
 <p>
 Então programos o hello world pelo método GET, então escrevemos:
 </p>
 
-<pre class="example">
-(ql:quickload :hunchentoot)
+<div class="org-src-container">
+<pre class="src src-lisp">(ql:quickload :hunchentoot)
 
 (defparameter *web* (make-instance 'hunchentoot:easy-acceptor
 				    :port 4242))
@@ -687,13 +683,14 @@ Então programos o hello world pelo método GET, então escrevemos:
 (hunchentoot:start *web*)
 
 </pre>
+</div>
 
 <p>
 Podemos visualizar no browser o resultado no link: <a href="http://localhost:4242/hello?nome=pedro">http://localhost:4242/hello?nome=pedro</a>, com meu nome.
 </p>
 
 
-<div class="figure">
+<div id="orga816b91" class="figure">
 <p><img src="./imagens/name_hello.png" alt="name_hello.png" />
 </p>
 </div>
@@ -704,7 +701,7 @@ Sem nome in <a href="https://localhost:4242/hello">https://localhost:4242/hello<
 </p>
 
 
-<div class="figure">
+<div id="orgc1e7c2d" class="figure">
 <p><img src="./imagens/world_hello.png" alt="world_hello.png" />
 </p>
 </div>
@@ -720,8 +717,8 @@ Para desativar o servidor basta digitar:
 </div>
 </div>
 
-<div id="outline-container-orgc949bc5" class="outline-3">
-<h3 id="orgc949bc5"><span class="section-number-3">1.11</span> Lisp Hunchentoot Avancado</h3>
+<div id="outline-container-org1f708a0" class="outline-3">
+<h3 id="org1f708a0"><span class="section-number-3">1.11</span> Lisp Hunchentoot Avancado</h3>
 <div class="outline-text-3" id="text-1-11">
 <p>
 Vamos fazer alguma aplicação mais complexa, que são o seguintes pontos:
@@ -737,44 +734,44 @@ Vamos fazer alguma aplicação mais complexa, que são o seguintes pontos:
 </ul>
 </div>
 
-<div id="outline-container-org865f6b3" class="outline-4">
-<h4 id="org865f6b3"><span class="section-number-4">1.11.1</span> GET/POST/PUT Request</h4>
+<div id="outline-container-org12217e0" class="outline-4">
+<h4 id="org12217e0"><span class="section-number-4">1.11.1</span> GET/POST/PUT Request</h4>
 <div class="outline-text-4" id="text-1-11-1">
 </div>
 <ol class="org-ol">
-<li><a id="org2317231"></a>GET Request<br />
+<li><a id="orgcf49523"></a>GET Request<br />
 <div class="outline-text-5" id="text-1-11-1-1">
 <p>
 O método get e post é essencial para a comunicação HTTP, como vimos no <b>GET Simples - Hello World</b>, usamos o método GET, quando manipulamos a QUERY<sub>STRING</sub>, mas vejamos novamente outra aplicação utilizando o método Query.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-lisp">  <span style="color: #cd853f;">;; </span><span style="color: #cd853f;">file: client_fib.lisp</span>
-  (ql:quickload <span style="color: #76ee00;">:hunchentoot</span>)
+<pre class="src src-lisp">  ;; file: client_fib.lisp
+  (ql:quickload :hunchentoot)
 
 
-  (<span style="color: #20b2aa; font-weight: bold;">defparameter</span> <span style="color: #9acd32;">*web*</span> (make-instance 'hunchentoot:easy-acceptor
-<span style="color: #76ee00;">:port</span> 4242))
+  (defparameter *web* (make-instance 'hunchentoot:easy-acceptor
+:port 4242))
 
 
-  (<span style="color: #20b2aa; font-weight: bold;">defun</span> <span style="color: #00ff7f;">fib</span>(n <span style="color: #9370db;">&amp;optional</span> (prev 1) (acc 0))
-      (<span style="color: #20b2aa; font-weight: bold;">cond</span> ((&gt; n 50) <span style="color: #ffa07a;">"limite break, because we limit cost"</span>)
+  (defun fib(n &amp;optional (prev 1) (acc 0))
+      (cond ((&gt; n 50) "limite break, because we limit cost")
    ((&lt;= n 0) acc)
    (t (fib (- n 1) acc (+ prev acc)) )))
 
-  (<span style="color: #20b2aa; font-weight: bold;">defun</span> <span style="color: #00ff7f;">client-name</span>(name)
-    (<span style="color: #20b2aa; font-weight: bold;">if</span> (null name) <span style="color: #ffa07a;">"Hello, Cliente"</span>
-(format nil <span style="color: #ffa07a;">"Hello, ~a!"</span> name)))
+  (defun client-name(name)
+    (if (null name) "Hello, Cliente"
+(format nil "Hello, ~a!" name)))
 
-  (hunchentoot:define-easy-handler (hello <span style="color: #76ee00;">:uri</span> <span style="color: #ffa07a;">"/fib"</span>) (number name)
-    (setf (hunchentoot:content-type*) <span style="color: #ffa07a;">"text/html"</span>)
-    (<span style="color: #20b2aa; font-weight: bold;">let</span> ((v (fib (parse-integer number))) (c (client-name name)))
-      (format nil <span style="color: #ffa07a;">"&lt;html&gt;&lt;body&gt;&lt;h1&gt;~a&lt;\h1&gt;&lt;p&gt;Fib: ~a&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"</span> c v)) )
+  (hunchentoot:define-easy-handler (hello :uri "/fib") (number name)
+    (setf (hunchentoot:content-type*) "text/html")
+    (let ((v (fib (parse-integer number))) (c (client-name name)))
+      (format nil "&lt;html&gt;&lt;body&gt;&lt;h1&gt;~a&lt;\h1&gt;&lt;p&gt;Fib: ~a&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;" c v)) )
 
 
   (hunchentoot:start *web*)
 
-  <span style="color: #cd853f;">;; </span><span style="color: #cd853f;">user: sbcl --load client_fib.lisp</span>
+  ;; user: sbcl --load client_fib.lisp
 
 
 </pre>
@@ -789,8 +786,8 @@ Neste caso a propria função <b>define-easy-handler</b> separa o conteúdo da q
 </p>
 
 
-<pre class="example">
-(ql:quickload :hunchentoot)
+<div class="org-src-container">
+<pre class="src src-lisp">(ql:quickload :hunchentoot)
 
 
 (hunchentoot:define-easy-handler (get-query :uri "/") ()
@@ -801,6 +798,7 @@ Neste caso a propria função <b>define-easy-handler</b> separa o conteúdo da q
 
 
 </pre>
+</div>
 
 
 <p>
@@ -808,7 +806,7 @@ Por exemplo, testamos o seguinte url =&gt; <a href="http://localhost:4242/?pedro
 </p>
 
 
-<div class="figure">
+<div id="org74245b8" class="figure">
 <p><img src="./imagens/querystring.png" alt="querystring.png" />
 </p>
 </div>
@@ -819,7 +817,7 @@ Dessa forma, como a Query\<sub>String</sub> é um string podemos manipulamos com
 </div>
 </li>
 
-<li><a id="org13c1c36"></a>POST Request<br />
+<li><a id="org1345a4b"></a>POST Request<br />
 <div class="outline-text-5" id="text-1-11-1-2">
 <p>
 O método POST request é muito importante na comunição TCP/IP do HTTP/HTTPS, sendo assim iremos demostra algumas programas utilizamos o post como método, mas tarde nos aprofuntaremos, na passagem de json e outro tipos de dados pelo método post. Vejemos então um aplicação básica.
@@ -827,9 +825,10 @@ O método POST request é muito importante na comunição TCP/IP do HTTP/HTTPS, 
 
 <div class="org-src-container">
 <pre class="src src-lisp">
-(hunchentoot:define-easy-handler (hello-post <span style="color: #76ee00;">:uri</span> <span style="color: #ffa07a;">"/hellopost"</span> <span style="color: #76ee00;">:default-request-type</span> <span style="color: #76ee00;">:post</span>) (name)
-  (setf (hunchentoot:content-type*) <span style="color: #ffa07a;">"text/html"</span>)
-  (format nil <span style="color: #ffa07a;">"Hello, ~a!"</span> name))
+(hunchentoot:define-easy-handler (hello-post :uri "/hellopost"
+				       :default-request-type :post) (name)
+ (setf (hunchentoot:content-type*) "text/html")
+ (format nil "Hello, ~a!" name))
 
 </pre>
 </div>
@@ -845,10 +844,11 @@ Também queria pode utiliza-se de ferramentas do tipo <a href="https://www.postm
 
 <div class="org-src-container">
 <pre class="src src-lisp">
-(hunchentoot:define-easy-handler (get-post <span style="color: #76ee00;">:uri</span> <span style="color: #ffa07a;">"/postall"</span> <span style="color: #76ee00;">:default-request-type</span> <span style="color: #76ee00;">:post</span>) ()
- (setf (hunchentoot:content-type*) <span style="color: #ffa07a;">"text/pain"</span>)
- (<span style="color: #20b2aa; font-weight: bold;">let</span> ((ps (hunchentoot:post-parameters* hunchentoot:*request*)))
-    (format nil <span style="color: #ffa07a;">"POST: ~a"</span> ps)) )
+(hunchentoot:define-easy-handler (get-post :uri "/postall"
+				     :default-request-type :post) ()
+ (setf (hunchentoot:content-type*) "text/pain")
+ (let ((ps (hunchentoot:post-parameters* hunchentoot:*request*)))
+      (format nil "POST: ~a" ps)) )
 
 </pre>
 </div>
@@ -861,8 +861,8 @@ Novamente podemos testar com o html abaixo:
 </ol>
 </div>
 
-<div id="outline-container-org9e6b8d6" class="outline-4">
-<h4 id="org9e6b8d6"><span class="section-number-4">1.11.2</span> HTTP HEADERS</h4>
+<div id="outline-container-orgd91b064" class="outline-4">
+<h4 id="orgd91b064"><span class="section-number-4">1.11.2</span> HTTP HEADERS</h4>
 <div class="outline-text-4" id="text-1-11-2">
 <p>
 Quando trabalhamos com protocolo de redes, e principalmente na comunica TCP/IP, devemos nos atentar no cabeçalho, ou header, então vamos abordar um pouco de como definimos este paramento no hunchentoot. O importante é sempre seguimos os protocolo da do W3C, que estabelece-se diretrizes de como deverão ser a comunicação da rede <a href="https://www.w3.org/TR/trace-context/#trace-context-http-headers-format">WC3 HTTP header</a>.
@@ -874,14 +874,14 @@ De qualquer maneira vejamos como podemos definir nosso headers. Vejamos o exempl
 
 <div class="org-src-container">
 <pre class="src src-lisp">
- (hunchentoot:define-easy-handler (infos-json <span style="color: #76ee00;">:uri</span> <span style="color: #ffa07a;">"/system/menu"</span>) ()
-   (setf (hunchentoot:content-type*) <span style="color: #ffa07a;">"application/json; charset=utf-8"</span>)
-   (setf (hunchentoot:header-out <span style="color: #ffa07a;">"Access-Control-Allow-Origin"</span>) <span style="color: #ffa07a;">"*"</span>)
-   (setf (hunchentoot:header-out <span style="color: #ffa07a;">"Content-Type"</span>) <span style="color: #ffa07a;">"application/json"</span>)
-   (setf (hunchentoot:header-out <span style="color: #ffa07a;">"Access-Control-Allow-Headers"</span>)
-<span style="color: #ffa07a;">"Content-Type, authorization"</span>)
-   (<span style="color: #20b2aa; font-weight: bold;">multiple-value-bind</span> (username password) (hunchentoot:authorization)
-     (format nil <span style="color: #ffa07a;">"~a ~a"</span>  username password) ))
+ (hunchentoot:define-easy-handler (infos-json :uri "/system/menu") ()
+   (setf (hunchentoot:content-type*) "application/json; charset=utf-8")
+   (setf (hunchentoot:header-out "Access-Control-Allow-Origin") "*")
+   (setf (hunchentoot:header-out "Content-Type") "application/json")
+   (setf (hunchentoot:header-out "Access-Control-Allow-Headers")
+"Content-Type, authorization")
+   (multiple-value-bind (username password) (hunchentoot:authorization)
+     (format nil "~a ~a"  username password) ))
 </pre>
 </div>
 
@@ -896,8 +896,8 @@ No exemplo usamos este tipos de cabeçalho, mas você pode configurar o que quis
 </div>
 </div>
 
-<div id="outline-container-org0c36b81" class="outline-4">
-<h4 id="org0c36b81"><span class="section-number-4">1.11.3</span> IO Json</h4>
+<div id="outline-container-org3fb6d37" class="outline-4">
+<h4 id="org3fb6d37"><span class="section-number-4">1.11.3</span> IO Json</h4>
 <div class="outline-text-4" id="text-1-11-3">
 <p>
 Uma maneira bastante útil de compartilhar dados na rede é usamos o formato json, principalmente entre servidores ou API's, existem também a possibilidade do XML, mas o json é uma maneira bem mais simples de trabalhar, então vejamos com trabalharemos com json no hunchentoot. Nesta aplicação iremos receber um json é retorna um json, no caso será o mesmo json de entrada, como exemplo, mas o json de saída poderá ser qualquer outro, só para fins de demonstração iremos utilizar o mesmo json, mas deverá funcionar com qualquer outro que a aplicação retorna. Então vejamos:
@@ -906,15 +906,15 @@ Uma maneira bastante útil de compartilhar dados na rede é usamos o formato jso
 
 <div class="org-src-container">
 <pre class="src src-lisp">
-(ql:quickload <span style="color: #76ee00;">:cl-json</span>)
+(ql:quickload :cl-json)
 
 
-(hunchentoot:define-easy-handler (json-io <span style="color: #76ee00;">:uri</span> <span style="color: #ffa07a;">"/json"</span>) ()
-  (setf (hunchentoot:content-type*) <span style="color: #ffa07a;">"application/json; charset=utf-8"</span>)
-  (setf (hunchentoot:header-out <span style="color: #ffa07a;">"Context-Type"</span>) <span style="color: #ffa07a;">"application/json; charset=utf-8"</span>)
-  (<span style="color: #20b2aa; font-weight: bold;">let*</span> ((raw-data (hunchentoot:raw-post-data <span style="color: #76ee00;">:force-text</span> t))
-(js (<span style="color: #20b2aa; font-weight: bold;">with-input-from-string</span> (s raw-data) (json:decode-json s))) )
-    (format nil <span style="color: #ffa07a;">"~a"</span> (json:encode-json-to-string js))))
+(hunchentoot:define-easy-handler (json-io :uri "/json") ()
+  (setf (hunchentoot:content-type*) "application/json; charset=utf-8")
+  (setf (hunchentoot:header-out "Context-Type") "application/json; charset=utf-8")
+  (let* ((raw-data (hunchentoot:raw-post-data :force-text t))
+(js (with-input-from-string (s raw-data) (json:decode-json s))) )
+    (format nil "~a" (json:encode-json-to-string js))))
 </pre>
 </div>
 
@@ -928,21 +928,21 @@ Para testar este entypoint, precisamos fazer um request passando um json, novame
 </p>
 
 <div class="org-src-container">
-<pre class="src src-lisp">  (ql:quickload <span style="color: #76ee00;">:drakma</span>)
+<pre class="src src-lisp">  (ql:quickload :drakma)
 
-  (<span style="color: #20b2aa; font-weight: bold;">defun</span> <span style="color: #00ff7f;">post-request</span>(url <span style="color: #9370db;">&amp;optional</span> string-json)
-    (<span style="color: #20b2aa; font-weight: bold;">multiple-value-bind</span> (stream status-code)
-(drakma:http-request url <span style="color: #76ee00;">:content</span> string-json
-    <span style="color: #76ee00;">:content-type</span> <span style="color: #ffa07a;">"application/json; charset=utf-8"</span> <span style="color: #76ee00;">:want-stream</span> t)
-    (<span style="color: #20b2aa; font-weight: bold;">let</span> ((r nil))
-      (<span style="color: #20b2aa; font-weight: bold;">when</span> stream
-(<span style="color: #20b2aa; font-weight: bold;">loop</span> for line = (read-line stream nil)
+  (defun post-request(url &amp;optional string-json)
+    (multiple-value-bind (stream status-code)
+(drakma:http-request url :content string-json
+    :content-type "application/json; charset=utf-8" :want-stream t)
+    (let ((r nil))
+      (when stream
+(loop for line = (read-line stream nil)
   while line do (push line r))
       (close stream))
-    (values status-code (format nil <span style="color: #ffa07a;">"~{~a~^~% ~}"</span> r))) ))
+    (values status-code (format nil "~{~a~^~% ~}" r))) ))
 
 
-<span style="color: #cd853f;">;; </span><span style="color: #cd853f;">run:  (post-request "http://192.168.100.28:4242/json" "{\"name\": \"pedro\"}")</span>
+;; run:  (post-request "http://192.168.100.28:4242/json" "{\"name\": \"pedro\"}")
 
 </pre>
 </div>
@@ -953,34 +953,29 @@ Esta função recebe url e um paramento opcional que deverá ser um string com f
 </div>
 </div>
 
-<div id="outline-container-org307288d" class="outline-4">
-<h4 id="org307288d"><span class="section-number-4">1.11.4</span> IO Binary Stream</h4>
+<div id="outline-container-orgb006d5d" class="outline-4">
+<h4 id="orgb006d5d"><span class="section-number-4">1.11.4</span> IO Binary Stream</h4>
 <div class="outline-text-4" id="text-1-11-4">
 <p>
 Como estaremos trabalhando com dados binário, devemos trabalhar o que estávamos recebendo, mas vamos supor que nossa aplicação está atrás de proxy ou que o request para por um autenticação antes mesmo de receber o streams (transmissão).
 </p>
 
+<div class="org-src-container">
+<pre class="src src-lisp">
+(ql:quickload :cl-json)
 
-<pre class="example">
-#+begin_src lisp
-
-  (ql:quickload :cl-json)
-
-  (hunchentoot:define-easy-handler (json-io :uri "/json") ()
-    (setf (hunchentoot:content-type*) "application/json; charset=utf-8")
-    (setf (hunchentoot:header-out "Context-Type") "application/json; charset=utf-8")
-    (hunchentoot:raw-post-data :force-binary t))
+(hunchentoot:define-easy-handler (json-io :uri "/json") ()
+  (setf (hunchentoot:content-type*) "application/json; charset=utf-8")
+  (setf (hunchentoot:header-out "Context-Type") "application/json; charset=utf-8")
+  (hunchentoot:raw-post-data :force-binary t))
 
 </pre>
-
-<p>
-#+end<sub>src</sub>
-</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org0dd870c" class="outline-4">
-<h4 id="org0dd870c"><span class="section-number-4">1.11.5</span> Authorization</h4>
+<div id="outline-container-orgc6e794b" class="outline-4">
+<h4 id="orgc6e794b"><span class="section-number-4">1.11.5</span> Authorization</h4>
 <div class="outline-text-4" id="text-1-11-5">
 <p>
 Criamos um sistema de autenticação, abortando o básico o método <b>Basic Auth</b>, também falamos um pouco de como acessar o cabeçalho (ou header) de 'AUTHORIZATION', como isso fazemos a autenticação que queremos.
@@ -991,8 +986,8 @@ Criamos um sistema de autenticação, abortando o básico o método <b>Basic Aut
 <li>O Basic Auth é uma autenticação simples que passa um string no formato base64 com usuário e senha separado por ; (ponto e vírgula). Como é uma autenticação mais simples pode utiliza-se de uma função já existente no hunchentoot, que já nos passa o o usuário e senha, então vejamos:</li>
 </ul>
 
-<pre class="example">
-
+<div class="org-src-container">
+<pre class="src src-lisp">
 (hunchentoot:define-easy-handler (authz :uri "/auth") ()
   (setf (hunchentoot:content-type*) "text/plain")
   (setf (hunchentoot:header-out "Access-Control-Allow-Origin") "*")
@@ -1004,13 +999,14 @@ Criamos um sistema de autenticação, abortando o básico o método <b>Basic Aut
     (format nil "User: ~A ; Password: ~A" username password)))
 
 </pre>
+</div>
 
 <p>
 Caso seja necessário usamos outro tipos de autenticação, podemos obter acesso no conteúdo do cabeçario 'AUTHORIZATION', vejamos então o cabeçario:
 </p>
 
-<pre class="example">
-
+<div class="org-src-container">
+<pre class="src src-lisp">
 (hunchentoot:define-easy-handler (authz :uri "/auth") ()
   (setf (hunchentoot:content-type*) "text/plain")
   (setf (hunchentoot:header-out "Access-Control-Allow-Origin") "*")
@@ -1022,16 +1018,17 @@ Caso seja necessário usamos outro tipos de autenticação, podemos obter acesso
 </pre>
 </div>
 </div>
+</div>
 
-<div id="outline-container-org7966500" class="outline-4">
-<h4 id="org7966500"><span class="section-number-4">1.11.6</span> CGI Script</h4>
+<div id="outline-container-orgb28621f" class="outline-4">
+<h4 id="orgb28621f"><span class="section-number-4">1.11.6</span> CGI Script</h4>
 <div class="outline-text-4" id="text-1-11-6">
 <p>
 Antes de começamos devemos esclarer a sigla CGI, está sigla ao contrario do CGI usados em filmes da marvel ou em qualquer cinema, que possui um nome <b>Computer Generated Imagery</b>, o nosso CGI significa na verdade (Common Gateway Interface), que é uma interface que permite que o servidor execute código externo a ele, ou seja, execução de código que não faze parte do código padrão do servidor. Então vejamos como habilitamos este recurso no hunchentoot, implemetamos o seguinte trecho.
 </p>
 
-<pre class="example">
-(ql:quickload :hunchentoot-cgi)
+<div class="org-src-container">
+<pre class="src src-lisp">(ql:quickload :hunchentoot-cgi)
 (ql:quickload :chunga)
 
 (setf chunga:*accept-bogus-eols* t)
@@ -1041,13 +1038,14 @@ Antes de começamos devemos esclarer a sigla CGI, está sigla ao contrario do CG
 	 ) hunchentoot:*dispatch-table* :test #'equal)
 
 </pre>
+</div>
 
 <p>
 Então testamos aquele programa em clean escrevemos antes, o hello.icl, aonde complitamos o mesmo para hello.cgi, vejamos abaixo o resultado:
 </p>
 
 
-<div class="figure">
+<div id="org2cb1819" class="figure">
 <p><img src="./imagens/cgiclean.png" alt="cgiclean.png" />
 </p>
 </div>
@@ -1057,23 +1055,23 @@ Podemos rodar programas semelhante em qualquer linguagem, por exemplo, em python
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #cd853f;">#</span><span style="color: #cd853f;">!/usr/bin/python3.8</span>
+<pre class="src src-python">#!/usr/bin/python3.8
 
-<span style="color: #20b2aa; font-weight: bold;">import</span> os
+import os
 
-<span style="color: #20b2aa; font-weight: bold;">def</span> <span style="color: #00ff7f;">hello_cgi</span>(text):
-  <span style="color: #9acd32;">name</span> = text <span style="color: #20b2aa; font-weight: bold;">if</span> text <span style="color: #20b2aa; font-weight: bold;">is</span> <span style="color: #20b2aa; font-weight: bold;">not</span> <span style="color: #1e90ff;">None</span> <span style="color: #20b2aa; font-weight: bold;">else</span> <span style="color: #ffa07a;">"World"</span>
-  <span style="color: #20b2aa; font-weight: bold;">return</span> <span style="color: #ffa07a;">"&lt;p&gt;Hello, {}!&lt;/p&gt;"</span>.<span style="color: #76ee00;">format</span>(name)
+def hello_cgi(text):
+  name = text if text is not None else "World"
+  return "&lt;p&gt;Hello, {}!&lt;/p&gt;".format(name)
 
-<span style="color: #20b2aa; font-weight: bold;">print</span>(<span style="color: #ffa07a;">"Content-type: text/html\n\n"</span>)
-<span style="color: #20b2aa; font-weight: bold;">print</span>(<span style="color: #ffa07a;">"&lt;html&gt;&lt;body&gt;&lt;h1&gt;From Python&lt;/h1&gt;"</span>)
-<span style="color: #20b2aa; font-weight: bold;">print</span>(hello_cgi(os.environ[<span style="color: #ffa07a;">'QUERY_STRING'</span>]))
-<span style="color: #20b2aa; font-weight: bold;">print</span>(<span style="color: #ffa07a;">"&lt;/body&gt;&lt;/html&gt;"</span>)
+print("Content-type: text/html\n\n")
+print("&lt;html&gt;&lt;body&gt;&lt;h1&gt;From Python&lt;/h1&gt;")
+print(hello_cgi(os.environ['QUERY_STRING']))
+print("&lt;/body&gt;&lt;/html&gt;")
 </pre>
 </div>
 
 
-<div class="figure">
+<div id="orgf50f88e" class="figure">
 <p><img src="./imagens/cgipython.png" alt="cgipython.png" />
 </p>
 </div>
@@ -1085,22 +1083,22 @@ Também podemos fazer isto com o lisp:
 <div class="org-src-container">
 <pre class="src src-lisp">#!/usr/local/bin/sbcl --script
 
-(format t <span style="color: #ffa07a;">"Content-type: text/html~%~%"</span>)
+(format t "Content-type: text/html~%~%")
 
 (format t
-<span style="color: #ffa07a;">" &lt;html&gt;</span>
-<span style="color: #ffa07a;">   &lt;body&gt;</span>
-<span style="color: #ffa07a;">    &lt;h1&gt;Hello, ~a&lt;/h1&gt;</span>
-<span style="color: #ffa07a;">   &lt;/body&gt;</span>
-<span style="color: #ffa07a;">  &lt;/html&gt;"</span>
- (<span style="color: #20b2aa; font-weight: bold;">let</span> ((qs (sb-ext:posix-getenv <span style="color: #ffa07a;">"QUERY_STRING"</span>)))
-       (<span style="color: #20b2aa; font-weight: bold;">if</span> (zerop (length qs)) <span style="color: #ffa07a;">"World"</span> qs))
+" &lt;html&gt;
+   &lt;body&gt;
+    &lt;h1&gt;Hello, ~a&lt;/h1&gt;
+   &lt;/body&gt;
+  &lt;/html&gt;"
+ (let ((qs (sb-ext:posix-getenv "QUERY_STRING")))
+       (if (zerop (length qs)) "World" qs))
 )
 </pre>
 </div>
 
 
-<div class="figure">
+<div id="org1580736" class="figure">
 <p><img src="./imagens/cgilisp.png" alt="cgilisp.png" />
 </p>
 </div>
@@ -1112,8 +1110,8 @@ Citei duas linguagem, mas qualquer liguagem podem ser usadas com CGI script.
 </div>
 </div>
 
-<div id="outline-container-orgcdfd3db" class="outline-3">
-<h3 id="orgcdfd3db"><span class="section-number-3">1.12</span> Extra: HTML e JavaScript</h3>
+<div id="outline-container-org8e5a15d" class="outline-3">
+<h3 id="org8e5a15d"><span class="section-number-3">1.12</span> Extra: HTML e JavaScript</h3>
 <div class="outline-text-3" id="text-1-12">
 <p>
 Nesta documentação todos os processo foram efeito utiliza-se de programa para montar back-end interface, mas caso queira montar programas para o front-end, é possivel trabalhamos com algumas library também, por exemplo <b>CL-WHO</b>, que é um gerador de html. Vejamos um exemplo:
@@ -1121,15 +1119,15 @@ Nesta documentação todos os processo foram efeito utiliza-se de programa para 
 
 <div class="org-src-container">
 <pre class="src src-lisp">
-(ql:quickload <span style="color: #76ee00;">:cl-who</span>)
+(ql:quickload :cl-who)
 
-(cl-who:with-html-output (*standard-output* nil <span style="color: #76ee00;">:prologue</span> t)
-  (<span style="color: #76ee00;">:html</span> (<span style="color: #76ee00;">:body</span> <span style="color: #ffa07a;">"Hello, World"</span>)) (values))
+(cl-who:with-html-output (*standard-output* nil :prologue t)
+  (:html (:body "Hello, World")) (values))
 
 </pre>
 </div>
 
-<pre class="example">
+<pre class="example" id="org11c6d97">
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
 &lt;html&gt;&lt;body&gt;Exemplo&lt;/body&gt;&lt;/html&gt;
 </pre>
@@ -1139,11 +1137,11 @@ Existem muitas possibilidades, caso queira visualizar melhor de uma olhada na p�
 </p>
 
 <div class="org-src-container">
-<pre class="src src-lisp">(parenscript:ps (<span style="color: #20b2aa; font-weight: bold;">defun</span> <span style="color: #00ff7f;">greeting-callback</span>() (alert <span style="color: #ffa07a;">"Hello, World"</span>)))
+<pre class="src src-lisp">(parenscript:ps (defun greeting-callback() (alert "Hello, World")))
 </pre>
 </div>
 
-<pre class="example">
+<pre class="example" id="orgbc32725">
 "function greetingCallback() {
     __PS_MV_REG = [];
     return alert('Hello, World');
@@ -1157,8 +1155,8 @@ Para mais detalhes visualize a página: <a href="https://parenscript.common-lisp
 </div>
 </div>
 
-<div id="outline-container-orgdca7630" class="outline-2">
-<h2 id="orgdca7630"><span class="section-number-2">2</span> <a href="https://hitokey.github.io/">Home</a></h2>
+<div id="outline-container-org5ad4d3d" class="outline-2">
+<h2 id="org5ad4d3d"><span class="section-number-2">2</span> <a href="https://hitokey.github.io/">Home</a></h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Minha Página (My Page): <a href="https://hitokey.github.io/">https://hitokey.github.io/</a>
@@ -1169,8 +1167,8 @@ Minha Página (My Page): <a href="https://hitokey.github.io/">https://hitokey.gi
 <div id="postamble" class="status">
 <p class="date">Data: 2022-03-24 Thu 00:00</p>
 <p class="author">Autor: Pedro Fernandes</p>
-<p class="date">Created: 2022-04-14 Thu 10:14</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Criado em: 2022-10-07 Fri 19:01</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

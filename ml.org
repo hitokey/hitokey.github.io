@@ -1,0 +1,11 @@
+#+Author: Pedro Fernandes
+#+TITLE: Machine Learning + Vision Computacional
+#+DATE: <2022-05-18 Wed>
+
+
+* Introdução
+
+  Bem vindo ao estudo geral de machine learning, busco entender profundamento, existem muito contéudo sobre deep learning em geral. Muitos das aplicações de hoje estão se baseando em algumas tecnicas já bastante conhecidas, com RNN, CNN, YOLO, ResNet, LSTM etc.
+
+
+* Imagens

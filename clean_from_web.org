@@ -17,16 +17,16 @@
 Depois de baixar o arquivo, pelo terminal fazemos as seguintes configuração.
 
 #+begin_src
-# mv Download/clean-bundle-complete-linux-x64-latest.tgz ~/
-# tar xvf clean-bundle-complete-linux-x64-latest.tgz .
-# mv clean-bundle-complete clean/
+$ mv Download/clean-bundle-complete-linux-x64-latest.tgz ~/
+$ tar xvf clean-bundle-complete-linux-x64-latest.tgz .
+$ mv clean-bundle-complete clean/
 #+end_src
 
 Com o directório clean criado, vamos então configurar no arquivo ~/.bashrc as seguintes variáveis.
 
 #+begin_src
-# echo "export CLEAN_HOME=~/clean >> ~/.bashrc
-# echo "export PATH=$PATH:$CLEAN_HOME/bin >> ~/.bashrc
+$ echo "export CLEAN_HOME=~/clean >> ~/.bashrc
+$ echo "export PATH=$PATH:$CLEAN_HOME/bin >> ~/.bashrc
 #+end_src
 
 ** Simples programa em Clean para Web.
@@ -34,7 +34,7 @@ Com o directório clean criado, vamos então configurar no arquivo ~/.bashrc as se
   Neste caso, o programa que iremos abordar são para web servering, com por exemplo o apache, nginx etc. Servidores que gerenciam todas as conexão e requisições necessárias para uma comunicação web. Tais programas chamamos de Common Gateway Interface (CGI). Recomendo o excelente livro: [[https://docstore.mik.ua/orelly/linux/cgi/index.htm][CGI Programming with perl]], onde ele aborda tais métodos. Então, vamos ao programa.
 
 #+CAPTION: hello-web.icl
-#+begin_src
+#+begin_src 
 module printenv;
 
 import StdEnv, ArgEnv;
@@ -58,8 +58,8 @@ where {
 No Clean precisamos antes de rodar nosso programa compilar nosso código, iremos usar uma parte importante dos arquivos já baixados, que é o ArgEnv, o mesmo deve está no diretório lib/ dentro do directório do clean baixado. Então, tente ver se , caso cometa um erro, pode ser que esteja faltando está library. Vejamos, como compilamos este código.
 
 #+begin_src sh
-clm -b -nt -nr hello-web -O hello.cgi
-./hello.cgi
+$ clm -b -nt -nr hello-web -O hello.cgi
+$ ./hello.cgi
 #+end_src
 
 Tal programa retorna quando rodado no localmente.
@@ -87,7 +87,7 @@ Recomendo que leia o [[https://docstore.mik.ua/orelly/linux/cgi/ch03_02.htm][Env
 ** Lisp GGI.
    Podemos também fazer um aplicativo GUI com o lisp, não é nosso objetivo, mas podemos observar.
 
-#+begin_src
+#+begin_src lisp
 #!/usr/local/bin/sbcl --script
 
 (format t "Content-type: text/html~%~%")
@@ -108,7 +108,7 @@ Neste caso, vale observar que diferente do clean esta versão do código é implant
    Primeira, uma alternativa para controle do clean programa é usamos o controle de sistema a partir do SO(Sistema Operacional), dessa maneira codificado.
 
 #+CAPTION: Basic program
-#+begin_src
+#+begin_src lisp
 (sb-ext:run-program "./hello.cgi" nil :output *standard-output*)
 #+end_src
 
@@ -145,7 +145,7 @@ Neste caso apenas llegamos o z, que o processo.
 
 De qualquer forma o common lisp permite que controle qual será a função que iremos chamar verificado a versão do interpretador, por exemplo:
 
-#+begin_src
+#+begin_src lisp
 (defun my-run (program argv)
      (declare (type string program))
      (declare (type list argv))
@@ -176,7 +176,7 @@ Então, com este processo podemos por exemplo controlar produtor de áudio, por ex
 *Obs.*: é necessário ter o sox instalado, instalar: sudo apt install sox
 
 #+CAPTION: Windows
-#+begin_src
+#+begin_src lisp
 (sb-ext:run-program "cmd.exe" '("/C" "start" "D:/Sound/sound.mp3")
                                 :search t :windows :hide)
 #+end_src
@@ -189,7 +189,7 @@ Então, com este processo podemos por exemplo controlar produtor de áudio, por ex
 
 Vemos que podemos controlar vários processos entre outro com o lisp, então uma possibilidade é controlar o programa compilado em clean, afinal o programa estará em formato *elf*, vamos então testá-lo, usamos o programa my-run, escrito anteriormente.
 
-#+begin_src
+#+begin_src lisp
 (my-run "./hello.cgi" nil)
 #+end_src
 
@@ -211,7 +211,7 @@ O sistema hunchentoot é um interface de rede com ferramentas para construção de 
 
 Então começamos o que interessa, construir uma aplicação web-server em lisp. Começamos com algo simples, um hello world
 
-#+begin_src
+#+begin_src lisp
 (ql:quickload :hunchentoot)
 #+end_src
 
@@ -250,7 +250,7 @@ Como hunchentoot em vale ressaltar, que qualquer informação dentro desse pacote 
 Então começamos iniciando um servidor http simples, com uma função dinâmica que pegar a query\_string é diz um Hello, caso não term a query\_string, diz hello, world.
 
 #+CAPTION: Start Easy Acceptor
-#+begin_src
+#+begin_src lisp
 (hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 4242))
 #+end_src
 
@@ -276,7 +276,7 @@ E isso no terminal:
 
 Então programos o hello world pelo método GET, então escrevemos:
 
-#+begin_src
+#+begin_src lisp
 (ql:quickload :hunchentoot)
 
 (defparameter *web* (make-instance 'hunchentoot:easy-acceptor
@@ -358,7 +358,7 @@ Agora podemos acessar a página pela url => [[http://localhost:4242/fib?number=40
 Neste caso a propria função *define-easy-handler* separa o conteúdo da query string pelas key como os mesmo nome dos symbols de entrada, conforme vemos o number (symbol) e na url *number=* (key=), mas caso queria pegar o conteúdo da query_string por completo podemos fazer o seguinte.
 
 
-#+begin_src
+#+begin_src lisp
 (ql:quickload :hunchentoot)
 
 
@@ -384,9 +384,10 @@ O método POST request é muito importante na comunição TCP/IP do HTTP/HTTPS, send
 
 #+begin_src lisp
 
-(hunchentoot:define-easy-handler (hello-post :uri "/hellopost" :default-request-type :post) (name)
-  (setf (hunchentoot:content-type*) "text/html")
-  (format nil "Hello, ~a!" name))
+(hunchentoot:define-easy-handler (hello-post :uri "/hellopost"
+				       :default-request-type :post) (name)
+ (setf (hunchentoot:content-type*) "text/html")
+ (format nil "Hello, ~a!" name))
 
 #+end_src
 
@@ -408,10 +409,11 @@ Também queria pode utiliza-se de ferramentas do tipo [[https://www.postman.com/]
 
 #+begin_src lisp
 
-  (hunchentoot:define-easy-handler (get-post :uri "/postall" :default-request-type :post) ()
+  (hunchentoot:define-easy-handler (get-post :uri "/postall"
+				       :default-request-type :post) ()
    (setf (hunchentoot:content-type*) "text/pain")
    (let ((ps (hunchentoot:post-parameters* hunchentoot:*request*)))
-      (format nil "POST: ~a" ps)) )
+	(format nil "POST: ~a" ps)) )
 
 #+end_src
 
@@ -504,8 +506,6 @@ Esta função recebe url e um paramento opcional que deverá ser um string com form
 *** IO Binary Stream
 Como estaremos trabalhando com dados binário, devemos trabalhar o que estávamos recebendo, mas vamos supor que nossa aplicação está atrás de proxy ou que o request para por um autenticação antes mesmo de receber o streams (transmissão).
 
-
-#+begin_src
 #+begin_src lisp
 
   (ql:quickload :cl-json)
@@ -517,8 +517,6 @@ Como estaremos trabalhando com dados binário, devemos trabalhar o que estávamos 
 
 #+end_src
 
-#+end_src
-
 *** Authorization
 
 Criamos um sistema de autenticação, abortando o básico o método *Basic Auth*, também falamos um pouco de como acessar o cabeçalho (ou header) de 'AUTHORIZATION', como isso fazemos a autenticação que queremos.
@@ -526,7 +524,7 @@ Criamos um sistema de autenticação, abortando o básico o método *Basic Auth*, ta
 
  - O Basic Auth é uma autenticação simples que passa um string no formato base64 com usuário e senha separado por ; (ponto e vírgula). Como é uma autenticação mais simples pode utiliza-se de uma função já existente no hunchentoot, que já nos passa o o usuário e senha, então vejamos:
 
-#+begin_src
+#+begin_src lisp
 
 (hunchentoot:define-easy-handler (authz :uri "/auth") ()
   (setf (hunchentoot:content-type*) "text/plain")
@@ -542,7 +540,7 @@ Criamos um sistema de autenticação, abortando o básico o método *Basic Auth*, ta
 
 Caso seja necessário usamos outro tipos de autenticação, podemos obter acesso no conteúdo do cabeçario 'AUTHORIZATION', vejamos então o cabeçario:
 
-#+begin_src
+#+begin_src lisp
 
 (hunchentoot:define-easy-handler (authz :uri "/auth") ()
   (setf (hunchentoot:content-type*) "text/plain")
@@ -558,7 +556,7 @@ Caso seja necessário usamos outro tipos de autenticação, podemos obter acesso no
 
 Antes de começamos devemos esclarer a sigla CGI, está sigla ao contrario do CGI usados em filmes da marvel ou em qualquer cinema, que possui um nome *Computer Generated Imagery*, o nosso CGI significa na verdade (Common Gateway Interface), que é uma interface que permite que o servidor execute código externo a ele, ou seja, execução de código que não faze parte do código padrão do servidor. Então vejamos como habilitamos este recurso no hunchentoot, implemetamos o seguinte trecho.
 
-#+begin_src
+#+begin_src lisp
 (ql:quickload :hunchentoot-cgi)
 (ql:quickload :chunga)
 

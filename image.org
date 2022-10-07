@@ -1,0 +1,34 @@
+#+AUTHOR: Pedro Fernandes.
+#+TITLE: Image
+#+DATE: <2022-05-12 Thu>
+
+
+* O que uma Image?
+
+* O que é uma Imagem Digital
+
+** Formatos comuns para Image Digital.
+
+** Formatos de arquivos comuns de Image Digital.
+
+** Como lê uma arquivo Image
+
+** Array Image Strutura.
+
+
+** Conversão Formato de Image
+
+
+* Python
+
+** Read Image
+
+
+* Lisp
+
+** Read Image
+Para se lê uma arquivos de imagem com o lisp, mais espeficicamente o common lisp, podemos utiliza-se de uma library com 
+
+* Scheme
+
+** Read Image
