@@ -1,7 +1,8 @@
 #+AUTHOR: Pedro Fernandes
 #+DATE: <2022-10-10 Mon>
 #+TITLE: Francês
-
+#+SETUPFILE: ../org-html-themes/org/theme-bigblow.setup
+#+LANGUAGE: pt_BR
 
 * Partes 1 - Frances/Português
 

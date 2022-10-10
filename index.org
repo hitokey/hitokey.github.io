@@ -13,3 +13,7 @@ Um teste inicial para o Blog atráveis do github, escrevi o algoritmos fibonacci 
 
 ** [[http://hitokey.github.io/clean_from_web.html][Clean and Lisp - Muitas confusão no Web Server.]]
 Criando um Sistema serverless com o Hunchentoot que rodem Clean GCI e outras linguagens.
+* Language
+** [[./language/france.html][France - Todos em um só lugar]]
+Meu camanhar pelo frances
+
