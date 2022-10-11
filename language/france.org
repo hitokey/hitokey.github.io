@@ -4,78 +4,79 @@
 #+SETUPFILE: ../../org-html-themes/org/theme-bigblow.setup
 #+LANGUAGE: pt_BR
 
-* Partes 1 - Frances/Português
-|-------------------------------------------------------------------------------------------------------------|
-| Mots and Phrase                                                                                             |
-|-------------------------------------------------------------------------------------------------------------|
-| Orielle/Bouche                                                                                              |
-| Queleques personnes dissent que nous avons deux *Oreilles* et une Bouche pour écouter plus et parler moins. |
-|-------------------------------------------------------------------------------------------------------------|
-| Orelha/Boca                                                                                                 |
-| Alguns pessoas dizem que temos duas Orelhas e uma boca para ouvir mais e falar menos                        |
-|-------------------------------------------------------------------------------------------------------------|
-| AN/SIÈCLE                                                                                                   |
-| Un siècle a cen ANS.                                                                                        |
-|-------------------------------------------------------------------------------------------------------------|
-| Ano/Século                                                                                                  |
-| Um século tem cem anos.                                                                                     |
-|-------------------------------------------------------------------------------------------------------------|
-| Canard/EAU                                                                                                  |
-| Les canards aiment l'eau                                                                                    |
-|-------------------------------------------------------------------------------------------------------------|
-| Pato/Água                                                                                                   |
-| Os patos gostam de água                                                                                     |
-|-------------------------------------------------------------------------------------------------------------|
-| POULE/MAÏS/NOURRITURE                                                                                       |
-| Tout le mond sai que la meilleure Nourriture pour le Poules est le Mais                                     |
-|-------------------------------------------------------------------------------------------------------------|
-| GALINHA/MILHO/ALIMENTO                                                                                      |
-| Todo mundo sabe que o melhor alimento para as galinhas é o milho                                            |
-|-------------------------------------------------------------------------------------------------------------|
-| ENNEMI/AMI                                                                                                  |
-| Un ennemi est le contraire d'un AMI                                                                         |
-|-------------------------------------------------------------------------------------------------------------|
-| INIMIGO/AMIGO                                                                                               |
-| Um inimigo é o contrário de um amigo                                                                        |
-|-------------------------------------------------------------------------------------------------------------|
-| FRUIT/POMME                                                                                                 |
-| La pomme est le fruit defend que'Eve a mangé                                                                |
-|-------------------------------------------------------------------------------------------------------------|
-| FRUTA/MAÇA                                                                                                  |
-| A maça é a fruta proibida que Eva comeu.                                                                    |
-|-------------------------------------------------------------------------------------------------------------|
-| GRAINE/TERRE/PLANTE                                                                                         |
-| Une graine deviendra une plante si on la couve de terre et si on l'arrose régulièrement                     |
-|-------------------------------------------------------------------------------------------------------------|
-| SEMENTE/TERRA/PLANETA                                                                                       |
-| Uma semente se tornará uma planta se a cobrirmos com terra e se a regarmos regularmente                     |
-|-------------------------------------------------------------------------------------------------------------|
-| CHAMP/ANIMAL/VACHE/DÉSERT                                                                                   |
-| Les champs sont utilisés pour élever des animaux comme les vaches et les brebis. Pas les desérts            |
-|-------------------------------------------------------------------------------------------------------------|
-| CAMPO/ANIMAL/VACA/DESERTO                                                                                   |
-| O campo são utilizados para criar animais como as vcas e as ovelhas. Os deserto não.                        |
-|-------------------------------------------------------------------------------------------------------------|
-| DICTIONNAIRE/MOT/LANGUE                                                                                     |
-| Un dictionnaire contient beaucoup de Mots d'une langue                                                      |
-|-------------------------------------------------------------------------------------------------------------|
-| DICIONÁRIO/PALAVRA/LÍNGUA                                                                                   |
-| Um dicionário contém muitas das palavras de uma lígua.                                                      |
-|-------------------------------------------------------------------------------------------------------------|
-| FAMILLE/PÈRE/MÈRE/FILS/FILLE/ENFANTS                                                                        |
-| Cette famille est très sympathique: le père, la mère et les deux enfants, um fils et une fille.             |
-|-------------------------------------------------------------------------------------------------------------|
-| FAMILIA/PAI/MÃE/FILHO/FILHA/FILHOS                                                                          |
-| Esta familia é muito simpática: o pai, a mãe e os dois filhos, um filho e uma filha.                        |
-|-------------------------------------------------------------------------------------------------------------|
-| ARBRE/FORÊT                                                                                                 |
-| Le forêt est un grand terrain où poussent des Arbres                                                        |
-|-------------------------------------------------------------------------------------------------------------|
-| ÁVORE/FLORESTA                                                                                              |
-| A foresta é um terreno grande onde crescem Árvores.                                                         |
-|-------------------------------------------------------------------------------------------------------------|
+* 1500 Mots
+** Partes 1 - Frances/Português
+|----------------------------------------------------------------------------------------------------------|
+| Mots and Phrase                                                                                          |
+|----------------------------------------------------------------------------------------------------------|
+| *ORIELLE/BOUCHE*                                                                                         |
+| Quelques personnes dissent que nous avons deux Oreilles et une Bouche pour écouter plus et parler moins. |
+|----------------------------------------------------------------------------------------------------------|
+| ORELHA/BOCA                                                                                              |
+| Alguns pessoas dizem que temos duas Orelhas e uma boca para ouvir mais e falar menos                     |
+|----------------------------------------------------------------------------------------------------------|
+| *AN/SIÈCLE*                                                                                              |
+| Un siècle a cen ANS.                                                                                     |
+|----------------------------------------------------------------------------------------------------------|
+| *ANO/SÉCULO*                                                                                             |
+| Um século tem cem anos.                                                                                  |
+|----------------------------------------------------------------------------------------------------------|
+| *CANARD/EAU*                                                                                             |
+| Les canards aiment l'eau                                                                                 |
+|----------------------------------------------------------------------------------------------------------|
+| PATO/ÁGUA                                                                                                |
+| Os patos gostam de água                                                                                  |
+|----------------------------------------------------------------------------------------------------------|
+| *POULE/MAÏS/NOURRITURE*                                                                                  |
+| Tout le mond sai que la meilleure Nourriture pour le Poules est le Mais                                  |
+|----------------------------------------------------------------------------------------------------------|
+| *GALINHA/MILHO/ALIMENTO*                                                                                 |
+| Todo mundo sabe que o melhor alimento para as galinhas é o milho                                         |
+|----------------------------------------------------------------------------------------------------------|
+| *ENNEMI/AMI*                                                                                             |
+| Un ennemi est le contraire d'un AMI                                                                      |
+|----------------------------------------------------------------------------------------------------------|
+| INIMIGO/AMIGO                                                                                            |
+| Um inimigo é o contrário de um amigo                                                                     |
+|----------------------------------------------------------------------------------------------------------|
+| *FRUIT/POMME*                                                                                            |
+| La pomme est le fruit defend que'Eve a mangé                                                             |
+|----------------------------------------------------------------------------------------------------------|
+| FRUTA/MAÇA                                                                                               |
+| A maça é a fruta proibida que Eva comeu.                                                                 |
+|----------------------------------------------------------------------------------------------------------|
+| *GRAINE/TERRE/PLANTE*                                                                                    |
+| Une graine deviendra une plante si on la couve de terre et si on l'arrose régulièrement                  |
+|----------------------------------------------------------------------------------------------------------|
+| SEMENTE/TERRA/PLANETA                                                                                    |
+| Uma semente se tornará uma planta se a cobrirmos com terra e se a regarmos regularmente                  |
+|----------------------------------------------------------------------------------------------------------|
+| *CHAMP/ANIMAL/VACHE/DÉSERT*                                                                              |
+| Les champs sont utilisés pour élever des animaux comme les vaches et les brebis. Pas les desérts         |
+|----------------------------------------------------------------------------------------------------------|
+| CAMPO/ANIMAL/VACA/DESERTO                                                                                |
+| O campo são utilizados para criar animais como as vcas e as ovelhas. Os deserto não.                     |
+|----------------------------------------------------------------------------------------------------------|
+| *DICTIONNAIRE/MOT/LANGUE*                                                                                |
+| Un dictionnaire contient beaucoup de Mots d'une langue                                                   |
+|----------------------------------------------------------------------------------------------------------|
+| DICIONÁRIO/PALAVRA/LÍNGUA                                                                                |
+| Um dicionário contém muitas das palavras de uma lígua.                                                   |
+|----------------------------------------------------------------------------------------------------------|
+| *FAMILLE/PÈRE/MÈRE/FILS/FILLE/ENFANTS*                                                                   |
+| Cette famille est très sympathique: le père, la mère et les deux enfants, um fils et une fille.          |
+|----------------------------------------------------------------------------------------------------------|
+| FAMILIA/PAI/MÃE/FILHO/FILHA/FILHOS                                                                       |
+| Esta familia é muito simpática: o pai, a mãe e os dois filhos, um filho e uma filha.                     |
+|----------------------------------------------------------------------------------------------------------|
+| *ARBRE/FORÊT*                                                                                            |
+| Le forêt est un grand terrain où poussent des Arbres                                                     |
+|----------------------------------------------------------------------------------------------------------|
+| ÁVORE/FLORESTA                                                                                           |
+| A foresta é um terreno grande onde crescem Árvores.                                                      |
+|----------------------------------------------------------------------------------------------------------|
 
-* Partes 2 - Frances/Português
+** Partes 2 - Frances/Português
   |--------------------------------------------------------------------------------------------|
   | Mots and Phrase                                                                            |
   |--------------------------------------------------------------------------------------------|
@@ -148,7 +149,7 @@
   | Nossos corpos são feitos de carne, de ossos e de sangue.                                   |
   |--------------------------------------------------------------------------------------------|
 
-* Partes 3 - Frances/Português
+** Partes 3 - Frances/Português
   
   |---------------------------------------------------------------------------------------------|
   | Mots and Phrase                                                                             |
@@ -220,11 +221,10 @@
   | UM dia é divido em manhã, tarde, noite e madrugada                                          |
   |---------------------------------------------------------------------------------------------|
 
-* Partes 4 - Frances/Português
+** Partes 4 - Frances/Português
 
    |-------------------------------------------------------------------------------------------------------------------------------------------------|
    | Mots and Phrase                                                                                                                                 |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
    |-------------------------------------------------------------------------------------------------------------------------------------------------|
    | FERME/LÉGUME/SALADE/ŒUF                                                                                                                         |
    | Quand nous vivions dans une FERME nous avions des SALADES, des CŒfS et des LÉGUMES frais                                                        |
