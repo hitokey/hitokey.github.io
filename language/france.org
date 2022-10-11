@@ -18,7 +18,7 @@
 | *AN/SIÈCLE*                                                                                              |
 | Un siècle a cen ANS.                                                                                     |
 |----------------------------------------------------------------------------------------------------------|
-| *ANO/SÉCULO*                                                                                             |
+| ANO/SÉCULO                                                                                               |
 | Um século tem cem anos.                                                                                  |
 |----------------------------------------------------------------------------------------------------------|
 | *CANARD/EAU*                                                                                             |
@@ -30,7 +30,7 @@
 | *POULE/MAÏS/NOURRITURE*                                                                                  |
 | Tout le mond sai que la meilleure Nourriture pour le Poules est le Mais                                  |
 |----------------------------------------------------------------------------------------------------------|
-| *GALINHA/MILHO/ALIMENTO*                                                                                 |
+| GALINHA/MILHO/ALIMENTO                                                                                   |
 | Todo mundo sabe que o melhor alimento para as galinhas é o milho                                         |
 |----------------------------------------------------------------------------------------------------------|
 | *ENNEMI/AMI*                                                                                             |
