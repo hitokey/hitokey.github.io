@@ -4,8 +4,140 @@
 #+SETUPFILE: ../../org-html-themes/org/theme-bigblow.setup
 #+LANGUAGE: pt_BR
 
+
+
+* Pronúncia/Pronancialion
+|----------+-------------+----------------------------------------------|
+| Français | Équivalence | Example                                      |
+|----------+-------------+----------------------------------------------|
+| au       | ô           | automne, jaune                               |
+| ai       | ê/é         | maison, chaise                               |
+| eau      | ô           | beau, gâteau, eau                            |
+| oi       | oá          | bois, loi, foi                               |
+| ou       | u           | où, pour, armour                             |
+| u        | **          | veu, tu                                      |
+| in, im   | an          | raisin, timbre, simple, intersant, important |
+|----------+-------------+----------------------------------------------|
+
+*obs:* ** = com um pico de "u", mas fala "i"
+
+* Conjugações
+
+  As conjugações importante na pronuncia.
+  
+  * Présent, imparfait, passé composé, futur conditionnel, sobjanetif
+
+
+Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* et 3 èmer *-ir, oir, -re*
+
+** 1er Gouper
+|----------+-----------|
+| Français | Português |
+|----------+-----------|
+| aimer    | amar      |
+| commecer | começar   |
+| lever    | levantar  |
+| amener   | levar     |
+| manger   | comer     |
+| appeler  | chamar    |
+| acheler  | compar    |
+| oublier  | esquecer  |
+| payer    | pagar     |
+| ennuyer  | encomdar  |
+| paler    | falar     |
+| jeler    | lançar    |
+| chanter  | cantar    |
+|----------+-----------|
+
+
+  
+** 2ene Gouper
+
+|-----------+-----------|
+| Français  | Português |
+|-----------+-----------|
+| investir  | investir  |
+| punir     | punir     |
+| réunir    | reunir    |
+| unir      | unir      |
+| obéir     | esquecer  |
+| nourrir   | nutir     |
+| divertir  | divertir  |
+| agir      | agir      |
+| agrandir  | aumentar  |
+| applaudir | aplaudir  |
+| finir     | acabar    |
+| choisir   | escolher  |
+|-----------+-----------|
+
+** 3èmer Gouper
+
+   3èmer gouper es un gouper verbo irregulares
+
+   
+|----------+-----------|
+| Français | Português |
+|----------+-----------|
+| mourir   | morrer    |
+| ouvr     | abrir     |
+| savoir   | saber     |
+| pouvoir  | poder     |
+| prendre  | pegar     |
+| vouloir  | querer    |
+| courir   | correr    |
+| voir     | ver       |
+| mettre   | por       |
+|----------+-----------|
+
+
+
+
+** Conjucação de Verbos Pronomiais reflexivos:
+
+   Este tipo de verbo sempre se conjuga com o auxiliar être. 
+
 * 1500 Mots
+  
 ** Partes 1 - Frances/Português
+
+#+CAPTION: Mots
+|--------------+------------|
+| Français     | Português  |
+|--------------+------------|
+| Orielle      | Orelha     |
+| Bouche       | Boca       |
+| An           | Anos       |
+| Siècle       | Séculos    |
+| Canard       | Pato       |
+| Eau          | Água       |
+| Poule        | Galinha    |
+| Maïs         | Milho      |
+| Nourriture   | Alimento   |
+| Ennemi       | Inimigo    |
+| Ami          | Amigo      |
+| Fruit        | Fruto      |
+| Pomme        | Maça       |
+| Graine       | Semente    |
+| Terre        | Terra      |
+| Plante       | Planeta    |
+| Champ        | Campo      |
+| Animal       | Animal     |
+| Vache        | Vaca       |
+| Désert       | Deserto    |
+| Dictionnaire | Dicionário |
+| Mot          | Palavra    |
+| Langue       | Lingua     |
+| Famille      | Familia    |
+| Père         | Pai        |
+| Mère         | Mãe        |
+| Fils         | Filho      |
+| Fille        | Filha      |
+| Enfants      | Crianças   |
+| Arbre        | Arvore     |
+| Forêt        | Foresta    |
+|--------------+------------|
+
+#+CAPTION: Mots et Phase
 |----------------------------------------------------------------------------------------------------------|
 | Mots and Phrase                                                                                          |
 |----------------------------------------------------------------------------------------------------------|
@@ -72,7 +204,7 @@
 | *ARBRE/FORÊT*                                                                                            |
 | Le forêt est un grand terrain où poussent des Arbres                                                     |
 |----------------------------------------------------------------------------------------------------------|
-| ÁVORE/FLORESTA                                                                                           |
+| ÁRVORE/FLORESTA                                                                                          |
 | A foresta é um terreno grande onde crescem Árvores.                                                      |
 |----------------------------------------------------------------------------------------------------------|
 
