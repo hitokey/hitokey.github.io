@@ -49,8 +49,7 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
 | chanter  | cantar    |
 |----------+-----------|
 
-
-  
+ 
 ** 2ene Gouper
 
 |-----------+-----------|
@@ -90,16 +89,402 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
 |----------+-----------|
 
 
-
-
 ** Conjucação de Verbos Pronomiais reflexivos:
 
-   Este tipo de verbo sempre se conjuga com o auxiliar être. 
+   Este tipo de verbo sempre se conjuga com o auxiliar être.
+   Me, te, se \to m', t', s' quando a primeria letra do verbo é um vogal, por ex. s'allonger) ou como h mudo (s'habituer)
+
+
+*** Indicatif - Lèver
+
+|----------+------------|
+| Français | Portugués  |
+|----------+------------|
+| Lèver    | levante-se |
+|----------+------------|
+
+    
+|------------------|
+| présent          |
+|------------------|
+| je me lève       |
+| tu te lèves      |
+| il se lève       |
+| nous nous levons |
+| vous vous levez  |
+| ils se lèvent    |
+|------------------|  
+    
+|-------------------|
+| imparfait         |
+|-------------------|
+| je me levais      |
+| tu te levais      |
+| il se levait      |
+| nous nous levoins |
+| vous vous leviez  |
+| ils se levaient   |
+|-------------------|
+ 
+|------------------------|
+| passé composé          |
+|------------------------|
+| je me suis levé        |
+| tu t' es levé          |
+| il s' est levé         |
+| nous nous sommes levés |
+| vus vous êtes levés    |
+| ils se sont levés      |
+|------------------------|
+    
+|------------------------|
+| plus-que-parfait       |
+|------------------------|
+| je m' étais levé       |
+| tu t' étais levé       |
+| il s' étais levé       |
+| nous nous étions levés |
+| vous vous étiez levés  |
+| ils s' étaient levés   |
+|------------------------|
+
+|-------------------|
+| passé simple      |
+|-------------------|
+| je me levai       |
+| tu te levas       |
+| il se leva        |
+| nous nous levâmes |
+| vous vous levâtes |
+| ils se levèrent   |
+|-------------------|
+
+|-----------------------|
+| passé antérieur       |
+|-----------------------|
+| Je me fus levé        |
+| tu te fus levé        |
+| il se fut levé        |
+| nous nous fûmes levés |
+| vous vous fûtes levés |
+| ils se furent levés   |
+|-----------------------|
+
+|--------------------|
+| futur simples      |
+|--------------------|
+| je me lèverai      |
+| tu te lèveras      |
+| il se lèvera       |
+| nous nous lèverons |
+| vous vous lèverez  |
+| ils se lèveront    |
+|--------------------|
+
+
+|------------------------|
+| futur antérieur        |
+|------------------------|
+| je me serai levé       |
+| tu te seras levé       |
+| il se sera levé        |
+| nous nous serons levés |
+| vous vous serez levés  |
+| il se seront levés     |
+|------------------------|
+
+
+
+*** Subjontif - Lèver
+
+|-----------------------|
+| présent               |
+|-----------------------|
+| que je me lève        |
+| que tu te lèves       |
+| que il se lève        |
+| que nous nous levions |
+| que vous vous leviez  |
+| que ils se lèvent     |
+|-----------------------|
+
+
+|----------------------------|
+| passé                      |
+|----------------------------|
+| que je me sois levé        |
+| que tu te sois levé        |
+| que il se soit levé        |
+| que nous nous soyons levés |
+| que vous vous soyez levéz  |
+| qu'ils se soient levés     |
+|----------------------------|
+
+|--------------------------|
+| imparfait                |
+|--------------------------|
+| que je me levasse        |
+| que tu te levasses       |
+| que il se levât          |
+| que nous nous levassions |
+| que vous vous levassiez  |
+| que ils se levassent     |
+|--------------------------|
+
+|------------------------------|
+| plus que parfait             |
+|------------------------------|
+| que je me fusse levé         |
+| que tu te fusses levé        |
+| qu'il se fût levé            |
+| que nous nous fussions levés |
+| que vous vous fussiez levés  |
+| qu'ils se fussent levés      |
+|------------------------------|
+
+
+*
+    
+
+   
+
+ 
+   
+*** Conditionnel - Lèver
+
+|---------------------|
+| présent             |
+|---------------------|
+| je me lèverais      |
+| tu te lèverais      |
+| il se lèverait      |
+| nous nous lèverions |
+| vous vous lèveriez  |
+| ils se lèveraient   |
+|---------------------|
+
+|-------------------------|
+| passé                   |
+|-------------------------|
+| je me serais levé       |
+| tu te serais levé       |
+| il se serait levé       |
+| nous nous serions levés |
+| vous vous seriez levés  |
+| ils se seraient levés   |
+|-------------------------|
+
+
+*** Imperatif - Léver
+
+
+|-------------|
+| Lève-toi    |
+| levons-nous |
+| levez-vous  |
+|-------------|
+
+
+*** Participe - Lèver
+
+ - *présent* - se levant
+ - *passé* - s'étant levé
+   
+    
+** Voz passiva
+
+   A voz passiva é conjugada com o verbo être. O participe concorda sempre com o sujeito, em gênero e número: elle est élue...
+
+** Verbe
+
+*** Avoir/Ter
+   Verbo auxiliar
+
+**** Indicatif
+
+|------------|
+| présent    |
+|------------|
+| j'ai       |
+| tu as      |
+| il a       |
+| nous avons |
+| vous avez  |
+| ils ont    |
+|------------|
+   
+|---------------|
+| passé composé |
+|---------------|
+| j'ai eu       |
+| tu as eu      |
+| il a eu       |
+| nous avons eu |
+| vous avez eu  |
+| ils ont eu    |
+|---------------|
+
+|-------------|
+| Imparfait   |
+|-------------|
+| j' avais    |
+| tu avais    |
+| il avait    |
+| nous avions |
+| vous aviez  |
+| ils avaient |
+|-------------|
+
+
+|------------------|
+| plus-que-parfait |
+|------------------|
+| j' avais eu      |
+| tu avais eu      |
+| il avait eu      |
+| nous avions eu   |
+| vous aviez eu    |
+| ils avaient e    |
+|------------------|
+
+
+|--------------|
+| passé simple |
+|--------------|
+| j'eus        |
+| tu eus       |
+| il eut       |
+| nous eûmes   |
+| vous eûtes   |
+| ils eurent   |
+|--------------|
+
+
+|-----------------|
+| passé antérieur |
+|-----------------|
+| j'eus eu        |
+| tu eus eu       |
+| il eut eu       |
+| nous eûmes eu   |
+| vous eûtes eu   |
+| il eurent eu    |
+|-----------------|
+
+
+|--------------|
+| futur simple |
+|--------------|
+| j'aurai      |
+| tu auras     |
+| il aura      |
+| nous aurons  |
+| vous aurez   |
+| ils auront   |
+|--------------|
+|              |
+
+|-----------------|
+| futur antérieur |
+|-----------------|
+| j' aurai eu     |
+| tu auras eu     |
+| il aura eu      |
+| nous aurons eu  |
+| vous auvez eu   |
+| ils auront eu   |
+|-----------------|
+
+
+**** Subjontif
+
+|----------------|
+| présent        |
+|----------------|
+| que j' aie     |
+| que tu aies    |
+| qu'il ait      |
+| que nous ayons |
+| que vous ayez  |
+| qu' ils aient  |
+|----------------|
+
+|-------------------|
+| passé             |
+|-------------------|
+| que j'aie eu      |
+| que tu aies eu    |
+| qu'il ait eu      |
+| que nous ayons eu |
+| que vous ayez eu  |
+| qu'ils aient eu   |
+|-------------------|
+
+
+|-------------------|
+| imparfait         |
+|-------------------|
+| que j' eusse      |
+| que tu eusses     |
+| qu'il eût         |
+| que nous eussions |
+| que vous eussiez  |
+| que ils eussent   |
+|-------------------|
+
+
+|----------------------|
+| plus-que-parfait     |
+|----------------------|
+| que j' eusse eu      |
+| que tu eusses eu     |
+| qu'il eût eu         |
+| que nous eussions eu |
+| que vous eussiez eu  |
+| qu' ils eussent eu  |
+|----------------------|
+
+**** Conditionnel
+
+|--------------|
+| présent      |
+|--------------|
+| j' aurais    |
+| tu aurais    |
+| il aurait    |
+| nous aurions |
+| vous auriez  |
+| il auraient  |
+|--------------|
+
+
+|-----------------|
+| passsé          |
+|-----------------|
+| j' aurais eu    |
+| tu aurais eu    |
+| il aurait eu    |
+| nous aurions eu |
+| vous auriez eu  |
+| ils auraient eu |
+|-----------------|
+
+
+**** Imperatif
+
+  - *aie*
+  - *ayons*
+  - *ayez*
+
+*** Participe
+
+  - présent - ayant
+  - passé - eu(e)  
 
 * 1500 Mots
   
 ** Partes 1 - Frances/Português
-
+   
 #+CAPTION: Mots
 |--------------+------------|
 | Français     | Português  |
@@ -209,77 +594,112 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
 |----------------------------------------------------------------------------------------------------------|
 
 ** Partes 2 - Frances/Português
-  |--------------------------------------------------------------------------------------------|
-  | Mots and Phrase                                                                            |
-  |--------------------------------------------------------------------------------------------|
-  | ACTE/DAME/RUE                                                                              |
-  | Ça a été un Acte de bonté d'aider une vieille Dame à tranverser la RUE                     |
-  |--------------------------------------------------------------------------------------------|
-  | ATO/SENHORA/RUA                                                                            |
-  | Foi um ato de bondade ajudar a velha senhora a atravessar a Rua                            |
-  |--------------------------------------------------------------------------------------------|
-  | CHAMBRE/LIT/COFFRE                                                                         |
-  | Elle voulait une chambre avec un lit pour deux et un caffre pour mettre se bijoux          |
-  |--------------------------------------------------------------------------------------------|
-  | QUARTO/CAMA/COFRE                                                                          |
-  | Ela queria um quarto com uma cama de casal e um cofre para pôr suas jóias                  |
-  |--------------------------------------------------------------------------------------------|
-  | QUELQUE CHOSE/ RIEN/ TOUT                                                                  |
-  | - Marie sait TOUT faire. Veux- tu voir Qualque chose?                                      |
-  | - Mais c'est sombre, je ne vois rien                                                       |
-  |--------------------------------------------------------------------------------------------|
-  | ALGUMA COISA/ NADA/ TUDO                                                                   |
-  | - Maria sabe fazer tudo. Voce quer alguma coisa?                                           |
-  | - Mas está escuro, eu não vejo nada.                                                       |
-  |--------------------------------------------------------------------------------------------|
-  | N'IMPORTE QUOI                                                                             |
-  | Je ferai n'importe quoi pour t'aider                                                       |
-  |--------------------------------------------------------------------------------------------|
-  | Qualquer coisa                                                                             |
-  | Eu farei qualquer coisa para te ajudar                                                     |
-  |--------------------------------------------------------------------------------------------|
-  | N'IMPORTE QUI                                                                              |
-  | N'importe qui peut entrer dans ce musée.                                                   |
-  |--------------------------------------------------------------------------------------------|
-  | Qualquer pessoa                                                                            |
-  | Qualquer pessoa pode entrar neste museu.                                                   |
-  |--------------------------------------------------------------------------------------------|
-  | QUELQU'UN/PERSONNE/ TOUS                                                                   |
-  | - J'ai besoin de quelqu'un ici pour m'aider                                                |
-  | - PERSONNE n'est là maintenant. TOUS sont sortis pour déjeuner.                            |
-  |--------------------------------------------------------------------------------------------|
-  | ALGUÉM/NINGUÉM/TODOS                                                                       |
-  | - Preciso de alguem aqui para me ajudar                                                    |
-  | - Ninguém está aqui agora. Todos saíram para almoçar.                                      |
-  |--------------------------------------------------------------------------------------------|
-  | SERVICE/CLÉ/VOISIN                                                                         |
-  | - Pouvez-vous me rendre un Service?                                                        |
-  | - Bein sûr.                                                                                |
-  | - Laissez la Clé chez le voisin quand vous sortez, d'accord?                               |
-  |--------------------------------------------------------------------------------------------|
-  | FAVOR/CHAVE/VIZINHO                                                                        |
-  | - Você pode me fazer um favor?                                                             |
-  | - Claro                                                                                    |
-  | - Deixe a chave no vizinho quando você sair, certo?                                        |
-  |--------------------------------------------------------------------------------------------|
-  | SAINSON/HIVER/PRINTEMPS/ÉTÉ/AUTOMME                                                        |
-  | Les quatre saisons de l'année sont l'hiver, le printemps, l'été et l'automme.              |
-  |--------------------------------------------------------------------------------------------|
-  | ESTAÇÃO/INVERNO/PRIMAVERA/VERSÃO/OUTONO                                                    |
-  | A quatro estação do ano são inverno, primavera, verão e outono.                            |
-  |--------------------------------------------------------------------------------------------|
-  | EXPÉRIENCE/INSTUMENT/COIN                                                                  |
-  | Tous ces instrument dans le coin du laboratoire seront utilisés demain dans l'expérience   |
-  |--------------------------------------------------------------------------------------------|
-  | EXPERIMENTO/INSTUMENT/CANTO (ESQUINA)                                                      |
-  | Todos estes instumentos no canto do do laboratório serão utilizados amanhã no experimento. |
-  |--------------------------------------------------------------------------------------------|
-  | CORPS/OS/SANG                                                                              |
-  | Nos corps sont faits de chair, d'os et de sang.                                            |
-  |--------------------------------------------------------------------------------------------|
-  | Corpos/osso(s)/sangue                                                                      |
-  | Nossos corpos são feitos de carne, de ossos e de sangue.                                   |
-  |--------------------------------------------------------------------------------------------|
+
+#+CAPTION: Mots em français et português
+|----------------+-----------------|
+| Français       | Portugues       |
+|----------------+-----------------|
+| Acte           | Ato             |
+| DAME           | SENHORA         |
+| RUE            | RUA             |
+| CHAMBRE        | QUARTO          |
+| LIT            | CAMA            |
+| COFFRE         | COFRE           |
+| QUELQUE CHOSE  | QUALQUER COISA  |
+| RIEN           | NADA            |
+| TOUT           | TUDO            |
+| N'IMPORTE QUOI | QUALQUER PESSOA |
+| QUELQU'UN      | ALGUÉM          |
+| PERSONNE       | NINGUÉM         |
+| TOUS           | TODOS           |
+| SERVICE        | FAVOR           |
+| CLÉ            | CHAVE           |
+| VOISIN         | VIZINHO         |
+| SAINSON        | ESTAÇÃO         |
+| HIVER          | INVERNO         |
+| PRINTEMPS      | PRIMAVERA       |
+| ÉTÉ            | VERÃO           |
+| AUTOMME        | OUTONO          |
+| EXPERIENCE     | EXPERIMENTO     |
+| INSTUMENT      | INSTUMENTO      |
+| COIN           | CANTO           |
+| CORPS          | CORPO           |
+| OS             | OSSO            |
+| SANG           | SANGUE          |
+|----------------+-----------------|
+
+#+CAPTION: Mots and Phrase use
+|--------------------------------------------------------------------------------------------|
+| Mots and Phrase                                                                            |
+|--------------------------------------------------------------------------------------------|
+| ACTE/DAME/RUE                                                                              |
+| Ça a été un Acte de bonté d'aider une vieille Dame à tranverser la RUE                     |
+|--------------------------------------------------------------------------------------------|
+| ATO/SENHORA/RUA                                                                            |
+| Foi um ato de bondade ajudar a velha senhora a atravessar a Rua                            |
+|--------------------------------------------------------------------------------------------|
+| CHAMBRE/LIT/COFFRE                                                                         |
+| Elle voulait une chambre avec un lit pour deux et un caffre pour mettre se bijoux          |
+|--------------------------------------------------------------------------------------------|
+| QUARTO/CAMA/COFRE                                                                          |
+| Ela queria um quarto com uma cama de casal e um cofre para pôr suas jóias                  |
+|--------------------------------------------------------------------------------------------|
+| QUELQUE CHOSE/ RIEN/ TOUT                                                                  |
+| - Marie sait TOUT faire. Veux- tu voir Qualque chose?                                      |
+| - Mais c'est sombre, je ne vois rien                                                       |
+|--------------------------------------------------------------------------------------------|
+| ALGUMA COISA/ NADA/ TUDO                                                                   |
+| - Maria sabe fazer tudo. Voce quer alguma coisa?                                           |
+| - Mas está escuro, eu não vejo nada.                                                       |
+|--------------------------------------------------------------------------------------------|
+| N'IMPORTE QUOI                                                                             |
+| Je ferai n'importe quoi pour t'aider                                                       |
+|--------------------------------------------------------------------------------------------|
+| Qualquer coisa                                                                             |
+| Eu farei qualquer coisa para te ajudar                                                     |
+|--------------------------------------------------------------------------------------------|
+| N'IMPORTE QUI                                                                              |
+| N'importe qui peut entrer dans ce musée.                                                   |
+|--------------------------------------------------------------------------------------------|
+| Qualquer pessoa                                                                            |
+| Qualquer pessoa pode entrar neste museu.                                                   |
+|--------------------------------------------------------------------------------------------|
+| QUELQU'UN/PERSONNE/ TOUS                                                                   |
+| - J'ai besoin de quelqu'un ici pour m'aider                                                |
+| - PERSONNE n'est là maintenant. TOUS sont sortis pour déjeuner.                            |
+|--------------------------------------------------------------------------------------------|
+| ALGUÉM/NINGUÉM/TODOS                                                                       |
+| - Preciso de alguem aqui para me ajudar                                                    |
+| - Ninguém está aqui agora. Todos saíram para almoçar.                                      |
+|--------------------------------------------------------------------------------------------|
+| SERVICE/CLÉ/VOISIN                                                                         |
+| - Pouvez-vous me rendre un Service?                                                        |
+| - Bein sûr.                                                                                |
+| - Laissez la Clé chez le voisin quand vous sortez, d'accord?                               |
+|--------------------------------------------------------------------------------------------|
+| FAVOR/CHAVE/VIZINHO                                                                        |
+| - Você pode me fazer um favor?                                                             |
+| - Claro                                                                                    |
+| - Deixe a chave no vizinho quando você sair, certo?                                        |
+|--------------------------------------------------------------------------------------------|
+| SAINSON/HIVER/PRINTEMPS/ÉTÉ/AUTOMME                                                        |
+| Les quatre saisons de l'année sont l'hiver, le printemps, l'été et l'automme.              |
+|--------------------------------------------------------------------------------------------|
+| ESTAÇÃO/INVERNO/PRIMAVERA/VERSÃO/OUTONO                                                    |
+| A quatro estação do ano são inverno, primavera, verão e outono.                            |
+|--------------------------------------------------------------------------------------------|
+| EXPÉRIENCE/INSTUMENT/COIN                                                                  |
+| Tous ces instrument dans le coin du laboratoire seront utilisés demain dans l'expérience   |
+|--------------------------------------------------------------------------------------------|
+| EXPERIMENTO/INSTUMENT/CANTO (ESQUINA)                                                      |
+| Todos estes instumentos no canto do do laboratório serão utilizados amanhã no experimento. |
+|--------------------------------------------------------------------------------------------|
+| CORPS/OS/SANG                                                                              |
+| Nos corps sont faits de chair, d'os et de sang.                                            |
+|--------------------------------------------------------------------------------------------|
+| Corpos/osso(s)/sangue                                                                      |
+| Nossos corpos são feitos de carne, de ossos e de sangue.                                   |
+|--------------------------------------------------------------------------------------------|
 
 ** Partes 3 - Frances/Português
   
