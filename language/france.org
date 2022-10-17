@@ -208,7 +208,6 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
 | que ils se lèvent     |
 |-----------------------|
 
-
 |----------------------------|
 | passé                      |
 |----------------------------|
@@ -241,14 +240,6 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
 | que vous vous fussiez levés  |
 | qu'ils se fussent levés      |
 |------------------------------|
-
-
-*
-    
-
-   
-
- 
    
 *** Conditionnel - Lèver
 
@@ -274,7 +265,6 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
 | ils se seraient levés   |
 |-------------------------|
 
-
 *** Imperatif - Léver
 
 
@@ -283,7 +273,6 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
 | levons-nous |
 | levez-vous  |
 |-------------|
-
 
 *** Participe - Lèver
 
@@ -296,10 +285,9 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
    A voz passiva é conjugada com o verbo être. O participe concorda sempre com o sujeito, em gênero e número: elle est élue...
 
 ** Verbe
-
 *** Avoir/Ter
    Verbo auxiliar
-
+   
 **** Indicatif
 
 |------------|
@@ -395,7 +383,6 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
 | ils auront eu   |
 |-----------------|
 
-
 **** Subjontif
 
 |----------------|
@@ -469,7 +456,6 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
 | ils auraient eu |
 |-----------------|
 
-
 **** Imperatif
 
   - *aie*
@@ -480,7 +466,7 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
 
   - présent - ayant
   - passé - eu(e)  
-
+    
 * 1500 Mots
   
 ** Partes 1 - Frances/Português
@@ -702,146 +688,228 @@ Exister trois les types dans conjugation, 1er grouper *er*, 2ene groupe - *ir* e
 |--------------------------------------------------------------------------------------------|
 
 ** Partes 3 - Frances/Português
-  
-  |---------------------------------------------------------------------------------------------|
-  | Mots and Phrase                                                                             |
-  |---------------------------------------------------------------------------------------------|
-  | RAGE/JOIE/SENTIMENT                                                                         |
-  | La rage est un sentiment négatif alors que la joie est un sentiment positif                 |
-  |---------------------------------------------------------------------------------------------|
-  | RAIVA/ALEGRIA/SENTIMENTO                                                                    |
-  | A raiva é um sentimento negativo, ao passo que a alegria é um sentimento positivo           |
-  |---------------------------------------------------------------------------------------------|
-  | CHUTE/MUR/FIN/CHANGEMENT/HISTOIRE                                                           |
-  | La chute du mur de Berlin à fin de 1989 a signifié un changement important dans l'histoire. |
-  |---------------------------------------------------------------------------------------------|
-  | QUEDA/MURO(PARETE)/FIM/MUDANÇA/HISTÓRIA                                                     |
-  | A queda do muro de Berlin no fim de 1989 significa uma mudança importate na história.       |
-  |---------------------------------------------------------------------------------------------|
-  | CAPITAINE/ SOLDAT/ DIVERTISSEMENT                                                           |
-  | Le capitaine demande à ses soldats que est leur divertissement préféré                      |
-  |---------------------------------------------------------------------------------------------|
-  | CAPITÃO/SOLDADO/DIVERSÃO                                                                    |
-  | O capitão pergunta a seus soldados qual é a diversão perferida deles.                       |
-  |---------------------------------------------------------------------------------------------|
-  | PÈRE/ÉCOLE/MATIN                                                                            |
-  | Mon père m'emmenait à l'école tous les matins                                               |
-  |---------------------------------------------------------------------------------------------|
-  | PAI/ESCOLA/MANHÃ                                                                            |
-  | Meu pai me levara a escola todas as manhãs                                                  |
-  |---------------------------------------------------------------------------------------------|
-  | MÈRE/FEMME                                                                                  |
-  | Ma mère étrait une femme remarquable                                                        |
-  |---------------------------------------------------------------------------------------------|
-  | MÃE/MULHER                                                                                  |
-  | Minha mãe era uma mulher notável                                                            |
-  |---------------------------------------------------------------------------------------------|
-  | CAMP/MAISON                                                                                 |
-  | La plupart des gens dans les camps de réfugiés y sont parce qu'ils ont perdu leurs maisons  |
-  |---------------------------------------------------------------------------------------------|
-  | CAMPO/CASA                                                                                  |
-  | A maioria das pessoas nos campos de refugiados estão lá porque perderam suas casas          |
-  |---------------------------------------------------------------------------------------------|
-  | SOUER/FRÈRE                                                                                 |
-  | Combien de soeurs et de frères as-tu?                                                       |
-  |---------------------------------------------------------------------------------------------|
-  | IRMÃO/IRMÃO                                                                                 |
-  | Quantos irmãos e irmã você tem?                                                             |
-  |---------------------------------------------------------------------------------------------|
-  | CERCLE/TRIANGLE/CARRÉ                                                                       |
-  | Le cercle n'a pas d'angles. Um triangle en a trois et un carré en a quatre.                 |
-  |---------------------------------------------------------------------------------------------|
-  | CIRCULO/TRIÂNGULO/QUADRADO                                                                  |
-  | O circulo não tem ângulos. Um triângulo tem três e um quadrado tem quatro.                  |
-  |---------------------------------------------------------------------------------------------|
-  | PLUIE/NUAGE/CIEL                                                                            |
-  | La pluie vient des nuges dans le ciel                                                       |
-  |---------------------------------------------------------------------------------------------|
-  | CHUVA/NUVEM/CÉU                                                                             |
-  | A chuva vem das nuvem no céu                                                                |
-  |---------------------------------------------------------------------------------------------|
-  | REGISTRE/RÉSULTAT/TEST                                                                      |
-  | Il maintient un registre de résultats de tous les tests qu'il fait                          |
-  |---------------------------------------------------------------------------------------------|
-  | REGISTRO/RESULTADO/TESTES                                                                   |
-  | Ele mantém um registro dos resultados de todos os testes que ele faz                        |
-  |---------------------------------------------------------------------------------------------|
-  | MATIN/APRÈS-MIDI/SOIR/ NUIT                                                                 |
-  | Um jour est divisé en matin, aprês-midi, soir et nuit                                       |
-  |---------------------------------------------------------------------------------------------|
-  | MANHÃ/TARDE/NOITE/MADRUGADA                                                                 |
-  | UM dia é divido em manhã, tarde, noite e madrugada                                          |
-  |---------------------------------------------------------------------------------------------|
+
+#+CAPTION: Mots
+|----------------+------------|
+| Français       | Português  |
+|----------------+------------|
+| RAGE           | RAIVA      |
+| JOIE           | ALEGRIA    |
+| SENTIMENT      | SENTIMENTO |
+| CHUTE          | QUEDA      |
+| MUR            | MURO       |
+| FIN            | FIM        |
+| CHANGEMENT     | MUDANÇA    |
+| HISTORIRE      | HISTORIA   |
+| CAPITAINE      | CAPITÃO    |
+| SOLDAT         | SOLDADO    |
+| DIVERTISSEMENT | DIVERSÃO   |
+| PÈRE           | PAI        |
+| ÉCOLE          | ESCOLA     |
+| MATIN          | MANHÃ      |
+| MÈRE           | MÃE        |
+| FEMME          | MULHER     |
+| CAMP           | CAMPO      |
+| MAISON         | CASA       |
+| SOUER          | IRMÃO      |
+| FRÈRE          | IRMÃ       |
+| CERCLE         | CIRCULO    |
+| TRIANGLE       | TRIANGLO   |
+| CARRÉ          | QUADRADO   |
+| PLUIE          | CHUVA      |
+| NUAGE          | NUVEM      |
+| CIEL           | CÉU        |
+| REGISTRE       | REGISTRO   |
+| RÉSULTAT       | RESULTADO  |
+| TEST           | TESTE      |
+| APRÉS-MIDI     | TARDE      |
+| SOIR           | NOITE      |
+| NUIT           | MADRUGADA  |
+|----------------+------------|
+
+#+CAPTION: Mots and Phrase
+|---------------------------------------------------------------------------------------------|
+| Mots and Phrase                                                                             |
+|---------------------------------------------------------------------------------------------|
+| RAGE/JOIE/SENTIMENT                                                                         |
+| La rage est un sentiment négatif alors que la joie est un sentiment positif                 |
+|---------------------------------------------------------------------------------------------|
+| RAIVA/ALEGRIA/SENTIMENTO                                                                    |
+| A raiva é um sentimento negativo, ao passo que a alegria é um sentimento positivo           |
+|---------------------------------------------------------------------------------------------|
+| CHUTE/MUR/FIN/CHANGEMENT/HISTOIRE                                                           |
+| La chute du mur de Berlin à fin de 1989 a signifié un changement important dans l'histoire. |
+|---------------------------------------------------------------------------------------------|
+| QUEDA/MURO(PARETE)/FIM/MUDANÇA/HISTÓRIA                                                     |
+| A queda do muro de Berlin no fim de 1989 significa uma mudança importate na história.       |
+|---------------------------------------------------------------------------------------------|
+| CAPITAINE/ SOLDAT/ DIVERTISSEMENT                                                           |
+| Le capitaine demande à ses soldats que est leur divertissement préféré                      |
+|---------------------------------------------------------------------------------------------|
+| CAPITÃO/SOLDADO/DIVERSÃO                                                                    |
+| O capitão pergunta a seus soldados qual é a diversão perferida deles.                       |
+|---------------------------------------------------------------------------------------------|
+| PÈRE/ÉCOLE/MATIN                                                                            |
+| Mon père m'emmenait à l'école tous les matins                                               |
+|---------------------------------------------------------------------------------------------|
+| PAI/ESCOLA/MANHÃ                                                                            |
+| Meu pai me levara a escola todas as manhãs                                                  |
+|---------------------------------------------------------------------------------------------|
+| MÈRE/FEMME                                                                                  |
+| Ma mère étrait une femme remarquable                                                        |
+|---------------------------------------------------------------------------------------------|
+| MÃE/MULHER                                                                                  |
+| Minha mãe era uma mulher notável                                                            |
+|---------------------------------------------------------------------------------------------|
+| CAMP/MAISON                                                                                 |
+| La plupart des gens dans les camps de réfugiés y sont parce qu'ils ont perdu leurs maisons  |
+|---------------------------------------------------------------------------------------------|
+| CAMPO/CASA                                                                                  |
+| A maioria das pessoas nos campos de refugiados estão lá porque perderam suas casas          |
+|---------------------------------------------------------------------------------------------|
+| SOUER/FRÈRE                                                                                 |
+| Combien de soeurs et de frères as-tu?                                                       |
+|---------------------------------------------------------------------------------------------|
+| IRMÃO/IRMÃO                                                                                 |
+| Quantos irmãos e irmã você tem?                                                             |
+|---------------------------------------------------------------------------------------------|
+| CERCLE/TRIANGLE/CARRÉ                                                                       |
+| Le cercle n'a pas d'angles. Um triangle en a trois et un carré en a quatre.                 |
+|---------------------------------------------------------------------------------------------|
+| CIRCULO/TRIÂNGULO/QUADRADO                                                                  |
+| O circulo não tem ângulos. Um triângulo tem três e um quadrado tem quatro.                  |
+|---------------------------------------------------------------------------------------------|
+| PLUIE/NUAGE/CIEL                                                                            |
+| La pluie vient des nuges dans le ciel                                                       |
+|---------------------------------------------------------------------------------------------|
+| CHUVA/NUVEM/CÉU                                                                             |
+| A chuva vem das nuvem no céu                                                                |
+|---------------------------------------------------------------------------------------------|
+| REGISTRE/RÉSULTAT/TEST                                                                      |
+| Il maintient un registre de résultats de tous les tests qu'il fait                          |
+|---------------------------------------------------------------------------------------------|
+| REGISTRO/RESULTADO/TESTES                                                                   |
+| Ele mantém um registro dos resultados de todos os testes que ele faz                        |
+|---------------------------------------------------------------------------------------------|
+| MATIN/APRÈS-MIDI/SOIR/ NUIT                                                                 |
+| Um jour est divisé en matin, aprês-midi, soir et nuit                                       |
+|---------------------------------------------------------------------------------------------|
+| MANHÃ/TARDE/NOITE/MADRUGADA                                                                 |
+| UM dia é divido em manhã, tarde, noite e madrugada                                          |
+|---------------------------------------------------------------------------------------------|
 
 ** Partes 4 - Frances/Português
 
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | Mots and Phrase                                                                                                                                 |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | FERME/LÉGUME/SALADE/ŒUF                                                                                                                         |
-   | Quand nous vivions dans une FERME nous avions des SALADES, des CŒfS et des LÉGUMES frais                                                        |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | FAZENDA/LEGUME/VERDURA/OVO                                                                                                                      |
-   | Quando vivíamos numa fazenda tínhamos verduras, ovos e legumes frecos.                                                                          |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | HORLOGE/PENDULES/MONTRE/HEURES                                                                                                                  |
-   | Les gens qui sont pressés regardent toujours les HORLOGES, les pendules et les Montres pour vérifier les Heures                                 |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | RELÓGIO DE RUA/ RÉLOGIO DE MESA OU DE PAREDE/ RELÓGIO DE PULSO/ HORAS                                                                           |
-   | As pessoas que têm pressa olham sempre os relógios de rua, os de mesa ou de parede, os de pulso para verificar as horas                         |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | VŒU/CŒUR                                                                                                                                        |
-   | J'ai fait in VŒU de tout mon CŒUR et il s'est accompli                                                                                          |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | VOTO/CORAÇÃO                                                                                                                                    |
-   | Fiz um VOTO com todo meu CORAÇÃO e ele se realizou                                                                                              |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | OXYGÈNE/ÉLÉMENT/AIR                                                                                                                             |
-   | L'Oxygène est un important élément présent dans l'air                                                                                           |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | OXIGENIO/ELEMENTO/AR                                                                                                                            |
-   | O oxigenio é um importante elemento presente no ar                                                                                              |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | CAUSE/ACCIDENT                                                                                                                                  |
-   | Conduire en état d'ébriété est la cause de beaucoup d'accidents                                                                                 |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | CAUSA/ACIDENTE                                                                                                                                  |
-   | Dirigir embriagrado é a causa de muito acidente                                                                                                 |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | EFFET/ÉCLAT DE RIRE                                                                                                                             |
-   | Tous attendent que l'effet de ses plaisanteries sera un éclat de rire.                                                                          |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | EFEITO/GARGALHADA                                                                                                                               |
-   | Todas esperam que o efeito de suas piadas seja uma Gargalhada                                                                                   |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | EXPÉRIENCE/FEU/MAIN                                                                                                                             |
-   | L'EXPÉRIENCE nous dit que si on met la main dans le feu on se brûlera                                                                           |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | EXPERIENCIA/FOGO/MÃO                                                                                                                            |
-   | A experiencia nos diz que se colocarmos a mão no fogo nós nos queimaremos                                                                       |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | HOMME/ARGENT/JEU/CARTE                                                                                                                          |
-   | Je connais un homme que a gagné beaucoup d'argent au jeu. Surtout aux cartes.                                                                   |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | HOMEM/DINHEIRO/JOGO/CARTA                                                                                                                       |
-   | Eu conheço um hommem que ganhou muito dinheiro no jogo. Principalmente de cartas.                                                               |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | PRÉSENT/PASSÉ/FUTUR                                                                                                                             |
-   | Nous pouvons seulement faire des choses au présent. Le passé ne peut pas être changé et le futur est quelque chose que nous ne connaissons pas. |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | PRSENTE/PASSADO/FUTURO                                                                                                                          |
-   | Apenas podemos fazer coisas no present. O passado não poder se mudado e o futuro é algo que não conhecemos.                                     |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | CLASSE/PAUSE                                                                                                                                    |
-   | En classe, d'habitude, nous faisons une pause à 10 heures                                                                                       |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | AULA/INTERVO                                                                                                                                    |
-   | Na aula, geralmente fazemos um pause de 10 horas                                                                                                |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | LUNE/ÉTOILE/SOLEIR                                                                                                                              |
-   | La LUNE et les Étoiles brillent la nuit et le soleil brilhe pendant le jour                                                                     |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
-   | LUA/ESTRELA/SOL                                                                                                                                 |
-   | A lua e as estrelas brilha a noite e o sol brilha durante o dia.                                                                                |
-   |-------------------------------------------------------------------------------------------------------------------------------------------------|
+#+CAPTION: Mots
+|---------------+-------------------|
+| Français      | Português         |
+|---------------+-------------------|
+| FERME         | FAZENDA           |
+| LÉGUME        | LEGUME            |
+| SALADE        | VERDURA           |
+| OEUF          | OVO               |
+| HORLOGE       | RÉLOGIO DE RUA    |
+| PENDULES      | RÉLOGIO DE PAREDE |
+| MONTRE        | RÉLOGIO DE PULSO  |
+| HEURES        | HORAS             |
+| VOEU          | VOTO              |
+| COEUR         | CORAÇÃO           |
+| OXYGÈNE       | OXIGÉNIO          |
+| ÉLÉMENT       | ELEMENTO          |
+| AIR           | AR                |
+| CAUSE         | CAUSA             |
+| ACCIDENT      | ACIDENTE          |
+| EFFET         | EFEITO            |
+| ÉCLAT DE RIRE | GARGALHADA        |
+| EXPÉRIENCE    | EXPERIÊNCIA       |
+| FEU           | FOGO              |
+| MAIN          | MÃO               |
+| HOMME         | HOMEM             |
+| ARGENT        | DINHEIRO          |
+| JEU           | JOGO              |
+| CARTE         | CARTA             |
+| PRÉSENT       | PRESENTE          |
+| PASSÉ         | PASSADO           |
+| FUTUR         | FUTURO            |
+| CLASSE        | AULA              |
+| PAUSE         | INTERVALO         |
+| LUNE          | LUA               |
+| ÉTOILE        | ESTRELA           |
+| SOLEIR        | SOL               |
+|---------------+-------------------|
+
+
+#+CAPTION: Mots et phases   
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| Mots and Phrase                                                                                                                                 |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| FERME/LÉGUME/SALADE/ŒUF                                                                                                                         |
+| Quand nous vivions dans une FERME nous avions des SALADES, des CŒfS et des LÉGUMES frais                                                        |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| FAZENDA/LEGUME/VERDURA/OVO                                                                                                                      |
+| Quando vivíamos numa fazenda tínhamos verduras, ovos e legumes frecos.                                                                          |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| HORLOGE/PENDULES/MONTRE/HEURES                                                                                                                  |
+| Les gens qui sont pressés regardent toujours les HORLOGES, les pendules et les Montres pour vérifier les Heures                                 |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| RELÓGIO DE RUA/ RÉLOGIO DE MESA OU DE PAREDE/ RELÓGIO DE PULSO/ HORAS                                                                           |
+| As pessoas que têm pressa olham sempre os relógios de rua, os de mesa ou de parede, os de pulso para verificar as horas                         |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| VŒU/CŒUR                                                                                                                                        |
+| J'ai fait in VŒU de tout mon CŒUR et il s'est accompli                                                                                          |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| VOTO/CORAÇÃO                                                                                                                                    |
+| Fiz um VOTO com todo meu CORAÇÃO e ele se realizou                                                                                              |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| OXYGÈNE/ÉLÉMENT/AIR                                                                                                                             |
+| L'Oxygène est un important élément présent dans l'air                                                                                           |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| OXIGENIO/ELEMENTO/AR                                                                                                                            |
+| O oxigenio é um importante elemento presente no ar                                                                                              |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| CAUSE/ACCIDENT                                                                                                                                  |
+| Conduire en état d'ébriété est la cause de beaucoup d'accidents                                                                                 |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| CAUSA/ACIDENTE                                                                                                                                  |
+| Dirigir embriagrado é a causa de muito acidente                                                                                                 |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| EFFET/ÉCLAT DE RIRE                                                                                                                             |
+| Tous attendent que l'effet de ses plaisanteries sera un éclat de rire.                                                                          |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| EFEITO/GARGALHADA                                                                                                                               |
+| Todas esperam que o efeito de suas piadas seja uma Gargalhada                                                                                   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| EXPÉRIENCE/FEU/MAIN                                                                                                                             |
+| L'EXPÉRIENCE nous dit que si on met la main dans le feu on se brûlera                                                                           |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| EXPERIENCIA/FOGO/MÃO                                                                                                                            |
+| A experiencia nos diz que se colocarmos a mão no fogo nós nos queimaremos                                                                       |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| HOMME/ARGENT/JEU/CARTE                                                                                                                          |
+| Je connais un homme que a gagné beaucoup d'argent au jeu. Surtout aux cartes.                                                                   |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| HOMEM/DINHEIRO/JOGO/CARTA                                                                                                                       |
+| Eu conheço um hommem que ganhou muito dinheiro no jogo. Principalmente de cartas.                                                               |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| PRÉSENT/PASSÉ/FUTUR                                                                                                                             |
+| Nous pouvons seulement faire des choses au présent. Le passé ne peut pas être changé et le futur est quelque chose que nous ne connaissons pas. |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| PRSENTE/PASSADO/FUTURO                                                                                                                          |
+| Apenas podemos fazer coisas no present. O passado não poder se mudado e o futuro é algo que não conhecemos.                                     |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| CLASSE/PAUSE                                                                                                                                    |
+| En classe, d'habitude, nous faisons une pause à 10 heures                                                                                       |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| AULA/INTERVO                                                                                                                                    |
+| Na aula, geralmente fazemos um pause de 10 horas                                                                                                |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| LUNE/ÉTOILE/SOLEIR                                                                                                                              |
+| La LUNE et les Étoiles brillent la nuit et le soleil brilhe pendant le jour                                                                     |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| LUA/ESTRELA/SOL                                                                                                                                 |
+| A lua e as estrelas brilha a noite e o sol brilha durante o dia.                                                                                |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|
   
+   
+* [[https://hitokey.github.io/][Home]]
+Minha Página (My Page): [[https://hitokey.github.io/][link]]
