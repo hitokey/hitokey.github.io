@@ -17,9 +17,16 @@
 | ou       | u           | où, pour, armour                             |
 | u        | **          | veu, tu                                      |
 | in, im   | an          | raisin, timbre, simple, intersant, important |
+| ction    | cion        | introduction                                 |
+| ment     | mon         | tranquillement                               |
 |----------+-------------+----------------------------------------------|
 
 *obs:* ** = com um pico de "u", mas fala "i"
+
+NÃO SE PRONÚNCIA O FINAL COM: e,s,x,t,p,z
+
+O *e* é pronucival no final, nas exeções de palavras pequenas como: *je*, *le*, *de*, *ce* etc.
+O *e* seguindo de duas consoante não é pronuciado. é consoante é pronuciada apenas uma vez.
 
 * Conjugações
 
