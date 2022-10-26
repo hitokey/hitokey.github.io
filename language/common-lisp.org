@@ -7,11 +7,11 @@
 
 Ce document s'adresse autant à des débutants en Common Lisp qu'à des débutants en programmation; sa lecture ne demande aucun pré-requis. Etant une introduction à la programmation, seule une petite partie du Common Lisp est présentée, celle utile à l'apprentissage de quelques principes programmation.
 
-/Esse documento odestina-se tanto a principiante em Common Lisp, quanto de principiante em programação; sua leitura não precisa nenhum pré-requisto. Ser um introdução para a programação, possuir apenas uma pequena parte do Common Lisp esta presente, será muito util ao aprsendizado de qualquer principio da progamação/
+/Esse documento odestina-se tanto a principiante em Common Lisp, quanto de principiante em programação; sua leitura não precisa nenhum pré-requisto. Ser um introdução para a programação, possuir apenas uma pequena parte do Common Lisp esta presente, será muito util ao aprsendizado de qualquer principio da progamação./
 
 Pourquoi avoir choisi le Common Lisp (CL ou Lisp en bref) pour une introduction à la programmation? D'un point de vue pédagogique, le Lisp offre un certain nombre d'avantages. La syntaxe du Lisp est simple et s'apprend très rapidement. Le Lisp est une language interactif; ceci veut dire qu'en partique, lorsqu'on écrit un programme dans un environnement de programmation Lisp, l'interaction avec la machine est inmédiate et permamente: à tout moment le programmeur peut tester ce qu'il est en train de faire, par petits morceaux, un peu à la manière de ce qui se passe lors de l'utilisation d'une calculette.
 
-/Porque ter coisa do Common lisp (CL ou Lisp resumidamente) para uma instrodução a la programação? De um ponto de vista pedagógico, o Lisp oferta um certo número de vantagens. A sintaxe do Lisp é simples e é apredida muito rapidamente. O Lisp é uma linguagem interativa; isto quer dizer na partica, quando nós escremos um progama dentro um ambiente de programação Lisp, /
+/Porque ter coisa do Common lisp (CL ou Lisp resumidamente) para uma instrodução a la programação? De um ponto de vista pedagógico, o Lisp oferta um certo número de vantagens. A sintaxe do Lisp é simples e é apredida muito rapidamente. O Lisp é uma linguagem interativa; isto quer dizer na partica, quando nós escremos um progama dentro um ambiente de programação Lisp/
 
 
 
