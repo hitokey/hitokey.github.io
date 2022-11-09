@@ -4,25 +4,109 @@
 
 
 * TODO Introduction
-
+  
 Ce document s'adresse autant à des débutants en Common Lisp qu'à des débutants en programmation; sa lecture ne demande aucun pré-requis. Etant une introduction à la programmation, seule une petite partie du Common Lisp est présentée, celle utile à l'apprentissage de quelques principes programmation.
 
 /Esse documento odestina-se tanto a principiante em Common Lisp, quanto de principiante em programação; sua leitura não precisa nenhum pré-requisto. Ser um introdução para a programação, possuir apenas uma pequena parte do Common Lisp esta presente, será muito util ao aprsendizado de qualquer principio da progamação./
 
 Pourquoi avoir choisi le Common Lisp (CL ou Lisp en bref) pour une introduction à la programmation? D'un point de vue pédagogique, le Lisp offre un certain nombre d'avantages. La syntaxe du Lisp est simple et s'apprend très rapidement. Le Lisp est une language interactif; ceci veut dire qu'en partique, lorsqu'on écrit un programme dans un environnement de programmation Lisp, l'interaction avec la machine est inmédiate et permamente: à tout moment le programmeur peut tester ce qu'il est en train de faire, par petits morceaux, un peu à la manière de ce qui se passe lors de l'utilisation d'une calculette.
 
-/Porque ter coisa do Common lisp (CL ou Lisp resumidamente) para uma instrodução a la programação? De um ponto de vista pedagógico, o Lisp oferta um certo número de vantagens. A sintaxe do Lisp é simples e é apredida muito rapidamente. O Lisp é uma linguagem interativa; isto quer dizer na partica, quando nós escremos um progama dentro um ambiente de programação Lisp/
+/Por que ter coisa do Common lisp (CL ou Lisp resumidamente) para uma introdução a la programação? De um ponto de vista pedagógico, o Lisp oferta um certo número de vantagens. A sintaxe do Lisp é simples e é apredida muito rapidamente. O Lisp é uma linguagem interativa; isto quer dizer na partica, quando nós escremos um progama dentro um ambiente de programação Lisp, a interação com a máquina é imediata e permamente: à todo momento o programador poderá testa o que ele está fazendo, por pequena partes, un pouco para o caminho disso que acontece durante a utilização de uma calculatora./
+
+Le Commom Lisp est richement doté en terme de structures de donnée et d'opérateurs prédéfinis. Cette simplicité de la syntaxe et de l'interaction, ainsi que la richesse du langage, font que l'étudiant peut se concentrer sur ce qui est vraiment important, c'est-à-dire la représentation et la résolution des problèmes posés. Un autre intérêt du Common Lisp est que c'est un langage multi-paradigmes: il permet la programmation impérative, la programmation fonctionnelle et la programmation orientée-objects.
+
+/O Common Lisp é ricamente dotado em termo de estrutura de dados e de operadores predefinidos. Este simplicidade da syntaxe e da interação, assim que a riquesa da linguagem, faço que o estudo pouco se concentre sobre o que é verdamente importante, isso é para dizer a representação e a resolução de problemas colocados. Um outro interesse do common lisp é que isso é uma linguagem multi-paradigma, ele permit a progrmação imperativa, a programação funcional e a programação orientada a objeto./
+
+Voir la page WEB www.algo.be/clr.html pour plus d'information sur le Commmon Lisp: caractéristiques, utilisation professionnell, environmente de programmation (dont certain gratutis), ressources et bibliographie (en particulier, le traité de programmation en Common lisp de Robert Strandh et Irène Durand, également disponible en line).
+
+/Vá a página WEB www.galgo.be/clr.html para mais informações sobre o Common Lisp: caracteristicas, utilizações proficionais, ambiente de programação (alguns dos quais gratuito), recursos e bibliografia (em particular, o tratado da programação em Common Lisp de Robert Strandh e Irène Durand, também disponivel online)./
+
+* Ordinatuer et language de programmation
+
+Un langage de programmation est un langage que comprend un ordinateur. Il permet de communiquer des instructions et de l'information (des données) à un ordinateur afin de lui faire exécuter une tâche particulière. Instructions et données constituent le programme.
+
+/Uma lingagem de programação é uma lingagem que incluir um computador. Ele permitir a comunicação as instruções e as informaçãoes (os dados) para um computador afim de ele faça execução uma tarefa particular. Instruções e dados constituir o programa./
+
+En plus d'être un moyen de communication avec un ordinateur, un langage de programmation possède deux autres fonctions essentielles. Premièrement, c'est un moyen de communication entre programmeurs (les programmeurs passent une grande partie de leur temps à lire des programmes). Deuxièmement, un langage de programmation nous permet de représenter et d'organiser nos idées au sujet des tâches à accomplir par un ordinateur. Vu sous cet angle, on devine que les les langages de programmation different par leur pouvoir d'expression, c'est à dire para la facilité avec laquelle ils permettent de programmer une solution à un problème donné. Le Lisp est une langage dont le pouvoir d'expression est très grand, ce qui procure un avantage technologique à ses utilisateurs.
+
+/En plus d'être um meio de comunicação com um computador, uma linguagem de programação possui dois outras funções essenciais. Primeiramente, isso é um meio de communicação entre o programadores (os programadores passar uma grande parte do seus tempos no lendo o programa). Segundamente, uma linguagem de programação nos permite representar e organizar nossa ideias no tema das tarefa (a ser) relizar por um computador. Vejamos pelo ângulo, adivinhamos que as linguagem de programação diferente por suas habilidade de expressões, isso é para dizer por a facilidade com qual eles permitem o programador uma solução para um problema dado. O Lisp é uma linguagem cuja o poder das expressão é muito grande, o que fornce uma vantagem tecnologica a seus utitlizadores./
+
+* Premier contact, premier programme
+
+Supposons que vous soyez devant un ordinateur et qu'un environnement de programmation Lisp ait été lancé. Vous avez devant les yeux la fenêtre de l'interacteur Lisp qui attend que vous introduisiez quelque chose et est prêt à vous répondre. Le fait que l'interacteur Lisp attend est matérialisé par une invite (prompt en anglais), par exemple le signe > qui sera utilisé dans la suite de ce cours. Introduisez à l'aide du clavier l'expression Lisp suivante: (+ 2 3). La réponse s'inscrit immédiatement à l'écran : 5. C'est le résultat de l'évaluation (calcul) de cette expression. Dans la suite, ce type d'interactions sera représenté comme ceci:
+
+/Suponha que vós estamos diante um computador e que um ambiente de programação foi iniciado. Temos perante aos olhos a janela interativa lisp que espera que nós introduzimos qualquer coisa e está pronto respondemos. O fato que o interpedator lisp espera é materializar por um convite (prompt em inglês), por exemplo o sinal > que será utilizado na sequencia desse cursor. Introduzimos a usando o teclado a expressão Lisp seguinte: (+ 2 3). A resposta registará imediatamente na tela: 5. Este é o resultado da avaliação (calculada) dessa expressão. Então a segui, esse tipo de interacção sera representada com isto:/
+
+#+BEGIN_EXAMPLE
+> (+ 2 3)
+5
+#+END_EXAMPLE
+
+On peut utiliser le Lisp comme une calculette et calculer interactivement toute sorte d'exepressions numériques, y compris des expressions imbriquées:
+
+/Podemos (Nós poderia) utilisar o Lisp como uma calculatora e calcular interactivamente todo tipo de exepressões numericas, incluindo as expressões interligadas:/
+
+#+BEGIN_EXAMPLE
+* (round 33.45)
+33
+0.45000076
+* (round 33.45)
+33
+0.45000076
+* (round 34.87)
+35
+-0.13000107
+* (round 34.07)
+34
+0.069999695
+#+END_EXAMPLE
 
 
+Ces exemples simples illustrent déja quelques concepts de programmation en CL:
+
+ - dans ces interactions avec l'interacteur Lisp, on a utilisé des fonctions Lisp existantes, comme la fonction \+, dans des expressions Lisp comme $(+ 1 3 5)$. On remarque:
+   - une expression Lisp comme $(+ 1 3 5)$ commence et fini par une parenthèse, c'est-à-dire est une liste (list);
+   - l'opérateur (la fonction +) précède les arguments que sont 1, 3 et 5: le Lisp utilise la notation préfixe.
+
+ - Il n'y a pas d'ambiguité dans le expressions numériques en CL. Comparez $(* 2 (+ 3 4))$ avec l'expression infixe $2 * 3 + 4$. Autre intérêt de la notation préfixe: le nombre d'arguments d'un opérateur qui peut être 0, 1 ou plus.
+
+ - Quelques uns des types de donnée numériques prédéfinis en Lisp: nombre entier (*integer* - en Common Lisp, ce type est sans limite de grandeur), rationnel (*ratio*) et réel avec point décimal (*float*)
+
+ - Le type de donnée symbole (*symbol*), utilisé ici pour nommer les opérateurs; par exemple les symboles \+, \* et round.
+
+ - Un nombre est un objet auto-évaluant.
+
+ - L'évaluation d'une expression Lisp peut donner lieu à plusieurs valueurs, comme celle de $(round 33.45)$ qui donne le nombre entier le plus proche de 33.45 et le reste.
 
 
-** Verb
+/Esses exemplos simples ilustra já qualquer conceitos de programaçãoes em CL:/
 
-** Tout Mots
+ - /então essa interações com o interpetador Lisp, temos utilisado as funções Lisp existente, como a função \+, então as expressões Lisp como $(+ 1 3 5)$. Observamos:/
+   - /uma expressão Lisp como $(+ 1 3 5)$ começa e termina por uma parateches, quer dizer é uma lista (list);/
+   - /o computador (a função \+) precede os argumentos que são 1, 3 e 5: O Lisp utilisa a notação prefixa./
+
+ - /Não há ambiguidade então a expressões númerica em CL. Comparar $(* 2 ( + 3 4))$ com a expressão infixa $2 * 3 + 4$. Outra interesse a notação préfixa: o numero dos argumentos de uma operação poderá ser 0, 1 ou mais./
+
+ - /Alguns dos tipos de dados numericos pré-denifido no Lisp: números interior (*integer* - em Common Lips, esse tipo é sem limite de gradeza), ratical (*ratio*) e real com ponto decimal *float*)./
+
+ - /O tipo de dados simbolos (*symbol*), utilisa-se para nomar os operadores, por exemplo o simbolos \+, \* e round./
+
+ - /Um número é um objeto auto-avaliado./
+
+ - /A avaliação de uma expressão Lisp pode dar local a varios valores, como este $(round 33.45)$ que dar um numero inteiro mais próximo a 33.45 e o resto./
+
+   
+ 
+* Abstraciton procédurate
+  
+ 
+* Verb
+
+* Tout Mots
 
 | Français               | Português          | Prononciation     |
 |------------------------+--------------------+-------------------|
-| Ce                     | Esse               | C                 |
+| Ce                     | Esse               | Ce                |
 | Document               | Documento          | Docúmen           |
 | s'adresse autant à des | destina-se tanto a | sadress otan à de |
 | débutants              | principante        | debútant          |
@@ -88,5 +172,36 @@ Pourquoi avoir choisi le Common Lisp (CL ou Lisp en bref) pour une introduction 
 | programme              | programa           | program           |
 | dans                   | dentro             | dan               |
 | environnement          | ambiente           | environmon        |
-|                        |                    |                   |
+| l'interaction          | a interação        | lanteracion       |
+| avec                   | com                | avec              |
+| la machine             | a máquna           | la machin         |
+| immédiate              | imediate           | immédiat          |
+| permamente             | permanente         | permanent         |
+| tout                   | todo               | tu                |
+| moment                 | momento            | momon             |
+| le programmeur         | o programador      | le programmeu     |
+| peut                   | poderá             | peu               |
+| tester                 | teste              | teste             |
+| ce qu'il               | o que ele          | ce qu'il          |
+| est en train de faire  | está fazendo       | é en traan de fer |
+| par                    | por                | pa                |
+| petits                 | pequeno            | petit             |
+| morceaux               | partes             | morcô             |
+| un peu                 | um pouco           | un peu            |
+| à la manière           | para o caminho     | à la manièr       |
+| de ce                  | de isto            | de ce             |
+| qui                    | quem               | qui               |
+| se passe               | acontece           | se pass           |
+| lors                   | durante            | lor               |
+| l'utilisation          | a utilização       | lutilisacion      |
+| d'une                  | de uma             | d'une             |
+| calculette             | calculadora        | calculett         |
+| richement              | ricamente          | richemen          |
+| doté                   | dotado             | doté              |
+| donnée                 | dados              | donné             |
+| d'opérateurs           | de operadores      | dopérateur        |
+| prédéfinis             | predefinido        | prédéfini         |
+| Cette                  | Este               | Cette             |
+| simplicité             | simplicidade       | simplicité        |
+| c'est-à-dire           | isso é para dizer  |                   |
 
